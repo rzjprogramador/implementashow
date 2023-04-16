@@ -1,6 +1,6 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { createResposta1Controller } from "./resposta1.controller.ts";
-import { ArgsResposta1 } from "../../domain/entitys/resposta1/editables/resposta1.contracts.ts";
+import { ArgsResposta1 } from "../../domain/entitys/resposta1/editables/contract/contracts.resposta1.ts";
 
 const makeSut = (d: ArgsResposta1) => {
   return {
