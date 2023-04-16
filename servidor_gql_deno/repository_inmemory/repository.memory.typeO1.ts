@@ -1,4 +1,4 @@
-import { RepositoryResposta1, TypeResposta1 } from "../src/domain/entitys/resposta1/editables/contract/contracts.resposta1.ts";
+import { RepositoryResposta1, TypeResposta1 } from "../src/domain/entitys/typeO1/editables/contract/contracts.typeO1.ts";
 
 const repositoryResposta1Memory: RepositoryResposta1 = {
   _items: [],

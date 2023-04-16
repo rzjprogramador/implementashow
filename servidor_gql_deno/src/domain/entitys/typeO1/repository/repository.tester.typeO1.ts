@@ -1,4 +1,4 @@
-import { RepositoryResposta1, TypeResposta1 } from "../editables/contract/contracts.resposta1.ts";
+import { RepositoryResposta1, TypeResposta1 } from "../editables/contract/contracts.typeO1.ts";
 
 const repositoryResposta1Tester: RepositoryResposta1 = {
   _items: [],

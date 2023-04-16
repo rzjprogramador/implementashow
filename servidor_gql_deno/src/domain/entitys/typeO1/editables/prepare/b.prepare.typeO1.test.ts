@@ -1,14 +1,14 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { createResposta1Controller } from "./resposta1.controller.ts";
-import { ArgsResposta1 } from "../../domain/entitys/resposta1/editables/contract/contracts.resposta1.ts";
+import { ArgsResposta1 } from "../contract/contracts.typeO1.ts";
+import { prepareCreateResposta1 } from "./b.prepare.typeO1.ts";
 
 const makeSut = (d: ArgsResposta1) => {
   return {
-    sut1: createResposta1Controller(d),
+    sut1: prepareCreateResposta1(d),
   };
 };
 
-Deno.test("[ resposta1 controller ] deve retornar o objeto requerido em resposta1", () => {
+Deno.test("[ resposta1 >> prepare ] deve retornar o objeto prepare de resposta1", () => {
   const input1 = { texto: "foo texto 1" };
   const { sut1 } = makeSut(input1);
 
