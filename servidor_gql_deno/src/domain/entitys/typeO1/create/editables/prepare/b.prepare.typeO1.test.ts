@@ -1,10 +1,10 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { ArgsResposta1 } from "../contract/contracts.typeO1.ts";
-import { prepareCreateResposta1 } from "./b.prepare.typeO1.ts";
+import { ArgsTypeO1 } from "../contract/contracts.typeO1.ts";
+import { prepareCreateTypeO1 } from "./b.prepare.typeO1.ts";
 
-const makeSut = (d: ArgsResposta1) => {
+const makeSut = (d: ArgsTypeO1) => {
   return {
-    sut1: prepareCreateResposta1(d),
+    sut1: prepareCreateTypeO1(d),
   };
 };
 

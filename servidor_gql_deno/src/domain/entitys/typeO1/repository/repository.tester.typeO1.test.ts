@@ -1,10 +1,10 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { TypeResposta1 } from "../editables/contract/contracts.typeO1.ts";
-import { saveCreateResposta1 } from "../core/c.save.typeO1.ts";
+import { TypeO1Model } from "../create/editables/contract/contracts.typeO1.ts";
+import { saveCreateTypeO1 } from "../create/core/c.save.typeO1.ts";
 
-const makeSut = (d: TypeResposta1) => {
+const makeSut = (d: TypeO1Model) => {
   return {
-    whereSave: saveCreateResposta1(d),
+    whereSave: saveCreateTypeO1(d),
   };
 };
 

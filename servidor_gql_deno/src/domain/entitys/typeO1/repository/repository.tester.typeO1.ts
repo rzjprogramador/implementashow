@@ -1,17 +1,20 @@
-import { RepositoryResposta1, TypeResposta1 } from "../editables/contract/contracts.typeO1.ts";
+import {
+  TypeO1Model,
+  TypeO1Repository,
+} from "../create/editables/contract/contracts.typeO1.ts";
 
-const repositoryResposta1Tester: RepositoryResposta1 = {
+const repositoryTypeO1Tester: TypeO1Repository = {
   _items: [],
 
-  create(d: TypeResposta1): TypeResposta1 {
+  create(d: TypeO1Model): TypeO1Model {
     const input = d;
     this._items?.push(input);
     return input;
   },
 
-  list(): TypeResposta1[] {
+  list(): TypeO1Model[] {
     return this._items!;
   },
 };
 
-export { repositoryResposta1Tester };
+export { repositoryTypeO1Tester };
