@@ -8,3 +8,4 @@ const createResposta1Controller = (d: ArgsResposta1): ControllerTypeResposta1 =>
   coreCreateResposta1(d);
 
 export { createResposta1Controller };
+

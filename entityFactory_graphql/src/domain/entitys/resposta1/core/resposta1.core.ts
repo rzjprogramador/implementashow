@@ -24,3 +24,4 @@ const coreCreateResposta1 = (d: ArgsResposta1): TypeResposta1 =>
   prepareCreateResposta1(d);
 
 export { coreCreateResposta1 };
+export { prepareCreateResposta1, saveCreateResposta1 };
