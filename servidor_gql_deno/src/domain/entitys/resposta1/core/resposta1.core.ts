@@ -1,6 +1,6 @@
 // deno-lint-ignore-file no-unused-vars
+import { ArgsResposta1, TypeResposta1 } from "../editables/resposta1.contracts.ts";
 import { repositoryResposta1Memory } from "../repository/repository.memory.resposta1.ts";
-import { ArgsResposta1, TypeResposta1 } from "./resposta1.contracts.ts";
 
 const argsTypeResposta1 = (d: ArgsResposta1): ArgsResposta1 => {
   // criar factory do objeto
