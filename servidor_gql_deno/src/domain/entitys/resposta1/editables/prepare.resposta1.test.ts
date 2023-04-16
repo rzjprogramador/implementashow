@@ -1,6 +1,6 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { prepareCreateResposta1 } from "./resposta1.core.ts";
 import { ArgsResposta1 } from "../editables/resposta1.contracts.ts";
+import { prepareCreateResposta1 } from "./prepare.resposta1.ts";
 
 const makeSut = (d: ArgsResposta1) => {
   return {
@@ -16,5 +16,5 @@ Deno.test("[ resposta1 >> prepare ] deve retornar o objeto prepare de resposta1"
 
   console.log("TEST {{ sut1 }} >>>  ", sut1);
 
-  expect(sut1.args).toEqual(actual);
+  expect(sut1).toEqual(actual);
 });

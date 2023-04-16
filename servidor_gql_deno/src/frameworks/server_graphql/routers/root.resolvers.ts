@@ -1,4 +1,4 @@
-import { createResposta1Controller } from "../../../data/controller_resposta1/resposta1.controller.ts";
+import { createResposta1Controller } from "../../../data/resposta1/resposta1.controller.ts";
 
 const resolversRoot = {
   Query: {

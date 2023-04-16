@@ -16,5 +16,5 @@ Deno.test("[ resposta1 controller ] deve retornar o objeto requerido em resposta
 
   console.log("TEST {{ sut1 }} >>>  ", sut1);
 
-  expect(sut1.args).toEqual(actual);
+  expect(sut1).toEqual(actual);
 });

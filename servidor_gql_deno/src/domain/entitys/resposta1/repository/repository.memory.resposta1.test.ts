@@ -9,9 +9,7 @@ const makeSut = (d: TypeResposta1) => {
 };
 
 Deno.test("[ resposta1 >> save - Repo Memory ] deve retornar o objeto prepare de resposta1", () => {
-  const input1 = {
-    args: { texto: "foo" },
-  };
+  const input1 = { texto: "foo" };
   const { whereSave } = makeSut(input1);
 
   const actual = input1;

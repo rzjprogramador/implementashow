@@ -1,6 +1,5 @@
-interface TypeResposta1 {
-  args: ArgsResposta1;
-}
+type TypeResposta1 = ArgsResposta1;
+
 interface ArgsResposta1 {
   texto: string;
 }
