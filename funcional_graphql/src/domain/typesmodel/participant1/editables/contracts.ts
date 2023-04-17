@@ -8,4 +8,4 @@ export interface ArgsParticipant1 {
 }
 
 // functions
-export type participant1CoreFN = (a: ArgsParticipant1) => Participant1Model;
+export type participant1CoreFN = (args: ArgsParticipant1) => Participant1Model;
