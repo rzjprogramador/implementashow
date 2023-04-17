@@ -1,7 +1,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { TypeO1Model } from "../src/domain/entitys/typeO1/create/editables/contract/contracts.typeO1.ts";
-import { saveCreateTypeO1 } from "../src/domain/entitys/typeO1/create/core/c.save.typeO1.ts";
+import { saveCreateTypeO1 } from "../src/domain/entitys/typeO1/create/save/c.save.typeO1.ts";
 
 const makeSut = (d: TypeO1Model) => {
   return {

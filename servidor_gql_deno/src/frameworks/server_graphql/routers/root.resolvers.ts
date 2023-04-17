@@ -1,9 +1,9 @@
-import { createResposta1Controller } from "../../../data/typeO1/controller.typeO1.ts";
+import { showTypeObj1, showTypePrimitivo1 } from "../../../data/types/controller.types.ts";
 
 const resolversRoot = {
   Query: {
-    resposta1: () =>
-      createResposta1Controller({ texto: "Args como Resposta1 -- 02" }),
+    respostaTypePrimitivo1: () => showTypePrimitivo1(),
+    respostaTypeObj1: () => showTypeObj1(),
   },
 };
 
