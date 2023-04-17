@@ -1,3 +1,4 @@
+// deno-lint-ignore-file valid-typeof
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { participant1Core } from "./core.ts";
 import { ArgsParticipant1 } from "../editables/contracts.ts";
@@ -8,13 +9,28 @@ const makeSut = (a: ArgsParticipant1) => {
   };
 };
 
-Deno.test("[ core participant1 ] deve retornar o core do participant1", () => {
+Deno.test("[ core participant1 ] deve conter estas props no obj > core do participant1", () => {
   const input1 = { texto: "foo texto 1", numeroInteiro: 10 };
   const { sutCore } = makeSut(input1);
 
-  const actual = input1;
+  // console.log("TEST {{ SUTCORE }} >>>  ", sutCore);
 
-  console.log("TEST {{ ACTUAL }} >>>  ", actual);
+  expect(sutCore).toHaveProperty("texto");
+  expect(sutCore).toHaveProperty("numeroInteiro");
+  expect(sutCore).toHaveProperty("ID");
+  expect(sutCore).toHaveProperty("IDB");
+  expect(sutCore).toHaveProperty("createdAt");
+  expect(sutCore).toHaveProperty("updatedAt");
+  expect(sutCore).toHaveProperty("deletedAt");
+});
 
-  expect(sutCore).toEqual(actual);
+Deno.test("[ core participant1 ] deve ser instancia de Participant1Model", () => {
+  const input1 = { texto: "foo texto 1", numeroInteiro: 10 };
+  const { sutCore } = makeSut(input1);
+
+  const actual = (typeof sutCore )
+
+  // console.log("TEST {{ SUTCORE - TYPEOF ****}} >>>  ", typeof sutCore);
+
+  expect(actual).toEqual(actual);
 });

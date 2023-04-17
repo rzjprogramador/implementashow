@@ -1,4 +1,6 @@
-export type Participant1Model = ArgsParticipant1;
+import { ImportRegistersType } from "../../../utils/point_unique/modules_git.ts";
+
+export type Participant1Model = ArgsParticipant1 & ImportRegistersType;
 
 export interface ArgsParticipant1 {
   texto: string;
