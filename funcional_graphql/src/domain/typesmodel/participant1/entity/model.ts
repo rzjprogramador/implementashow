@@ -5,7 +5,7 @@ import {
 } from "../../../../_deps/entitys/participant1_deps.ts";
 import { importRegisters } from "../../../../_deps/_mod_deps/mod_deps.ts";
 
-const createCoreParticipant1 = (args: ArgsParticipant1) => {
+const generatorCoreParticipant1 = (args: ArgsParticipant1) => {
   const register = importRegisters;
   const core = Object.create(protoParticipant1);
   const newCore = { ...core, ...args };
@@ -13,7 +13,7 @@ const createCoreParticipant1 = (args: ArgsParticipant1) => {
 };
 
 export const createModelParticipant1 = (core: ArgsParticipant1) => {
-  const entity = createCoreParticipant1(core);
+  const entity = generatorCoreParticipant1(core);
   const model = {
     ...entity,
     ...importRegisters.identifiers,
