@@ -11,11 +11,16 @@ const makeSut = (a: ArgsParticipant1) => {
 };
 
 Deno.test("[ core entity participant1 ] deve conter estas props no obj > core do participant1", () => {
-  const inputArgs1 = { texto: "foo texto 1", numeroInteiro: 10 };
+  const inputArgs1 = {
+    primeiroNome: "reinaldo",
+    texto: "foo texto 1",
+    numeroInteiro: 10,
+  };
   const { sutCore } = makeSut(inputArgs1);
 
-  // console.log("TEST {{ SUTCORE }} >>>  ", sutCore);
+  console.log("TEST {{ SUTCORE }} >>>  ", sutCore);
 
+  expect(sutCore).toHaveProperty("primeiroNome");
   expect(sutCore).toHaveProperty("texto");
   expect(sutCore).toHaveProperty("numeroInteiro");
   expect(sutCore).toHaveProperty("ID");
@@ -23,11 +28,14 @@ Deno.test("[ core entity participant1 ] deve conter estas props no obj > core do
   expect(sutCore).toHaveProperty("createdAt");
   expect(sutCore).toHaveProperty("updatedAt");
   expect(sutCore).toHaveProperty("deletedAt");
-  // TODO TESTAR PARA NAO TER OUTRAS PROPS QUE NAO SEJA A DO CONTRATO
 });
 
 Deno.test("[ core participant1 ] deve ser instancia de Participant1Model", () => {
-  const inputArgs1 = { texto: "foo texto 1", numeroInteiro: 10 };
+  const inputArgs1 = {
+    primeiroNome: "reinaldo",
+    texto: "foo texto 1",
+    numeroInteiro: 10,
+  };
   const { sutCore } = makeSut(inputArgs1);
 
   const actual = typeof sutCore;

@@ -8,9 +8,8 @@ import { importRegisters } from "../../../../_deps/_mod_deps/mod_deps.ts";
 const createCoreParticipant1 = (args: ArgsParticipant1) => {
   const register = importRegisters;
   const core = Object.create(protoParticipant1);
-  core.texto = args.texto;
-  core.numeroInteiro = args.numeroInteiro;
-  return core;
+  const newCore = { ...core, ...args };
+  return newCore;
 };
 
 export const createModelParticipant1 = (core: ArgsParticipant1) => {

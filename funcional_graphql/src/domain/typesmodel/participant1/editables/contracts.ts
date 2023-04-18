@@ -3,6 +3,7 @@ import { ImportRegistersType } from "../../../../../src/_deps/_mod_deps/mod_deps
 export type Participant1Model = ArgsParticipant1 & ImportRegistersType;
 
 export interface ArgsParticipant1 {
+  primeiroNome: string;
   texto: string;
   numeroInteiro: number;
 }
