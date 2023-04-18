@@ -1,15 +1,16 @@
 // deno-lint-ignore-file valid-typeof
+
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { participant1Core } from "./core.ts";
+import { createModelParticipant1 } from "./model.ts";
 import { ArgsParticipant1 } from "../editables/contracts.ts";
 
 const makeSut = (a: ArgsParticipant1) => {
   return {
-    sutCore: participant1Core(a),
+    sutCore: createModelParticipant1(a),
   };
 };
 
-Deno.test("[ core participant1 ] deve conter estas props no obj > core do participant1", () => {
+Deno.test("[ core entity participant1 ] deve conter estas props no obj > core do participant1", () => {
   const inputArgs1 = { texto: "foo texto 1", numeroInteiro: 10 };
   const { sutCore } = makeSut(inputArgs1);
 
