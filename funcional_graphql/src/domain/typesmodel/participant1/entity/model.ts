@@ -1,9 +1,6 @@
 // deno-lint-ignore-file no-unused-vars
-import {
-  ArgsParticipant1,
-  importRegisters,
-  protoParticipant1,
-} from "./../../../../deps.ts";
+import { ArgsParticipant1, protoParticipant1 } from "./../../../../dev_deps.ts";
+import { importRegisters } from "./../../../../deps.ts";
 
 const createArgsProtoParticipant1 = (args: ArgsParticipant1) => {
   const register = importRegisters;
