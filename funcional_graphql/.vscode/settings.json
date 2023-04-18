@@ -1,0 +1,5 @@
+{
+  "deno.enable": true,
+  "deno.unstable": true,
+  "deno.importMap": "./../../funcional_graphql/src/domain/typesmodel/participant1/entity/import_map.json"
+}

@@ -18,3 +18,5 @@ casosDeUsoArgumentado: [
   deletar,
   restaurar
  ]
+
+ deno run --import-map=import_map.json register.ts
