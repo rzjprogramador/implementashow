@@ -1,5 +1,8 @@
-import { importRegisters, ImportRegistersType } from "https://raw.githubusercontent.com/reinaldoreizao/modules_typescript/release/registers_participant/object_use_in_production/registers/registers.ts";
+// import {
+//   importRegisters,
+//   ImportRegistersType,
+// } from "https://raw.githubusercontent.com/reinaldoreizao/modules_typescript/release/registers_participant/object_use_in_production/registers/registers.ts";
 
-export const useObjRegister = importRegisters;
+// export const useObjRegister = importRegisters;
 
-export type { ImportRegistersType }
+// export type { ImportRegistersType };

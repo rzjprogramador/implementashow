@@ -1,4 +1,4 @@
-import { ImportRegistersType } from "../../../utils/point_unique/modules_git.ts";
+import { ImportRegistersType } from "../../../../deps.ts";
 
 export type Participant1Model = ArgsParticipant1 & ImportRegistersType;
 
