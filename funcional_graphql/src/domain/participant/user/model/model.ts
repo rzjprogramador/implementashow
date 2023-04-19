@@ -5,17 +5,17 @@ import {
 } from "../../../../../imports/_deps/entitys/participant1_deps.ts";
 import { importRegisters } from "../../../../../imports/_deps/_mod_deps/mod_deps.ts";
 
-const generatorCoreParticipant1 = (args: ArgsParticipant1) => {
+const generatorProtoCoreUser = (args: ArgsParticipant1) => {
   const register = importRegisters;
   const core = Object.create(protoParticipant1);
   const newCore = { ...core, ...args };
   return newCore;
 };
 
-export const createModelParticipant1 = (core: ArgsParticipant1) => {
-  const entity = generatorCoreParticipant1(core);
+export const createModelUser = (core: ArgsParticipant1) => {
+  const protoCore = generatorProtoCoreUser(core);
   const model = {
-    ...entity,
+    ...protoCore,
     ...importRegisters.identifiers,
     ...importRegisters.dates,
   };
