@@ -2,8 +2,8 @@
 import {
   ArgsParticipant1,
   protoParticipant1,
-} from "../../../../_deps/entitys/participant1_deps.ts";
-import { importRegisters } from "../../../../_deps/_mod_deps/mod_deps.ts";
+} from "../../../../../imports/_deps/entitys/participant1_deps.ts";
+import { importRegisters } from "../../../../../imports/_deps/_mod_deps/mod_deps.ts";
 
 const generatorCoreParticipant1 = (args: ArgsParticipant1) => {
   const register = importRegisters;

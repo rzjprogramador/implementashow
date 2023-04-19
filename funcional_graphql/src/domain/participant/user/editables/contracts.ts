@@ -1,4 +1,4 @@
-import { ImportRegistersType } from "../../../../../src/_deps/_mod_deps/mod_deps.ts";
+import { ImportRegistersType } from "../../../../../imports/_deps/_mod_deps/mod_deps.ts";
 
 export type Participant1Model = ArgsParticipant1 & ImportRegistersType;
 
