@@ -1,4 +1,3 @@
-// deno-lint-ignore-file no-unused-vars
 import {
   ArgsParticipant1,
   protoParticipant1,
@@ -6,7 +5,6 @@ import {
 import { importRegisters } from "../../../../../../imports/_deps/_mod_deps/mod_deps.ts";
 
 const generatorPrototypeAndRegisterArgsUser = (args: ArgsParticipant1) => {
-  const register = importRegisters;
   const prototype = Object.create(protoParticipant1);
   const newCore = { ...prototype, ...args };
   return newCore;
