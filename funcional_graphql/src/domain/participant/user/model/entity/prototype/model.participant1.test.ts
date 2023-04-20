@@ -1,12 +1,12 @@
 // deno-lint-ignore-file valid-typeof
 
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { createModelParticipant1 } from "./model.ts";
-import { ArgsParticipant1 } from "../editables/contracts.ts";
+import { createEntityUser } from "./../../entity/entity.ts";
+import { ArgsParticipant1 } from "../../../editables/contracts.ts";
 
 const makeSut = (a: ArgsParticipant1) => {
   return {
-    sutCore: createModelParticipant1(a),
+    sutCore: createEntityUser(a),
   };
 };
 
