@@ -2,9 +2,9 @@
 
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { createEntityUser } from "./../../entity/entity.ts";
-import { ArgsParticipant1 } from "../../../editables/contracts.ts";
+import { UserArgs } from "../../../editables/contracts.ts";
 
-const makeSut = (a: ArgsParticipant1) => {
+const makeSut = (a: UserArgs) => {
   return {
     sutCore: createEntityUser(a),
   };
