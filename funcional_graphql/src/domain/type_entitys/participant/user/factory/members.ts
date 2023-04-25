@@ -1,5 +1,5 @@
 
-export const protoParticipant1 = {
+export const protoUser = {
   metodo1() {
     return 'acao metodo1...'
   }

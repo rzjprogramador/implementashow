@@ -1,11 +1,10 @@
-import {
-  protoParticipant1,
-  UserArgs,
-} from "../../../../../../../imports/_deps/entitys/participant1_deps.ts";
-import { importRegisters } from "../../../../../../../imports/_deps/_mod_deps/mod_deps.ts";
+import { importRegisters } from "../../../../../../imports/_deps/_mod_deps/mod_deps.ts";
+import { UserArgs } from "../../../../../../imports/_deps/entitys/participant1_deps.ts";
+import { protoUser } from "./members.ts";
+
 
 const userFactoryByArgs = (args: UserArgs) => {
-  const prototype = Object.create(protoParticipant1);
+  const prototype = Object.create(protoUser);
   const newCore = { ...prototype, ...args };
   return newCore;
 };
