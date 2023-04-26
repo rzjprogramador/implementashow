@@ -4,6 +4,7 @@ import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { UserArgs } from "../../editables/contracts.ts";
 import { executeCreateUser } from "./create.ts";
 import { createEntityUser } from "../../factory_model/factory_model.ts";
+import { fallbackArgsUser1 } from "../../uses/fallback_args.ts";
 
 const makeSut = (a: UserArgs) => {
   return {
@@ -12,14 +13,15 @@ const makeSut = (a: UserArgs) => {
   };
 };
 
-Deno.test("[ entity ] deve ser instancia de User", () => {
-  const inputArgs1: UserArgs = {
-    primeiroNome: "reinaldo",
-    texto: "foo texto 1",
-    numeroInteiro: 10,
+const makeInput = () => {
+  return {
+    inputArgsUser1: fallbackArgsUser1,
   };
-  const { sutEntity } = makeSut(inputArgs1);
+};
 
+Deno.test("[ entity ] deve ser instancia de User", () => {
+  const { inputArgsUser1 } = makeInput();
+  const { sutEntity } = makeSut(inputArgsUser1);
   const actual = typeof sutEntity;
 
   console.log("TEST {{ sutEntity } >>>  ", sutEntity);
@@ -29,12 +31,8 @@ Deno.test("[ entity ] deve ser instancia de User", () => {
 });
 
 Deno.test("[ Execute ] deve conter todas as props de User", () => {
-  const inputArgs1: UserArgs = {
-    primeiroNome: "reinaldo",
-    texto: "foo texto 1",
-    numeroInteiro: 10,
-  };
-  const { sutExecute } = makeSut(inputArgs1);
+  const { inputArgsUser1 } = makeInput();
+  const { sutExecute } = makeSut(inputArgsUser1);
 
   // console.log("TEST {{ Execute User }} >>>  ", sutExecute);
 
