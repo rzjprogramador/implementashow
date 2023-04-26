@@ -15,7 +15,7 @@ import { userRepositoryFirebase } from "../../repository/user_repository_firebas
 const repositoryTesterUser = userRepositoryMemory;
 
 // todo: usar somente antes de criar o de producao real - remover depois : #TEMPORARIO-TEST
-const repositoryProductionUser = userRepositoryFirebase;
+// const repositoryProductionUser = userRepositoryFirebase;
 
 // utils test
 const cleanItemsRepoMock = () => repositoryTesterUser._items = [];
