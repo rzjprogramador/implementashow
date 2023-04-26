@@ -10,6 +10,7 @@ import {
 import { prepareUser, saveUser } from "../../prepare/prepare.ts";
 import { userRepositoryMemory } from "../../../../../../../memory/repositories/user_repository_memory.ts";
 import { userProduction } from "../../../../../../global/production/user_production.ts";
+import { executeCreateUser } from "./create.ts";
 
 // execute foi mockado : somente para salvar no repo de testers
 const repositoryTesterUser = userRepositoryMemory;
@@ -23,19 +24,12 @@ const cleanItemsRepoMock = () => repositoryTesterUser._items = [];
 // rodar no final de cada test
 const runFinallyTesters = () => cleanItemsRepoMock();
 
-const executeCreateUserMock = (a: UserArgs) => {
-  const entity = createEntityUser(a);
-  const prepared = prepareUser(entity);
-  const saved = saveUser(prepared, repositoryTesterUser);
-  return saved;
-};
-
 type MakeSutType = { sutEntity: UserModel; sutExecute: UserModel };
 
 const makeSut = (a: UserArgs): MakeSutType => {
   return {
     sutEntity: createEntityUser(a),
-    sutExecute: executeCreateUserMock(a),
+    sutExecute: executeCreateUser(a),
   };
 };
 
@@ -82,8 +76,9 @@ Deno.test("[ Execute ] deve conter todas as props de User", () => {
 Deno.test("[ Repository User ] deve gravar somente no repositorio in memoria e nada no producao neste test", () => {
   const { inputArgsUser1 } = makeInput();
   const { inputArgsUser2 } = makeInput();
-  executeCreateUserMock(inputArgsUser1);
-  executeCreateUserMock(inputArgsUser2);
+
+  executeCreateUser(inputArgsUser1, repositoryTesterUser);
+  executeCreateUser(inputArgsUser2, repositoryTesterUser);
 
   // console.log(repositoryTesterUser.list());
 
