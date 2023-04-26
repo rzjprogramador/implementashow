@@ -1,16 +1,15 @@
-import { importRegisters } from "../../../../../../imports/_deps/_mod_deps/mod_deps.ts";
-import { UserArgs } from "../../../../../../imports/_deps/entitys/participant1_deps.ts";
+import { importRegisters } from "../../../../../global/imports/mod_deps.ts";
+import { UserArgs } from "../editables/contracts.ts";
 import { protoUser } from "./members.ts";
 
-
-const userFactoryByArgs = (args: UserArgs) => {
+const userFactoryByArgs = (u: UserArgs) => {
   const prototype = Object.create(protoUser);
-  const newCore = { ...prototype, ...args };
+  const newCore = { ...prototype, ...u };
   return newCore;
 };
 
-export const createEntityUser = (factory: UserArgs) => {
-  const protoCore = userFactoryByArgs(factory);
+export const createEntityUser = (f: UserArgs) => {
+  const protoCore = userFactoryByArgs(f);
   const model = {
     ...protoCore,
     ...importRegisters.identifiers,

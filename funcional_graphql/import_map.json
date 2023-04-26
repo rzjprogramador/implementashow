@@ -1,6 +1,0 @@
-{
-  "imports": {
-    "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.js",
-    "registers": "https://raw.githubusercontent.com/reinaldoreizao/modules_typescript/release/registers_participant/object_use_in_production/registers/registers.ts"
-  }
-}

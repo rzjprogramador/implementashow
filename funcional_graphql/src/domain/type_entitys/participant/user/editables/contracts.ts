@@ -1,4 +1,4 @@
-import { ImportRegistersType } from "../../../../../../imports/_deps/_mod_deps/mod_deps.ts";
+import { ImportRegistersType } from "../../../../../global/imports/mod_deps.ts";
 
 export type UserModel = UserArgs & ImportRegistersType;
 
