@@ -1,19 +1,23 @@
 // deno-lint-ignore-file valid-typeof
 
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { UserArgs } from "../../editables/contracts.ts";
+import { UserArgs, UserModel } from "../../editables/contracts.ts";
 import { executeCreateUser } from "./create.ts";
 import { createEntityUser } from "../../factory_model/factory_model.ts";
 import { fallbackArgsUser1 } from "../../uses/fallback_args.ts";
 
-const makeSut = (a: UserArgs) => {
+type MakeSutType = { sutEntity: UserModel; sutExecute: UserModel };
+
+const makeSut = (a: UserArgs): MakeSutType => {
   return {
     sutEntity: createEntityUser(a),
     sutExecute: executeCreateUser(a),
   };
 };
 
-const makeInput = () => {
+type MakeInputType = { inputArgsUser1: UserArgs };
+
+const makeInput = (): MakeInputType => {
   return {
     inputArgsUser1: fallbackArgsUser1,
   };
