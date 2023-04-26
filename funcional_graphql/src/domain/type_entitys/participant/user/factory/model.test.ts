@@ -18,7 +18,7 @@ Deno.test("[ core entity participant1 ] deve conter estas props no obj > core do
   };
   const { sutCore } = makeSut(inputArgs1);
 
-  console.log("TEST {{ SUTCORE }} >>>  ", sutCore);
+  // console.log("TEST {{ SUTCORE }} >>>  ", sutCore);
 
   expect(sutCore).toHaveProperty("primeiroNome");
   expect(sutCore).toHaveProperty("texto");
@@ -31,7 +31,7 @@ Deno.test("[ core entity participant1 ] deve conter estas props no obj > core do
 });
 
 Deno.test("[ core participant1 ] deve ser instancia de Participant1Model", () => {
-  const inputArgs1 = {
+  const inputArgs1: UserArgs = {
     primeiroNome: "reinaldo",
     texto: "foo texto 1",
     numeroInteiro: 10,

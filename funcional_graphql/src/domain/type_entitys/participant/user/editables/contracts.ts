@@ -8,5 +8,14 @@ export interface UserArgs {
   numeroInteiro: number;
 }
 
+// responses
+// export type ResponsePrepareUser = UserModel | Error;
+
 // functions
 export type participant1CoreFN = (args: UserArgs) => UserModel;
+
+export interface UserRepository {
+  _items?: UserModel[];
+  create: (u: UserModel) => UserModel;
+  list: () => UserModel[];
+}

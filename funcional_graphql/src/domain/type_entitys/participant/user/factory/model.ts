@@ -1,5 +1,6 @@
 import { importRegisters } from "../../../../../global/imports/mod_deps.ts";
-import { UserArgs } from "../editables/contracts.ts";
+import { UserArgs, UserModel, UserRepository } from "../editables/contracts.ts";
+import { userRepositoryFirebase } from "../repository/user_repository_firebase.ts";
 import { protoUser } from "./members.ts";
 
 const userFactoryByArgs = (u: UserArgs) => {
@@ -17,3 +18,7 @@ export const createEntityUser = (f: UserArgs) => {
   };
   return model;
 };
+
+
+
+
