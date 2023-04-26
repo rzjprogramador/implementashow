@@ -5,3 +5,9 @@ export const fallbackArgsUser1: UserArgs = {
   texto: "foo texto 1",
   numeroInteiro: 10,
 };
+
+export const fallbackArgsUser2: UserArgs = {
+  primeiroNome: "gustavo",
+  texto: "foo texto 1",
+  numeroInteiro: 13,
+};

@@ -2,24 +2,49 @@
 
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { UserArgs, UserModel } from "../../editables/contracts.ts";
-import { executeCreateUser } from "./create.ts";
 import { createEntityUser } from "../../factory_model/factory_model.ts";
-import { fallbackArgsUser1 } from "../../uses/fallback_args.ts";
+import {
+  fallbackArgsUser1,
+  fallbackArgsUser2,
+} from "../../uses/fallback_args.ts";
+import { prepareUser, saveUser } from "../../prepare/prepare.ts";
+import { userRepositoryMemory } from "../../../../../../../memory/repositories/user_repository_memory.ts";
+import { userRepositoryFirebase } from "../../repository/user_repository_firebase.ts";
+
+// execute foi mockado : somente para salvar no repo de testers
+const repositoryTesterUser = userRepositoryMemory;
+
+// todo: usar somente antes de criar o de producao real - remover depois : #TEMPORARIO-TEST
+const repositoryProductionUser = userRepositoryFirebase;
+
+// utils test
+const cleanItemsRepoMock = () => repositoryTesterUser._items = [];
+
+// rodar no final de cada test
+const runFinallyTesters = () => cleanItemsRepoMock();
+
+const executeCreateUserMock = (a: UserArgs) => {
+  const entity = createEntityUser(a);
+  const prepared = prepareUser(entity);
+  const saved = saveUser(prepared, repositoryTesterUser);
+  return saved;
+};
 
 type MakeSutType = { sutEntity: UserModel; sutExecute: UserModel };
 
 const makeSut = (a: UserArgs): MakeSutType => {
   return {
     sutEntity: createEntityUser(a),
-    sutExecute: executeCreateUser(a),
+    sutExecute: executeCreateUserMock(a),
   };
 };
 
-type MakeInputType = { inputArgsUser1: UserArgs };
+type MakeInputType = { inputArgsUser1: UserArgs; inputArgsUser2: UserArgs };
 
 const makeInput = (): MakeInputType => {
   return {
     inputArgsUser1: fallbackArgsUser1,
+    inputArgsUser2: fallbackArgsUser2,
   };
 };
 
@@ -28,10 +53,12 @@ Deno.test("[ entity ] deve ser instancia de User", () => {
   const { sutEntity } = makeSut(inputArgsUser1);
   const actual = typeof sutEntity;
 
-  console.log("TEST {{ sutEntity } >>>  ", sutEntity);
+  // console.log("TEST {{ sutEntity } >>>  ", sutEntity);
   // console.log("TEST {{ sutEntity - TYPEOF ****}} >>>  ", typeof sutEntity);
 
   expect(actual).toEqual(actual);
+
+  runFinallyTesters();
 });
 
 Deno.test("[ Execute ] deve conter todas as props de User", () => {
@@ -48,4 +75,25 @@ Deno.test("[ Execute ] deve conter todas as props de User", () => {
   expect(sutExecute).toHaveProperty("createdAt");
   expect(sutExecute).toHaveProperty("updatedAt");
   expect(sutExecute).toHaveProperty("deletedAt");
+
+  runFinallyTesters();
+});
+
+Deno.test("[ Repository User ] deve gravar somente no repositorio in memoria e nada no producao neste test", () => {
+  const { inputArgsUser1 } = makeInput();
+  const { inputArgsUser2 } = makeInput();
+  executeCreateUserMock(inputArgsUser1);
+  executeCreateUserMock(inputArgsUser2);
+
+  // console.log(repositoryTesterUser.list());
+  // // console.log(
+  // //   "#TEMPORARIO-TEST : REPO EM PRODUCAO TEM QUE ESTAR ZERADO >> ",
+  // //   repositoryProductionUser.list(),
+  // // );
+
+  const actualLength = repositoryTesterUser._items?.length;
+
+  expect(actualLength).toEqual(2);
+
+  runFinallyTesters();
 });
