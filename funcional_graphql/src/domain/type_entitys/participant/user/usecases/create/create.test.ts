@@ -9,7 +9,7 @@ import {
 } from "../../uses/fallback_args.ts";
 import { prepareUser, saveUser } from "../../prepare/prepare.ts";
 import { userRepositoryMemory } from "../../../../../../../memory/repositories/user_repository_memory.ts";
-import { userRepositoryFirebase } from "../../repository/user_repository_firebase.ts";
+// import { userRepositoryFirebase } from "../../repository/user_repository_firebase.ts";
 
 // execute foi mockado : somente para salvar no repo de testers
 const repositoryTesterUser = userRepositoryMemory;
