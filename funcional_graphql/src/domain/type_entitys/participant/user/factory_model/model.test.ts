@@ -2,7 +2,7 @@
 
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { UserArgs } from "../editables/contracts.ts";
-import { createEntityUser } from "./model.ts";
+import { createEntityUser } from "./factory_model.ts";
 
 const makeSut = (a: UserArgs) => {
   return {
