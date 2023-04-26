@@ -9,13 +9,13 @@ import {
 } from "../../uses/fallback_args.ts";
 import { prepareUser, saveUser } from "../../prepare/prepare.ts";
 import { userRepositoryMemory } from "../../../../../../../memory/repositories/user_repository_memory.ts";
-// import { userRepositoryFirebase } from "../../repository/user_repository_firebase.ts";
+import { userProduction } from "../../../../../../global/production/user_production.ts";
 
 // execute foi mockado : somente para salvar no repo de testers
 const repositoryTesterUser = userRepositoryMemory;
 
 // todo: usar somente antes de criar o de producao real - remover depois : #TEMPORARIO-TEST
-// const repositoryProductionUser = userRepositoryFirebase;
+const repositoryProductionUser = userProduction.repository;
 
 // utils test
 const cleanItemsRepoMock = () => repositoryTesterUser._items = [];
@@ -86,10 +86,11 @@ Deno.test("[ Repository User ] deve gravar somente no repositorio in memoria e n
   executeCreateUserMock(inputArgsUser2);
 
   // console.log(repositoryTesterUser.list());
-  // // console.log(
-  // //   "#TEMPORARIO-TEST : REPO EM PRODUCAO TEM QUE ESTAR ZERADO >> ",
-  // //   repositoryProductionUser.list(),
-  // // );
+
+  console.log(
+    "#TEMPORARIO-TEST : REPO EM PRODUCAO TEM QUE ESTAR ZERADO >> ",
+    repositoryProductionUser.list(),
+  );
 
   const actualLength = repositoryTesterUser._items?.length;
 
