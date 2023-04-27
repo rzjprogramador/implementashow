@@ -1,15 +1,11 @@
 // deno-lint-ignore-file valid-typeof
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-
-import { userProduction } from './../../../../../global/production/user_production.ts';
-import { userRepositoryMemory } from './../../../../../../memory/repositories/user_repository_memory.ts';
-import { UserArgs, UserModel } from "../../dynamic/contracts.ts";
-import { createEntityUser } from "../../factory_model/factory_model.ts";
-import {
-  fallbackArgsUser1,
-  fallbackArgsUser2,
-} from "../../uses/fallback_args.ts";
-import { executeCreateUser } from "./create.ts";
+import { userRepositoryMemory } from "../../../../../memory/repositories/user_repository_memory.ts";
+import { userProduction } from "../../../../global/production/user_production.ts";
+import { UserArgs, UserModel } from "../dynamic/contracts.ts";
+import { createEntityUser } from "../factory/entity.ts";
+import { executeCreateUser } from "../usecases/create/create.ts";
+import { fakesUser } from "../uses/fakes.ts";
 
 // execute foi mockado : somente para salvar no repo de testers
 const repositoryTesterUser = userRepositoryMemory;
@@ -36,8 +32,8 @@ type MakeInputType = { inputArgsUser1: UserArgs; inputArgsUser2: UserArgs };
 
 const makeInput = (): MakeInputType => {
   return {
-    inputArgsUser1: fallbackArgsUser1,
-    inputArgsUser2: fallbackArgsUser2,
+    inputArgsUser1: fakesUser.args1,
+    inputArgsUser2: fakesUser.args2,
   };
 };
 
@@ -58,7 +54,7 @@ Deno.test("[ Execute ] deve conter todas as props de User", () => {
   const { inputArgsUser1 } = makeInput();
   const { sutExecute } = makeSut(inputArgsUser1);
 
-  // console.log("TEST {{ Execute User }} >>>  ", sutExecute);
+  console.log("TEST {{ Execute User }} >>>  ", sutExecute);
 
   expect(sutExecute).toHaveProperty("primeiroNome");
   expect(sutExecute).toHaveProperty("texto");
@@ -81,10 +77,10 @@ Deno.test("[ Repository User ] deve gravar somente no repositorio in memoria e n
 
   // console.log(repositoryTesterUser.list());
 
-  console.log(
-    "#TEMPORARIO-TEST : REPO EM PRODUCAO TEM QUE ESTAR ZERADO >> ",
-    repositoryProductionUser.list(),
-  );
+  // console.log(
+  //   "#TEMPORARIO-TEST : REPO EM PRODUCAO TEM QUE ESTAR ZERADO >> ",
+  //   repositoryProductionUser.list(),
+  // );
 
   const actualLength = repositoryTesterUser._items?.length;
 

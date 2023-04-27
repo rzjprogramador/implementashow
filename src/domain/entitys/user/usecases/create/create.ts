@@ -1,6 +1,6 @@
 import { userProduction } from "../../../../../global/production/user_production.ts";
 import { UserArgs, UserRepository } from "../../dynamic/contracts.ts";
-import { createEntityUser } from "../../factory_model/factory_model.ts";
+import { createEntityUser } from "../../factory/entity.ts";
 import { prepareUser, saveUser } from "../../prepare/prepare.ts";
 
 export const executeCreateUser = (

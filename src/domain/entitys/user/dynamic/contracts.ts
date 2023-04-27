@@ -1,6 +1,9 @@
-import { ImportRegistersType } from "../../../../global/imports/mod_deps.ts";
+import {
+  DatesType,
+  IdentifiersType,
+} from "../../../../global/imports/mod_deps.ts";
 
-export type UserModel = UserArgs & ImportRegistersType;
+export type UserModel = UserArgs & AddPropsUser;
 
 export interface UserArgs {
   primeiroNome: string;
@@ -8,11 +11,15 @@ export interface UserArgs {
   numeroInteiro: number;
 }
 
-// responses
-// export type ResponsePrepareUser = UserModel | Error;
+export type AddPropsUser = {
+  identifiers: IdentifiersType;
+  dates: DatesType;
+};
 
-// functions
-export type participant1CoreFN = (args: UserArgs) => UserModel;
+export interface FakeUser {
+  args1: UserArgs;
+  args2: UserArgs;
+}
 
 export interface UserRepository {
   _items?: UserModel[];

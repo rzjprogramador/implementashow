@@ -1,19 +1,19 @@
-import { importRegisters } from "../../../../global/imports/mod_deps.ts";
+import { addPropsUser } from "../dynamic/addProps.ts";
 import { UserArgs } from "../dynamic/contracts.ts";
-import { protoUser } from "./members.ts";
+import { membersProtoUser } from "../dynamic/members.ts";
 
 const userFactoryByArgs = (u: UserArgs) => {
-  const prototype = Object.create(protoUser);
+  const prototype = Object.create(membersProtoUser);
   const newCore = { ...prototype, ...u };
   return newCore;
 };
 
 export const createEntityUser = (f: UserArgs) => {
   const protoCore = userFactoryByArgs(f);
+  const addProps = { ...addPropsUser };
   const model = {
     ...protoCore,
-    ...importRegisters.identifiers,
-    ...importRegisters.dates,
+    ...addProps,
   };
   return model;
 };
