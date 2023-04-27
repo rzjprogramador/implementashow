@@ -1,4 +1,4 @@
-import { UserModel, UserRepository } from "../editables/contracts.ts";
+import { UserModel, UserRepository } from "../dynamic/contracts.ts";
 
 export const prepareUser = (u: UserModel) => {
   if (!u) {

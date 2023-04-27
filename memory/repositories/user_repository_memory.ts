@@ -1,7 +1,7 @@
 import {
   UserModel,
   UserRepository,
-} from "../../src/domain/type_entitys/participant/user/editables/contracts.ts";
+} from "../../src/domain/entitys/user/dynamic/contracts.ts";
 
 export const userRepositoryMemory: UserRepository = {
   _items: [],

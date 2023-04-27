@@ -1,15 +1,14 @@
 // deno-lint-ignore-file valid-typeof
-
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { UserArgs, UserModel } from "../../editables/contracts.ts";
+
+import { userProduction } from './../../../../../global/production/user_production.ts';
+import { userRepositoryMemory } from './../../../../../../memory/repositories/user_repository_memory.ts';
+import { UserArgs, UserModel } from "../../dynamic/contracts.ts";
 import { createEntityUser } from "../../factory_model/factory_model.ts";
 import {
   fallbackArgsUser1,
   fallbackArgsUser2,
 } from "../../uses/fallback_args.ts";
-import { prepareUser, saveUser } from "../../prepare/prepare.ts";
-import { userRepositoryMemory } from "../../../../../../../memory/repositories/user_repository_memory.ts";
-import { userProduction } from "../../../../../../global/production/user_production.ts";
 import { executeCreateUser } from "./create.ts";
 
 // execute foi mockado : somente para salvar no repo de testers

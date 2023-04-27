@@ -1,5 +1,5 @@
-import { userProduction } from "../../../../../../global/production/user_production.ts";
-import { UserArgs, UserRepository } from "../../editables/contracts.ts";
+import { userProduction } from "../../../../../global/production/user_production.ts";
+import { UserArgs, UserRepository } from "../../dynamic/contracts.ts";
 import { createEntityUser } from "../../factory_model/factory_model.ts";
 import { prepareUser, saveUser } from "../../prepare/prepare.ts";
 

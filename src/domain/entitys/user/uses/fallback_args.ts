@@ -1,4 +1,4 @@
-import { UserArgs } from "../editables/contracts.ts";
+import { UserArgs } from "../dynamic/contracts.ts";
 
 export const fallbackArgsUser1: UserArgs = {
   primeiroNome: "reinaldo",
