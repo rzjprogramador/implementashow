@@ -1,4 +1,5 @@
-import { userRepositoryFirebase } from './../../domain/entitys/user/repository/user_repository_firebase.ts';
+import { userRepositoryFirebase } from "../../domain/entitys/user/repository/userRepositoryFirebase.ts";
+
 
 export const userProduction = {
   repository: userRepositoryFirebase

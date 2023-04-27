@@ -1,8 +1,3 @@
-import {
-  DatesType,
-  IdentifiersType,
-} from "../../../../global/imports/mod_deps.ts";
-
 export type UserModel = UserArgs & AddPropsUser;
 
 export interface UserArgs {
@@ -12,8 +7,7 @@ export interface UserArgs {
 }
 
 export type AddPropsUser = {
-  identifiers: IdentifiersType;
-  dates: DatesType;
+  // novas props add aqui
 };
 
 export interface FakeUser {
