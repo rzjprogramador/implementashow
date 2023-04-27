@@ -7,6 +7,7 @@ import { createEntityUser } from "../factory/entity.ts";
 import { executeCreateUser } from "../usecases/create/create.ts";
 import { fakesUser } from "../uses/fakes.ts";
 import { userRepositoryMemory } from "../../../../../memory/repositories/userRepositoryMemory.ts";
+import { modMessagesFeedback } from "../../../../global/imports/mod_deps.ts";
 
 // execute foi mockado : somente para salvar no repo de testers
 const repositoryTesterUser = userRepositoryMemory;
@@ -19,6 +20,10 @@ const cleanItemsRepoMock = () => repositoryTesterUser._items = [];
 
 // rodar no final de cada test
 const runFinallyTesters = () => cleanItemsRepoMock();
+
+// replicas sut :: diferencasErros mudar na fonte
+const sut_message_field_primeiroNome_erro_length =
+  modMessagesFeedback.primeiroNome_TamanhoCaracteresPadrao;
 
 type MakeSutType = { sutEntity: UserModel; sutExecute: UserModel };
 
@@ -37,6 +42,25 @@ const makeInput = (): MakeInputType => {
     inputArgsUser2: fakesUser.args2,
   };
 };
+
+// Deno.test("[ valid field primeiroNome ] validacao campos user", () => {
+//   const argsErr = {
+//     primeiroNome: "ab",
+//     texto: "foo texto 1",
+//     numeroInteiro: 10,
+//   };
+
+//   const { sutEntity } = makeSut(argsErr);
+//   const actual = sutEntity.primeiroNome;
+//   const result = new Error(sut_message_field_primeiroNome_erro_length);
+//   // esta totalmente ligado ao moduloMessagePai : que vira do github
+
+//   // console.log("RESULTADO ERRO.LENGTH EM PRIMEIRO NOME", result);
+
+//   expect(actual).toEqual(result);
+
+//   runFinallyTesters();
+// });
 
 Deno.test("[ entity ] deve ser instancia de User", () => {
   const { inputArgsUser1 } = makeInput();
