@@ -18,7 +18,7 @@ const makeSut: MakeSutTypes = (u: UserArgs) => {
   };
 };
 
-Deno.test("[ Fail >> ... ] deve retornar ...", () => {
+Deno.test("[ Ok >> ... ] deve retornar instancia de user", () => {
   const input = userArgsFake;
   const { sut } = makeSut(input);
   const resultExpected = userArgsFake;
