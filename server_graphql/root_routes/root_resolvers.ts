@@ -6,7 +6,7 @@ const resolversRoot = {
 
     respostaTypeObj1: () => {
       return {
-        texto: "reinaldo",
+        texto: "reinaldo ok",
         numero: 10,
       };
     },
