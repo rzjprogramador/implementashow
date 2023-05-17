@@ -3,8 +3,8 @@ import { UserFisicoArgs } from "../contracts.ts";
 export const fakeListUserFisicoArgs: UserFisicoArgs[] = [
   {
     primeiroNome: "reinaldo",
-    sobrenome: "string",
-    email: "string",
+    sobrenome: "any sobrenome um",
+    email: "any_email@gmail.com",
     anoNascimento: 1977,
     tipoUser: "Fisico",
     endereco: {
