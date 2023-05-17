@@ -7,7 +7,7 @@ const Log = (d: any) => console.log(d);
 
 const sut = createPrototypeUserFisico;
 
-Deno.test("deve retornar ...", () => {
+Deno.test("deve retornar a criacao do prototipo user_fisico  fakeOK", () => {
   const input = fakeListUserFisicoArgsOK[0];
   const actual = sut(input);
 
