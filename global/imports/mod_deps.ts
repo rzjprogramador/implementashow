@@ -11,6 +11,9 @@ import { importRegisters } from "https://raw.githubusercontent.com/rzjprogramado
 
 import { objectValuesFN } from "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/main.ts";
 
+// modulos subir git
+import { date } from "../../_subir_mods_ts/date.ts";
+
 // REPLICANDO POINT_UNIQUE PARA A APP
 
 // replicando o objeto register para uso na app
@@ -20,3 +23,4 @@ export const modRegisters = {
 };
 
 export const modObjectsValueFN = objectValuesFN;
+export const modDate = date

@@ -1,11 +1,12 @@
+import { modDate } from "../../../../global/imports/mod_deps.ts";
 import { UserFisicoArgs } from "./contracts.ts";
 
 interface MembersUserFisico {
-  showIdade: () => number;
+  showIdade: () => Promise<number>;
 }
 
 export const membersUserFisico: MembersUserFisico = {
-  showIdade(this: UserFisicoArgs) {
-    return 2023 - this.idade!;
+  async showIdade(this: UserFisicoArgs) {
+    return await modDate.currentYear() - this.idade!;
   },
 };
