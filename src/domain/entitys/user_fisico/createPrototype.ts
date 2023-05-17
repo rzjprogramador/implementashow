@@ -8,11 +8,14 @@ export const createPrototypeUserFisico = async (a: UserFisicoArgs) => {
   const prototypeEntity: UserFisicoArgs = await Object.create(
     membersUserFisico,
   );
-  prototypeEntity.primeiroNome = await FistNamePerson(a.primeiroNome);
-  prototypeEntity.sobrenome = a.sobrenome;
-  prototypeEntity.email = a.email;
-  prototypeEntity.anoNascimento = a.anoNascimento;
-  prototypeEntity.tipoUser = a.tipoUser;
+
+  const { primeiroNome, sobrenome, email, anoNascimento, tipoUser } = a;
+
+  prototypeEntity.primeiroNome = await FistNamePerson(primeiroNome);
+  prototypeEntity.sobrenome = sobrenome;
+  prototypeEntity.email = email;
+  prototypeEntity.anoNascimento = anoNascimento;
+  prototypeEntity.tipoUser = tipoUser;
 
   prototypeEntity.endereco = {
     cep: a.endereco.cep,
