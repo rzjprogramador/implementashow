@@ -7,13 +7,14 @@ const Log = (d: any) => console.log(d);
 
 const sut = createPrototypeUserFisico;
 
-Deno.test("deve retornar a criacao do prototipo user_fisico  fakeOK", () => {
+Deno.test("deve retornar a criacao do prototipo user_fisico  fakeOK", async () => {
   const input = fakeListUserFisicoArgsOK[0];
-  const actual = sut(input);
+  const actual = await sut(input);
 
-  console.log(actual);
+  // console.log(actual);
 
-  expect(true);
+  expect(actual).toEqual(input);
+  expect(actual).toHaveProperty("primeiroNome");
 });
 
 /* TESTER_CONSOLE ************************************* */
