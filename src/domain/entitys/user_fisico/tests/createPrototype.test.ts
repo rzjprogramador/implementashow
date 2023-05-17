@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { createPrototypeUserFisico } from "./createPrototype.ts";
-import { fakeListUserFisicoArgsOK } from "../../../data/user_fisico/fake.ts";
+import { createPrototypeUserFisico } from "../createPrototype.ts";
+import { fakeListUserFisicoArgsOK } from "../../../../data/user_fisico/fake.ts";
 
 const Log = (d: any) => console.log(d);
 
