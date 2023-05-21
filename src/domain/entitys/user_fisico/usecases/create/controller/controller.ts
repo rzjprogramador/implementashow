@@ -3,10 +3,10 @@ import {
   HttpResponse,
   ok,
 } from "../../../../../../../global/helpers/httpResponse.ts";
-import { UserFisicoArgs } from "../../../contracts.ts";
+import { UserFisicoArgs, UserFisicoModel } from "../../../contracts.ts";
 
-export const controllerCreateUserFisico = (d: UserFisicoArgs): HttpResponse => {
-  const final = { ...d, id: "1" };
+export const controllerCreateUserFisico = (d: UserFisicoArgs): HttpResponse<UserFisicoModel> => {
+  const final: UserFisicoModel = { ...d, id: '1'};
   const feedBackOk = ["criado com sucesso"];
   return ok(final, feedBackOk);
 };

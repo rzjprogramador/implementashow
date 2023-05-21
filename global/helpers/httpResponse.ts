@@ -2,7 +2,7 @@
 
 export type HttpResponse<T = any> = {
   data: T;
-  statusCode: number;
+  statusCode?: number;
   info: string[];
 };
 
@@ -11,3 +11,6 @@ export const ok = (d: any, infoList: string[]): HttpResponse => ({
   statusCode: 200,
   info: infoList,
 });
+
+
+

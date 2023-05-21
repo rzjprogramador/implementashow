@@ -1,4 +1,7 @@
-export type UserFisicoModel = UserFisicoArgs
+
+type RegisterPerson = { id: string}
+
+export type UserFisicoModel = UserFisicoArgs & RegisterPerson
 
 export interface UserFisicoArgs {
   primeiroNome: string | any;
