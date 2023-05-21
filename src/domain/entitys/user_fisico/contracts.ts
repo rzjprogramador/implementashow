@@ -2,12 +2,12 @@ export interface UserFisicoArgs {
   primeiroNome: string | any;
   sobrenome: string;
   email: string;
-  anoNascimento: number;
+  dataNascimento: DataNascimento;
   idade?: number;
   tipoUser: TipoUser;
   endereco: Endereco;
 }
-
+type DataNascimento = { dia: number, mes: number, ano: number}
 type TipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
 
 interface Endereco {

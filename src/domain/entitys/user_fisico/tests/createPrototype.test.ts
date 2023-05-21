@@ -1,11 +1,12 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { createPrototypeUserFisico } from "../createPrototype.ts";
-import { fakeListUserFisicoArgsOK } from "../../../../data/user_fisico/fake.ts";
+
+import { fakeListUserFisicoArgsOK } from "../../../../data/literals/user_fisico/fake.ts";
+import { generatorProtoUserFisico } from "../usecases/create/createPrototypeByArgs.ts";
 
 const Log = (d: any) => console.log(d);
 
-const sut = createPrototypeUserFisico;
+const sut = generatorProtoUserFisico;
 
 Deno.test("deve retornar a criacao do prototipo user_fisico  fakeOK", async () => {
   const input = fakeListUserFisicoArgsOK[0];
