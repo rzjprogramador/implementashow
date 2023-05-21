@@ -1,17 +1,14 @@
-import { modObjectsValueFN } from "../../../../../../global/imports/mod_deps.ts";
 import { UserFisicoArgs } from "../../contracts.ts";
 import { membersUserFisico } from "./members.ts";
 
-const { FistNamePerson } = modObjectsValueFN;
-
-export const generatorProtoUserFisico = async (a: UserFisicoArgs) => {
-  const prototypeEntity: UserFisicoArgs = await Object.create(
+export const generatorProtoUserFisico = (a: UserFisicoArgs) => {
+  const prototypeEntity: UserFisicoArgs = Object.create(
     membersUserFisico,
   );
 
   const { primeiroNome, sobrenome, email, dataNascimento, tipoUser } = a;
 
-  prototypeEntity.primeiroNome = await FistNamePerson(primeiroNome);
+  prototypeEntity.primeiroNome = primeiroNome;
   prototypeEntity.sobrenome = sobrenome;
   prototypeEntity.email = email;
   prototypeEntity.dataNascimento = {
@@ -33,5 +30,5 @@ export const generatorProtoUserFisico = async (a: UserFisicoArgs) => {
     },
   };
 
-  return await prototypeEntity;
+  return prototypeEntity;
 };
