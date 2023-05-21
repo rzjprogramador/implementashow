@@ -22,9 +22,7 @@ Deno.test("deve retornar a criacao do prototipo user_fisico  fakeOK", async () =
 
 function showFoo() {
   const input = fakeListUserFisicoArgsOK[0];
-  const actual = sut(input);
-
-  actual.then((d) => console.log(d));
+  console.log(sut(input));
 }
 showFoo();
 
