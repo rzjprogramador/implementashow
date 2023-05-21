@@ -1,3 +1,5 @@
+export type UserFisicoModel = UserFisicoArgs
+
 export interface UserFisicoArgs {
   primeiroNome: string | any;
   sobrenome: string;
