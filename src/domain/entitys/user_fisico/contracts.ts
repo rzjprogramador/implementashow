@@ -26,3 +26,8 @@ interface Cidade {
   nome: string;
   uf: string;
 }
+
+export interface UserFisicoRepository {
+  items?: UserFisicoModel[];
+  create: (m: UserFisicoModel) => Promise<UserFisicoModel>;
+}

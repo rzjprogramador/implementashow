@@ -6,12 +6,18 @@ import {
 import { modObjectsValueFN } from "../../../../../../../global/imports/mod_deps.ts";
 import { feedbacks } from "../../../../../../../global/literals/feedbacks.ts";
 import { UserFisicoArgs, UserFisicoModel } from "../../../contracts.ts";
+import { pipeCreateUserFisico } from "../pipe/index.ts";
+import { saveCreateUserFisico } from "../save/save.ts";
 
-const FirstNamePerson = modObjectsValueFN.FistNamePerson
+const FirstNamePerson = modObjectsValueFN.FistNamePerson;
 
-type ControllerCreateUserFisicoFN = (d: UserFisicoArgs) => Promise<HttpResponse<UserFisicoModel>>
+type ControllerCreateUserFisicoFN = (
+  d: UserFisicoArgs,
+) => Promise<HttpResponse<UserFisicoModel>>;
 
-export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (d) => {
+export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (
+  d,
+) => {
   const checkArgs: UserFisicoArgs = await {
     primeiroNome: await FirstNamePerson(d.primeiroNome),
     sobrenome: d.sobrenome,
@@ -19,7 +25,7 @@ export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (d
     dataNascimento: {
       dia: d.dataNascimento.dia,
       mes: d.dataNascimento.mes,
-      ano: d.dataNascimento.ano
+      ano: d.dataNascimento.ano,
     },
     tipoUser: d.tipoUser,
     endereco: {
@@ -27,12 +33,15 @@ export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (d
       longadouro: d.endereco.longadouro,
       numero: d.endereco.numero,
       complemento: d.endereco.complemento,
-      cidade: d.endereco.cidade,
-    }
-  }
+      cidade: {
+        nome: d.endereco.cidade.nome,
+        uf: d.endereco.cidade.uf,
+      },
+    },
+  };
 
-  const model: UserFisicoModel = { ...checkArgs, id: '1' };
+  const model: UserFisicoModel = await saveCreateUserFisico(checkArgs);
 
-  const feedBackOk = [ feedbacks.createOk, ];
+  const feedBackOk = [feedbacks.createOk];
   return await ok(model, feedBackOk);
 };
