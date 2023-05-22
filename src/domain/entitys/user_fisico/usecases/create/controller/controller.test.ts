@@ -1,7 +1,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { controllerCreateUserFisico } from "./controller.ts";
-import { fakeListUserFisicoArgsOK } from "../../../../../../data/literals/user_fisico/fake.ts";
+import { fakeListUserFisicoArgsOK } from "../../../../../../data/literals/user_fisico/fake/fake.ts";
 
 const sut = controllerCreateUserFisico;
 const inputOK = fakeListUserFisicoArgsOK[0];
