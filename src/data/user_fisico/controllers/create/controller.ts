@@ -1,6 +1,6 @@
 // deno-lint-ignore-file no-explicit-any
 
-import { HttpResponse, ok } from "../../../../../global/helpers/httpResponse.ts";
+import { HttpResponse, InfoController, ok } from "../../../../../global/helpers/httpResponse.ts";
 import { feedbacks } from "../../../../../global/literals/feedbacks.ts";
 import { UserFisicoArgs, UserFisicoModel } from "../../../../domain/entitys/user_fisico/contracts.ts";
 import { checkArgsUserFisico } from "../../../../domain/entitys/user_fisico/usecases/create/features/checkArgs.ts";
@@ -16,7 +16,10 @@ export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (
   const checkArgs: UserFisicoArgs = await checkArgsUserFisico(a)
 
   const model: UserFisicoModel = await saveCreateUserFisico(checkArgs);
+  const info: InfoController = {
+    feedback: feedbacks.createOk,
+    logs: ['todo_log1 - implementar logs']
+  }
 
-  const feedBackOk = [feedbacks.createOk];
-  return await ok(model, feedBackOk);
+  return await ok(model, info);
 };

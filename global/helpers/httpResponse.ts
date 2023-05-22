@@ -3,13 +3,21 @@
 export type HttpResponse<T = any> = {
   data: T;
   statusCode?: number;
-  info: string[];
+  info: InfoController;
 };
 
-export const ok = (d: any, infoList: string[]): HttpResponse => ({
+export interface InfoController {
+  feedback: string
+  logs: string[]
+}
+
+export const ok = (d: any, info: InfoController): HttpResponse => ({
   data: d,
   statusCode: 200,
-  info: infoList,
+  info: {
+    feedback: info.feedback,
+    logs: info.logs
+  },
 });
 
 
