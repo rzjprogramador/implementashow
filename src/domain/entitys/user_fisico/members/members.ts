@@ -1,5 +1,5 @@
-import { modDate } from "../../../../../../global/imports/mod_deps.ts";
-import { UserFisicoArgs } from "../../contracts.ts";
+import { modDate } from "../../../../../global/imports/mod_deps.ts";
+import { UserFisicoArgs } from "../contracts.ts";
 
 interface MembersUserFisico {
   showIdade: () => Promise<number>;

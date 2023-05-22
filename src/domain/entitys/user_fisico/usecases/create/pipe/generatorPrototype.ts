@@ -1,5 +1,5 @@
-import { UserFisicoArgs } from "../../contracts.ts";
-import { membersUserFisico } from "./members.ts";
+import { UserFisicoArgs } from "../../../contracts.ts";
+import { membersUserFisico } from "../../../members/members.ts";
 
 export const generatorProtoUserFisico = (a: UserFisicoArgs) => {
   const prototypeEntity: UserFisicoArgs = Object.create(
