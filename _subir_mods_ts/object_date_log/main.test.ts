@@ -1,32 +1,22 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { IObjectDateLog } from "./main.ts";
-import { modObjectDateCurrent } from "../../global/imports/mod_deps.ts";
+import { objectDateLog } from "./main.ts";
 
-const objectDateMock = () => {
-  const hoje = modObjectDateCurrent.dateNow;
+const sut = objectDateLog;
 
-  const log: IObjectDateLog = {
-    dia: '22',
-    mes: '05',
-    ano: '2023',
-    horario: `11:01`,
-  };
-  return log;
-};
+Deno.test("deve retornar os dados do [ objectDateLog ] iguais ao date real do sistema no momento.", () => {
+  const hoje = new Date();
 
-const sut = objectDateMock
-
-Deno.test("deve retornar objectDateMock", () => {
   const actual = sut();
-  const assertion = {
-    dia: '22',
-    mes: '05',
-    ano: '2023',
-    horario: `11:01`,
-  }
 
-  expect(actual).toEqual(assertion)
+  const assertion = {
+    dia: hoje.getDate().toString().padStart(2, "0"),
+    mes: String(hoje.getMonth() + 1).padStart(2, "0"),
+    ano: String(hoje.getFullYear()),
+    horario: String(`${hoje.getHours()}:${hoje.getMinutes()}`),
+  };
+
+  expect(actual).toEqual(assertion);
 });
 
 /* TESTER_CONSOLE ************************************* */
