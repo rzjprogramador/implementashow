@@ -1,13 +1,10 @@
 // deno-lint-ignore-file no-explicit-any
-import {
-  HttpResponse,
-  ok,
-} from "../../../../../../../global/helpers/httpResponse.ts";
-import { modObjectsValueFN } from "../../../../../../../global/imports/mod_deps.ts";
-import { feedbacks } from "../../../../../../../global/literals/feedbacks.ts";
-import { UserFisicoArgs, UserFisicoModel } from "../../../contracts.ts";
-import { pipeCreateUserFisico } from "../pipe/index.ts";
-import { saveCreateUserFisico } from "../save/save.ts";
+
+import { HttpResponse, ok } from "../../../../../global/helpers/httpResponse.ts";
+import { modObjectsValueFN } from "../../../../../global/imports/mod_deps.ts";
+import { feedbacks } from "../../../../../global/literals/feedbacks.ts";
+import { UserFisicoArgs, UserFisicoModel } from "../../../../domain/entitys/user_fisico/contracts.ts";
+import { saveCreateUserFisico } from "../../../../domain/entitys/user_fisico/usecases/create/save/save.ts";
 
 const FirstNamePerson = modObjectsValueFN.FistNamePerson;
 
