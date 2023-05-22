@@ -20,11 +20,19 @@ export const modObjectsValueFN = objectValuesFN;
 /*  *************************************************** */
 
 /* DATE PARA ANIVERSARIO *************************************************** */
-import { objectDateCurrent } from "../../_subir_mods_ts/objectDateCurrent/main.ts"
+import { objectDateCurrent } from "../../_subir_mods_ts/objectDateCurrent/main.ts";
 export const modObjectDateCurrent = objectDateCurrent;
 /* *************************************************** */
 
 /* ObjectDate *************************************************** */
 import { objectDateLog } from "../../_subir_mods_ts/object_date_log/main.ts";
+
 export const modObjectDateLog = objectDateLog;
 /* *************************************************** */
+
+/* makeLogUser *************************************************** */
+import { makeLogUser } from "../../_subir_mods_ts/objectLogs/logUser/makeLogUser.ts";
+export const modMakeLogUser = makeLogUser;
+/*  *************************************************** */
+
+/*  *************************************************** */

@@ -1,4 +1,4 @@
-import { modObjectDateLog } from "../../../../global/imports/mod_deps.ts";
+import { modObjectDateLog } from "../../../global/imports/mod_deps.ts";
 import { LogUser } from "./index.ts";
 
 export const makeLogUser = (atividade: string, idAuthor: string) => {

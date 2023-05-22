@@ -5,7 +5,7 @@ import {
   InfoController,
   ok,
 } from "../../../../../global/helpers/httpResponse.ts";
-import { modObjectDateLog } from "../../../../../global/imports/mod_deps.ts";
+import { modMakeLogUser } from "../../../../../global/imports/mod_deps.ts";
 import { feedbacks } from "../../../../../global/literals/feedbacks.ts";
 import {
   UserFisicoArgs,
@@ -13,8 +13,6 @@ import {
 } from "../../../../domain/entitys/user_fisico/contracts.ts";
 import { checkArgsUserFisico } from "../../../../domain/entitys/user_fisico/usecases/create/features/checkArgs.ts";
 import { saveCreateUserFisico } from "../../../../domain/entitys/user_fisico/usecases/create/save/save.ts";
-import { LogUser } from "../../../finds/logs/index.ts";
-import { makeLogUser } from "../../../finds/logs/makeLogUser.ts";
 
 type ControllerCreateUserFisicoFN = (
   a: UserFisicoArgs,
@@ -27,7 +25,7 @@ export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (
 
   const model: UserFisicoModel = await saveCreateUserFisico(checkArgs);
 
-  const createLog = makeLogUser('createUserFisico', model?.id)
+  const createLog = modMakeLogUser('createUserFisico', model?.id)
 
   const info: InfoController = {
     feedback: feedbacks.createUserFisicoOk(),

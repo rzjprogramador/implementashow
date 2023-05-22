@@ -1,7 +1,6 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { ILogPerson } from "../../../domain/entitys/logs/log_person/index.ts";
-import { LogUser } from "./index.ts";
-import { fakeLogUserOK } from "../../../../global/literals/fakes/fake_logs/fakeLogs.ts";
+import { ILogPerson, LogUser } from "./index.ts";
+import { fakeLogUserOK } from "../../../global/literals/fakes/fake_logs/fakeLogs.ts";
 
 const input: ILogPerson = {
   atividade: fakeLogUserOK.atividade,
