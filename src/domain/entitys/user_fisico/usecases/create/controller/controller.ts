@@ -3,10 +3,36 @@ import {
   HttpResponse,
   ok,
 } from "../../../../../../../global/helpers/httpResponse.ts";
+import { modObjectsValueFN } from "../../../../../../../global/imports/mod_deps.ts";
+import { feedbacks } from "../../../../../../../global/literals/feedbacks.ts";
 import { UserFisicoArgs, UserFisicoModel } from "../../../contracts.ts";
 
-export const controllerCreateUserFisico = (d: UserFisicoArgs): HttpResponse<UserFisicoModel> => {
-  const final: UserFisicoModel = { ...d, id: '1'};
-  const feedBackOk = ["criado com sucesso"];
-  return ok(final, feedBackOk);
+const FirstNamePerson = modObjectsValueFN.FistNamePerson
+
+type ControllerCreateUserFisicoFN = (d: UserFisicoArgs) => Promise<HttpResponse<UserFisicoModel>>
+
+export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (d) => {
+  const checkArgs: UserFisicoArgs = await {
+    primeiroNome: await FirstNamePerson(d.primeiroNome),
+    sobrenome: d.sobrenome,
+    email: d.email,
+    dataNascimento: {
+      dia: d.dataNascimento.dia,
+      mes: d.dataNascimento.mes,
+      ano: d.dataNascimento.ano
+    },
+    tipoUser: d.tipoUser,
+    endereco: {
+      cep: d.endereco.cep,
+      longadouro: d.endereco.longadouro,
+      numero: d.endereco.numero,
+      complemento: d.endereco.complemento,
+      cidade: d.endereco.cidade,
+    }
+  }
+
+  const model: UserFisicoModel = { ...checkArgs, id: '1' };
+
+  const feedBackOk = [ feedbacks.createOk, ];
+  return await ok(model, feedBackOk);
 };
