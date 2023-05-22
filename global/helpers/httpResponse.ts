@@ -8,7 +8,7 @@ export type HttpResponse<T = any> = {
 
 export interface InfoController {
   feedback: string
-  logs: string[]
+  logRegistrado: boolean
 }
 
 export const ok = (d: any, info: InfoController): HttpResponse => ({
@@ -16,7 +16,7 @@ export const ok = (d: any, info: InfoController): HttpResponse => ({
   statusCode: 200,
   info: {
     feedback: info.feedback,
-    logs: info.logs
+    logRegistrado: info.logRegistrado
   },
 });
 

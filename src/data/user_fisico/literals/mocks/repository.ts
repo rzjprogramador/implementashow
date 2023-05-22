@@ -1,4 +1,4 @@
-import { UserFisicoModel, UserFisicoRepository } from "../../../domain/entitys/user_fisico/contracts.ts";
+import { UserFisicoModel, UserFisicoRepository } from "../../../../domain/entitys/user_fisico/contracts.ts";
 
 export const userFisicoRepositoryMock: UserFisicoRepository = {
   items: [],
