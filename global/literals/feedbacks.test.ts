@@ -6,4 +6,5 @@ const sut = feedbacks;
 
 Deno.test("deve retornar os feedbacks corretamente", () => {
   expect(sut.createOk).toBe("criado com sucesso");
+  expect(sut.createUserFisicoOk()).toBe("Usuario Fisico criado com sucesso");
 });

@@ -17,7 +17,7 @@ export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (
 
   const model: UserFisicoModel = await saveCreateUserFisico(checkArgs);
   const info: InfoController = {
-    feedback: feedbacks.createOk,
+    feedback: feedbacks.createUserFisicoOk(),
     logs: ['todo_log1 - implementar logs']
   }
 
