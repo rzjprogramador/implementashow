@@ -1,4 +1,4 @@
-import { modDate } from "../../../../../global/imports/mod_deps.ts";
+import { modObjectDateCurrent } from "../../../../../global/imports/mod_deps.ts";
 import { UserFisicoArgs } from "../contracts.ts";
 
 interface MembersUserFisico {
@@ -7,6 +7,6 @@ interface MembersUserFisico {
 
 export const membersUserFisico: MembersUserFisico = {
   async showIdade(this: UserFisicoArgs) {
-    return await modDate.currentYear() - this.idade!;
+    return await modObjectDateCurrent.currentYear() - this.idade!;
   },
 };
