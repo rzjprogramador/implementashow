@@ -1,12 +1,19 @@
+// deno-lint-ignore-file no-explicit-any
 import { objectDateLogMD } from "../../../global/imports/mod_deps.ts";
-import { repositoryInUselogUser } from "./controller.ts";
+import { ArgsLogPerson, ILogPerson } from "./contracts.ts";
 
-export const makeLogUser = (atividade: string, idAuthor: string) => {
-  const inputLog = {
-    atividade: atividade,
-    author: idAuthor,
+type MakeLogUserFN = (a: ArgsLogPerson)=> ILogPerson
+
+export const makeLogUser: MakeLogUserFN = (a) => {
+  const inputLog: ILogPerson = {
+    atividade: a.atividade,
+    author: a. author,
     data: objectDateLogMD(),
+    statusModificacoes: {
+      anterior: a.statusModificacoes?.anterior,
+      alteradoPara: a.statusModificacoes?.alteradoPara
+    }
   };
-  const createLog = repositoryInUselogUser.production.create(inputLog);
-  return !!createLog;
+  // const createLog = repositoryInUselogUser.production.create(inputLog);
+  return inputLog;
 };

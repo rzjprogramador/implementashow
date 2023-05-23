@@ -7,7 +7,7 @@ export const logUserRepositoryProduction: LogUserType = {
   create(props: ILogPerson) {
     if (props) {
       this?.items?.push(props)!;
-      return true;
+      return props;
     } else {
       return false;
     }
