@@ -1,15 +1,15 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { fakeLogUserOK } from "../../../global/literals/fakes/fake_logs/fakeLogs.ts";
-import { ILogPerson, LogUserType } from "./contracts.ts";
+import { LogPersonModel, LogUserType } from "./contracts.ts";
 import { makeLogUser } from "./main.ts";
 
-const input: ILogPerson = fakeLogUserOK;
+const input: LogPersonModel = fakeLogUserOK;
 
 // Mock
 export const logUserRepositoryMock: LogUserType = {
   items: [],
 
-  create(props: ILogPerson) {
+  create(props: LogPersonModel) {
     if (props) {
       this?.items?.push(props)!;
       return true;
@@ -30,7 +30,7 @@ const sutRepositoryMock = logUserRepositoryMock;
 const beforeTests = () => sutRepositoryMock.items = [];
 
 Deno.test("...", () => {
-  const actual = sut(input);
+  // const actual = sut(input);
   // const assertion = true;
 
   expect(true);
@@ -82,8 +82,8 @@ Deno.test("deve retornar a quantidade de items na colecao de LogUser", () => {
 // show_RepoMockLogUser();
 
 function show_SUT() {
-  const actual = sut(input)
-  console.log(actual)
+  const actual = sut(input);
+  console.log(actual);
 
   // Limpar os items do LogUser
   beforeTests();

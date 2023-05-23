@@ -1,21 +1,21 @@
 import { IObjectDateLogMD } from "../../../global/imports/mod_deps.ts";
 
-export type ILogPerson = ArgsLogPerson
+export type LogPersonModel = ArgsLogPerson;
 
 export interface ArgsLogPerson {
   atividade: string;
   author?: string;
   data?: IObjectDateLogMD;
-  statusModificacoes?: StatusModificacoes
+  statusModificacoes?: StatusModificacoes;
 }
 
 export interface StatusModificacoes {
-  anterior: any
-  alteradoPara: any
+  anterior: any;
+  alteradoPara: any;
 }
 
 export interface LogUserType {
-  items?: ILogPerson[];
-  create: (props: ILogPerson) => ILogPerson | boolean;
-  list: () => ILogPerson[];
+  items?: LogPersonModel[];
+  create: (props: LogPersonModel) => LogPersonModel | boolean;
+  list: () => LogPersonModel[];
 }
