@@ -1,38 +1,17 @@
-/* Registers *************************************************** */
-export type {
-  DatesType,
-  IdentifiersType,
-  ImportRegistersType,
-} from "https://raw.githubusercontent.com/rzjprogramador/modules_typescript/v1.0.1_register_aparticipant/registers_participant/object_use_in_production/registers/registers.ts";
-
-import { importRegisters } from "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.1_register_aparticipant/registers_participant/object_use_in_production/registers/registers.ts";
-
-export const modRegisters = {
-  ...importRegisters.identifiers,
-  ...importRegisters.dates,
-};
-/*  *************************************************** */
-
 /* ObjectValuesFN *************************************************** */
-import { objectValuesFN } from "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/main.ts";
+export { objectValuesFN as objectsValueMD } from "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/main.ts";
 
-export const modObjectsValueFN = objectValuesFN;
-/*  *************************************************** */
+/* Modules
+ *************************************************** */
+export { objectDateCurrent as objectDateCurrentMD } from "../../_subir_mods_ts/objectDateCurrent/main.ts";
 
-/* DATE PARA ANIVERSARIO *************************************************** */
-import { objectDateCurrent } from "../../_subir_mods_ts/objectDateCurrent/main.ts";
-export const modObjectDateCurrent = objectDateCurrent;
-/* *************************************************** */
+export { objectDateLog as objectDateLogMD } from "../../_subir_mods_ts/object_date_log/main.ts";
 
-/* ObjectDate *************************************************** */
-import { objectDateLog } from "../../_subir_mods_ts/object_date_log/main.ts";
-
-export const modObjectDateLog = objectDateLog;
-/* *************************************************** */
-
-/* makeLogUser *************************************************** */
-import { makeLogUser } from "../../_subir_mods_ts/objectLogs/logUser/makeLogUser.ts";
-export const modMakeLogUser = makeLogUser;
-/*  *************************************************** */
+export { makeLogUser as makeLogUserMD } from "../../_subir_mods_ts/objectLogs/logUser/makeLogUser.ts";
 
 /*  *************************************************** */
+
+// export const objectDateLogMD = objectDateLog;
+// export const objectDateCurrentMD = objectDateCurrent;
+// export const objectsValueMD = objectValuesFN;
+// export const modMakeLogUser = makeLogUser;

@@ -5,7 +5,7 @@ import {
   InfoController,
   ok,
 } from "../../../../../global/helpers/httpResponse.ts";
-import { modMakeLogUser } from "../../../../../global/imports/mod_deps.ts";
+import { makeLogUserMD } from "../../../../../global/imports/mod_deps.ts";
 import { feedbacks } from "../../../../../global/literals/feedbacks.ts";
 import {
   UserFisicoArgs,
@@ -25,7 +25,7 @@ export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (
 
   const model: UserFisicoModel = await saveCreateUserFisico(checkArgs);
 
-  const createLog = modMakeLogUser('createUserFisico', model?.id)
+  const createLog = makeLogUserMD('createUserFisico', model?.id)
 
   const info: InfoController = {
     feedback: feedbacks.createUserFisicoOk(),

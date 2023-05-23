@@ -1,7 +1,7 @@
-import { modObjectsValueFN } from "../../../../../../../global/imports/mod_deps.ts";
+import { objectsValueMD } from "../../../../../../../global/imports/mod_deps.ts";
 import { UserFisicoArgs } from "../../../contracts.ts";
 
-const FirstNamePerson = modObjectsValueFN.FistNamePerson;
+const FirstNamePerson = objectsValueMD.FistNamePerson;
 
 export const checkArgsUserFisico = async (a: UserFisicoArgs) => {
   const args = await {
