@@ -25,12 +25,12 @@ export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (
 
   const model: UserFisicoModel = await saveCreateUserFisico(checkArgs);
 
-  const createLog = makeLogUserMD('createUserFisico', model?.id)
+  // const createLog = makeLogUserMD('createUserFisico', model?.id)
 
-  const info: InfoController = {
-    feedback: feedbacks.createUserFisicoOk(),
-    logRegistrado: !!createLog
-  };
+  // const info: InfoController = {
+  //   feedback: feedbacks.createUserFisicoOk(),
+  //   logRegistrado: !!createLog
+  // };
 
-  return await ok(model, info);
+  return await ok(model);
 };

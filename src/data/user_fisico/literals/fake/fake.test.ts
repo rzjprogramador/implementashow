@@ -1,6 +1,7 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import {
+  fakeIDUserFisico,
   fakeListUserFisicoArgsFAIL,
   fakeListUserFisicoArgsOK,
 } from "./fake.ts";
@@ -11,6 +12,8 @@ const makeSut = () => {
     sutFAIL: fakeListUserFisicoArgsFAIL,
   };
 };
+
+const sutID = fakeIDUserFisico;
 
 Deno.test("[ fakeOK_one ]deve retornar as props com os valores  corretos utilizados no fake", () => {
   const { sutOk } = makeSut();
@@ -102,6 +105,11 @@ Deno.test("[ fakeFAIL_two ]deve retornar as props com os valores  corretos utili
       uf: "SP",
     },
   });
+});
+
+Deno.test("deve retornar os valores corretos dos fakeID UserFisico", () => {
+  expect(sutID.one).toEqual("1");
+  expect(sutID.two).toEqual("2");
 });
 
 /* TESTER_CONSOLE ************************************* */

@@ -1,5 +1,12 @@
 import { UserFisicoArgs } from "../../../../domain/entitys/user_fisico/contracts.ts";
 
+type FakeIDUserFisico = { one: string, two: string }
+
+export const fakeIDUserFisico: FakeIDUserFisico = {
+  one: '1',
+  two: '2'
+}
+
 export const fakeListUserFisicoArgsOK: UserFisicoArgs[] = [
   {
     primeiroNome: "onename",

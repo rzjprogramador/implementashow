@@ -6,7 +6,7 @@ import { makeLogUser } from "./main.ts";
 const input: LogPersonModel = fakeLogUserOK;
 
 // Mock
-export const logUserRepositoryMock: LogUserType = {
+export const repositoryLogUserMock: LogUserType = {
   items: [],
 
   create(props: LogPersonModel) {
@@ -26,8 +26,7 @@ export const logUserRepositoryMock: LogUserType = {
 // SUT
 const sut = makeLogUser;
 
-const sutRepositoryMock = logUserRepositoryMock;
-const beforeTests = () => sutRepositoryMock.items = [];
+const beforeTests = () => repositoryLogUserMock.items = [];
 
 Deno.test("...", () => {
   // const actual = sut(input);
@@ -38,7 +37,7 @@ Deno.test("...", () => {
 });
 
 Deno.test("testando repo mock", () => {
-  const actual = sutRepositoryMock.create(input);
+  const actual = repositoryLogUserMock.create(input);
   const assertion = true;
 
   expect(actual).toEqual(assertion);
@@ -61,8 +60,8 @@ Deno.test("testando repo mock", () => {
 Deno.test("deve retornar a quantidade de items na colecao de LogUser", () => {
   // necessario para zerar o criado no controller
   beforeTests();
-  sutRepositoryMock.create(input);
-  const actual = sutRepositoryMock?.items?.length;
+  repositoryLogUserMock.create(input);
+  const actual = repositoryLogUserMock?.items?.length;
   const assertion = 1;
 
   expect(actual).toEqual(assertion);
