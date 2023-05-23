@@ -1,5 +1,5 @@
 import { objectDateLogMD } from "../../../global/imports/mod_deps.ts";
-import { LogUser } from "./index.ts";
+import { repositoryInUselogUser } from "./controller.ts";
 
 export const makeLogUser = (atividade: string, idAuthor: string) => {
   const inputLog = {
@@ -7,6 +7,6 @@ export const makeLogUser = (atividade: string, idAuthor: string) => {
     author: idAuthor,
     data: objectDateLogMD(),
   };
-  const createLog = LogUser.create(inputLog);
+  const createLog = repositoryInUselogUser.production.create(inputLog);
   return !!createLog;
 };

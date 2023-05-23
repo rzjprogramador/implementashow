@@ -1,6 +1,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { ILogPerson, LogUser } from "./index.ts";
 import { fakeLogUserOK } from "../../../global/literals/fakes/fake_logs/fakeLogs.ts";
+import {  logUserRepositoryMock } from "./mock/repository.ts";
+import { ILogPerson } from "./contracts.ts";
 
 const input: ILogPerson = {
   atividade: fakeLogUserOK.atividade,
@@ -8,7 +9,7 @@ const input: ILogPerson = {
   data: fakeLogUserOK.data,
 };
 
-const sut = LogUser;
+const sut = logUserRepositoryMock;
 const runSuites_CleanItemsLogUser = () => sut.items = [];
 
 Deno.test("deve retornar  boleano de LogUser gerado", () => {
@@ -34,7 +35,7 @@ Deno.test("deve retornar  boleano de LogUser gerado", () => {
 
 Deno.test("deve retornar a quantidade de items na colecao de LogUser", () => {
   // necessario para zerar o criado no controller
-  runSuites_CleanItemsLogUser()
+  runSuites_CleanItemsLogUser();
   sut.create(input);
   const actual = sut?.items?.length;
   const assertion = 1;
@@ -51,7 +52,7 @@ function show_LogUser() {
   console.log(sut?.items?.length);
 
   // Limpar os items do LogUser
-  runSuites_CleanItemsLogUser()
+  runSuites_CleanItemsLogUser();
 }
 show_LogUser();
 

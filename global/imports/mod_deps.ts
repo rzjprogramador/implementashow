@@ -6,8 +6,9 @@ export { objectValuesFN as objectsValueMD } from "https://raw.githubusercontent.
 export { objectDateCurrent as objectDateCurrentMD } from "../../_subir_mods_ts/objectDateCurrent/main.ts";
 
 export { objectDateLog as objectDateLogMD } from "../../_subir_mods_ts/object_date_log/main.ts";
+export type { IObjectDateLog as IObjectDateLogMD } from "../../_subir_mods_ts/object_date_log/main.ts";
 
-export { makeLogUser as makeLogUserMD } from "../../_subir_mods_ts/objectLogs/logUser/makeLogUser.ts";
+export { makeLogUser as makeLogUserMD } from "../../_subir_mods_ts/objectLogs/logUser/main.ts";
 
 /*  *************************************************** */
 
