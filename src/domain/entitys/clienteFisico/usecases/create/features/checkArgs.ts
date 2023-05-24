@@ -1,7 +1,7 @@
-import { objectValuesFN } from "../../../../../../data/unique/controllerApp/global/imports/mod_deps.ts";
-import { ClienteFisicoArgs } from "../../../contracts.ts";
+import { objectValuesFN } from '../../../../../../data/unique/controllerApp/global/imports/mod_deps.ts'
+import { ClienteFisicoArgs } from '../../../contracts.ts'
 
-const FirstNamePerson = objectValuesFN.FistNamePerson;
+const FirstNamePerson = objectValuesFN.FistNamePerson
 
 export const checkArgsClienteFisico = async (a: ClienteFisicoArgs) => {
   const args = await {
@@ -24,6 +24,6 @@ export const checkArgsClienteFisico = async (a: ClienteFisicoArgs) => {
         uf: a.endereco.cidade.uf,
       },
     },
-  };
-  return await args;
-};
+  }
+  return await args
+}

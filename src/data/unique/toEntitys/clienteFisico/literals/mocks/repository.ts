@@ -1,4 +1,4 @@
-import { ClienteFisicoRepository, ClienteFisicoModel } from "../../../../../domain/entitys/clienteFisico/contracts.ts";
+import { ClienteFisicoModel, ClienteFisicoRepository } from "../../../../../../domain/entitys/clienteFisico/contracts.ts";
 
 export const clienteFisicoRepositoryMock: Partial<ClienteFisicoRepository> = {
   items: [],

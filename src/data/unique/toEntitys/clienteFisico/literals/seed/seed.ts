@@ -1,7 +1,7 @@
-import { ClienteFisicoModel } from "../../../../../domain/entitys/clienteFisico/contracts.ts";
-import { fakeIDClienteFisico, fakeListClienteFisicoArgsOK } from "../fake/fake.ts";
+import { ClienteFisicoModel } from '../../../../../../domain/entitys/clienteFisico/contracts.ts'
+import { fakeIDClienteFisico, fakeListClienteFisicoArgsOK } from '../fake/fake.ts'
 
-type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel };
+type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel }
 
 export const seedClienteFisico: SeedClienteFisico = {
   one: {
@@ -49,6 +49,6 @@ export const seedClienteFisico: SeedClienteFisico = {
       },
     },
   },
-};
+}
 
-console.log(seedClienteFisico);
+console.log(seedClienteFisico)
