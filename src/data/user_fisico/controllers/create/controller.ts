@@ -1,18 +1,12 @@
 // deno-lint-ignore-file no-explicit-any
 
 import {
-  HttpResponse,
-  InfoController,
-  ok,
-} from "../../../../../global/helpers/httpResponse.ts";
-import { makeLogUserMD } from "../../../../../global/imports/mod_deps.ts";
-import { feedbacks } from "../../../../../global/literals/feedbacks.ts";
-import {
   UserFisicoArgs,
   UserFisicoModel,
 } from "../../../../domain/entitys/user_fisico/contracts.ts";
 import { checkArgsUserFisico } from "../../../../domain/entitys/user_fisico/usecases/create/features/checkArgs.ts";
 import { saveCreateUserFisico } from "../../../../domain/entitys/user_fisico/usecases/create/save/save.ts";
+import { HttpResponse, ok } from "../../../../domain/helpers/httpResponse.ts";
 
 type ControllerCreateUserFisicoFN = (
   a: UserFisicoArgs,
@@ -25,7 +19,7 @@ export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (
 
   const model: UserFisicoModel = await saveCreateUserFisico(checkArgs);
 
-  // const createLog = makeLogUserMD('createUserFisico', model?.id)
+  // const createLog = makeLogUser('createUserFisico', model?.id)
 
   // const info: InfoController = {
   //   feedback: feedbacks.createUserFisicoOk(),

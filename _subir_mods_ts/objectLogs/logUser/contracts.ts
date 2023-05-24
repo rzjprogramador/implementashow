@@ -1,11 +1,11 @@
-import { IObjectDateLogMD } from "../../../global/imports/mod_deps.ts";
+import { IObjectDateLog } from "../../object_date_log/main.ts";
 
 export type LogPersonModel = ArgsLogPerson;
 
 export interface ArgsLogPerson {
   atividade: string;
   author?: string;
-  data?: IObjectDateLogMD;
+  data?: IObjectDateLog;
   statusModificacoes?: StatusModificacoes;
 }
 

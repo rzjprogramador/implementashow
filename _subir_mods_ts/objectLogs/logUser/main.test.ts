@@ -1,7 +1,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { fakeLogUserOK } from "../../../global/literals/fakes/fake_logs/fakeLogs.ts";
 import { LogPersonModel, LogUserType } from "./contracts.ts";
-import { makeLogUser } from "./main.ts";
+import { createLogUser } from "./main.ts";
+import { fakeLogUserOK } from "../../../src/data/unique/literals/fakes/fake_logs/fakeLogs.ts";
 
 const input: LogPersonModel = fakeLogUserOK;
 
@@ -24,7 +24,7 @@ export const repositoryLogUserMock: LogUserType = {
 };
 
 // SUT
-const sut = makeLogUser;
+const sut = createLogUser;
 
 const beforeTests = () => repositoryLogUserMock.items = [];
 

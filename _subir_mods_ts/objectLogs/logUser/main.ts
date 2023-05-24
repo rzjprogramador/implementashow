@@ -1,14 +1,14 @@
 // deno-lint-ignore-file no-explicit-any
-import { objectDateLogMD } from "../../../global/imports/mod_deps.ts";
+import { objectDateLog } from "../../object_date_log/main.ts";
 import { ArgsLogPerson, LogPersonModel } from "./contracts.ts";
 
 type MakeLogUserFN = (a: ArgsLogPerson) => LogPersonModel;
 
-export const makeLogUser: MakeLogUserFN = (a) => {
+export const createLogUser: MakeLogUserFN = (a) => {
   const inputLog: LogPersonModel = {
     atividade: a.atividade,
     author: a.author,
-    data: objectDateLogMD(),
+    data: objectDateLog(),
     statusModificacoes: {
       anterior: a.statusModificacoes?.anterior,
       alteradoPara: a.statusModificacoes?.alteradoPara,
