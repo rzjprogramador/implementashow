@@ -1,9 +1,9 @@
-import { UserFisicoModel, UserFisicoRepository } from "../../../../domain/entitys/user_fisico/contracts.ts";
+import { ClienteFisicoRepository, ClienteFisicoModel } from "../../../../../domain/entitys/clienteFisico/contracts.ts";
 
-export const userFisicoRepositoryMock: UserFisicoRepository = {
+export const clienteFisicoRepositoryMock: Partial<ClienteFisicoRepository> = {
   items: [],
 
-  async create(m: UserFisicoModel) {
+  async create(m: ClienteFisicoModel) {
     await this?.items?.push(m);
     return await m;
   },

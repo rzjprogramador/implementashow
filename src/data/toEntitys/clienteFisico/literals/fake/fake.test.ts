@@ -107,7 +107,7 @@ Deno.test("[ fakeFAIL_two ]deve retornar as props com os valores  corretos utili
   });
 });
 
-Deno.test("deve retornar os valores corretos dos fakeID UserFisico", () => {
+Deno.test("deve retornar os valores corretos dos fakeID ClienteFisico", () => {
   expect(sutID.one).toEqual("1");
   expect(sutID.two).toEqual("2");
 });

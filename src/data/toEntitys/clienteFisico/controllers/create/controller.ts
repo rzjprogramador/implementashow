@@ -9,23 +9,24 @@ import {
   ok,
 } from "../../../../../domain/helpers/httpResponse.ts";
 
-type ControllerCreateUserFisicoFN = (
+type ControllerCreateClienteFisico = (
   a: ClienteFisicoArgs,
 ) => Promise<HttpResponse<ClienteFisicoModel>>;
 
-export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (
-  a,
-) => {
-  const checkArgs: ClienteFisicoArgs = await checkArgsClienteFisico(a);
+export const controllerCreateClienteFisico: ControllerCreateClienteFisico =
+  async (
+    a,
+  ) => {
+    const checkArgs: ClienteFisicoArgs = await checkArgsClienteFisico(a);
 
-  const model: ClienteFisicoModel = await saveCreateClienteFisico(checkArgs);
+    const model: ClienteFisicoModel = await saveCreateClienteFisico(checkArgs);
 
-  // const createLog = makeLogUser('createUserFisico', model?.id)
+    // const createLog = makeLogUser('createClienteFisico', model?.id)
 
-  // const info: InfoController = {
-  //   feedback: feedbacks.createUserFisicoOk(),
-  //   logRegistrado: !!createLog
-  // };
+    // const info: InfoController = {
+    //   feedback: feedbacks.createClienteFisicoOk(),
+    //   logRegistrado: !!createLog
+    // };
 
-  return await ok(model);
-};
+    return await ok(model);
+  };

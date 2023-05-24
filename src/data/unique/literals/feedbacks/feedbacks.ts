@@ -1,13 +1,12 @@
-
 interface Feedbacks {
-  createOk: string
-  createUserFisicoOk: () => string
+  createOk: string;
+  createClienteFisicoOk: () => string;
 }
 
 export const feedbacks: Feedbacks = {
-  createOk: 'criado com sucesso',
+  createOk: "criado com sucesso",
 
-  createUserFisicoOk() {
-    return `Usuario Fisico ${this.createOk}`
-  }
-}
+  createClienteFisicoOk() {
+    return `Usuario Fisico ${this.createOk}`;
+  },
+};
