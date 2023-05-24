@@ -1,4 +1,4 @@
-import { objectDateCurrent } from "../../../../../_subir_mods_ts/objectDateCurrent/main.ts";
+import { objectDateCurrent } from "../../../../../_subir_mods_ts/dateCurrent/main.ts";
 import { UserFisicoArgs } from "../contracts.ts";
 
 interface MembersUserFisico {

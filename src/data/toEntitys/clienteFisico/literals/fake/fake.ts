@@ -1,4 +1,4 @@
-import { UserFisicoArgs } from "../../../../domain/entitys/user_fisico/contracts.ts";
+import { UserFisicoArgs } from "../../../../../domain/entitys/clienteFisico/contracts.ts";
 
 type FakeIDUserFisico = { one: string, two: string }
 

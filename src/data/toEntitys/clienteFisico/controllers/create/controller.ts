@@ -1,12 +1,7 @@
-// deno-lint-ignore-file no-explicit-any
-
-import {
-  UserFisicoArgs,
-  UserFisicoModel,
-} from "../../../../domain/entitys/user_fisico/contracts.ts";
-import { checkArgsUserFisico } from "../../../../domain/entitys/user_fisico/usecases/create/features/checkArgs.ts";
-import { saveCreateUserFisico } from "../../../../domain/entitys/user_fisico/usecases/create/save/save.ts";
-import { HttpResponse, ok } from "../../../../domain/helpers/httpResponse.ts";
+import { UserFisicoArgs, UserFisicoModel } from "../../../../../domain/entitys/clienteFisico/contracts.ts";
+import { checkArgsUserFisico } from "../../../../../domain/entitys/clienteFisico/usecases/create/features/checkArgs.ts";
+import { saveCreateUserFisico } from "../../../../../domain/entitys/clienteFisico/usecases/create/save/save.ts";
+import { HttpResponse, ok } from "../../../../../domain/helpers/httpResponse.ts";
 
 type ControllerCreateUserFisicoFN = (
   a: UserFisicoArgs,

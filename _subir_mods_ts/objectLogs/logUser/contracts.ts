@@ -1,4 +1,4 @@
-import { IObjectDateLog } from "../../object_date_log/main.ts";
+import { IObjectDateLog } from "../../dateObject/main.ts";
 
 export type LogPersonModel = ArgsLogPerson;
 

@@ -1,4 +1,4 @@
-import { UserFisicoArgs, UserFisicoModel } from "../../../contracts.ts";
+import { UserFisicoArgs } from "../../../contracts.ts";
 import { repositoryInUse } from "../../../variables/variables.ts";
 import { pipeCreateUserFisico } from "../pipe/index.ts";
 

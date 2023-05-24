@@ -1,5 +1,4 @@
-// deno-lint-ignore-file no-explicit-any
-import { objectDateLog } from "../../object_date_log/main.ts";
+import { objectDateLog } from "../../dateObject/main.ts";
 import { ArgsLogPerson, LogPersonModel } from "./contracts.ts";
 
 type MakeLogUserFN = (a: ArgsLogPerson) => LogPersonModel;

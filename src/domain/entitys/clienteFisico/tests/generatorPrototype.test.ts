@@ -2,7 +2,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { generatorProtoUserFisico } from "../usecases/create/pipe/generatorPrototype.ts";
-import { fakeListUserFisicoArgsOK } from "../../../../data/user_fisico/literals/fake/fake.ts";
+import { fakeListUserFisicoArgsOK } from "../../../../data/toEntitys/clienteFisico/literals/fake/fake.ts";
 
 const Log = (d: any) => console.log(d);
 
