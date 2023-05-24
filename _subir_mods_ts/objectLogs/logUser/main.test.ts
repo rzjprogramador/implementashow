@@ -1,7 +1,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { LogPersonModel, LogUserType } from "./contracts.ts";
 import { createLogUser } from "./main.ts";
-import { fakeLogUserOK } from "../../../src/data/unique/app/literals/fakes/fake_logs/fakeLogs.ts";
+import { fakeLogUserOK } from "../../../src/data/unique/controllerApp/global/literals/fakes/fake_logs/fakeLogs.ts";
 
 const input: LogPersonModel = fakeLogUserOK;
 

@@ -1,4 +1,4 @@
-import { objectValuesFN } from "../../../../../../data/unique/app/imports/mod_deps.ts";
+import { objectValuesFN } from "../../../../../../data/unique/controllerApp/global/imports/mod_deps.ts";
 import { ClienteFisicoArgs } from "../../../contracts.ts";
 
 const FirstNamePerson = objectValuesFN.FistNamePerson;
