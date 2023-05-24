@@ -1,10 +1,6 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import {
-  fakeIDClienteFisico,
-  fakeListClienteFisicoArgsFAIL,
-  fakeListClienteFisicoArgsOK,
-} from "../../../../../toEntitys/clienteFisico/literals/fake/fake.ts";
+import { fakeIDClienteFisico, fakeListClienteFisicoArgsFAIL, fakeListClienteFisicoArgsOK } from "./fake.ts";
 
 const makeSut = () => {
   return {
