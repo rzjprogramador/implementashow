@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 import { IObjectDateLog } from "../../dateObject/main.ts";
 
 export type LogPersonModel = ArgsLogPerson;
