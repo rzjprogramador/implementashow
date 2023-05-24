@@ -1,12 +1,12 @@
 import { objectDateCurrent } from "../../../../../_subir_mods_ts/dateCurrent/main.ts";
-import { UserFisicoArgs } from "../contracts.ts";
+import { ClienteFisicoArgs } from "../contracts.ts";
 
 interface MembersUserFisico {
   showIdade: () => Promise<number>;
 }
 
-export const membersUserFisico: MembersUserFisico = {
-  async showIdade(this: UserFisicoArgs) {
+export const membersClienteFisico: MembersUserFisico = {
+  async showIdade(this: ClienteFisicoArgs) {
     return await objectDateCurrent.currentYear() - this.idade!;
   },
 };

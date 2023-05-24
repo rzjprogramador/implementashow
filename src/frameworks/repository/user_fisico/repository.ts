@@ -1,10 +1,12 @@
-import { UserFisicoModel, UserFisicoRepository } from "../../../domain/entitys/clienteFisico/contracts.ts";
+import {
+  ClienteFisicoModel,
+  ClienteFisicoRepository,
+} from "../../../domain/entitys/clienteFisico/contracts.ts";
 
-
-export const userFisicoRepositoryProduction: UserFisicoRepository = {
+export const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   items: [],
 
-  async create(m: UserFisicoModel) {
+  async create(m: ClienteFisicoModel) {
     await this?.items?.push(m);
     return await m;
   },

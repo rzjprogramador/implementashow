@@ -1,9 +1,8 @@
+type RegisterPerson = { id: string };
 
-type RegisterPerson = { id: string}
+export type ClienteFisicoModel = ClienteFisicoArgs & RegisterPerson;
 
-export type UserFisicoModel = UserFisicoArgs & RegisterPerson
-
-export interface UserFisicoArgs {
+export interface ClienteFisicoArgs {
   primeiroNome: string | any;
   sobrenome: string;
   email: string;
@@ -12,7 +11,7 @@ export interface UserFisicoArgs {
   tipoUser: TipoUser;
   endereco: Endereco;
 }
-type DataNascimento = { dia: number, mes: number, ano: number}
+type DataNascimento = { dia: number; mes: number; ano: number };
 type TipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
 
 interface Endereco {
@@ -27,7 +26,7 @@ interface Cidade {
   uf: string;
 }
 
-export interface UserFisicoRepository {
-  items?: UserFisicoModel[];
-  create: (m: UserFisicoModel) => Promise<UserFisicoModel>;
+export interface ClienteFisicoRepository {
+  items?: ClienteFisicoModel[];
+  create: (m: ClienteFisicoModel) => Promise<ClienteFisicoModel>;
 }

@@ -1,15 +1,15 @@
 // deno-lint-ignore-file no-explicit-any ban-types
-import { UserFisicoArgs } from "../../../contracts.ts";
-import { generatorProtoUserFisico } from "./generatorPrototype.ts";
-import { prepareCreateUserFisico } from "./prepare.ts";
+import { ClienteFisicoArgs } from "../../../contracts.ts";
+import { generatorProtoClienteFisico } from "./generatorPrototype.ts";
+import { prepareCreateClienteFisico } from "./prepare.ts";
 
-const listCreateUserFisico = [
-  generatorProtoUserFisico,
-  prepareCreateUserFisico,
+const listCreateClienteFisico = [
+  generatorProtoClienteFisico,
+  prepareCreateClienteFisico,
 ];
 
-export const pipeCreateUserFisico = (a: UserFisicoArgs) =>
-  listCreateUserFisico.reduce((acc: any, fn: Function) => fn(acc), a);
+export const pipeCreateClienteFisico = (a: ClienteFisicoArgs) =>
+  listCreateClienteFisico.reduce((acc: any, fn: Function) => fn(acc), a);
 
 /*
 * na lista deixar o prepare por ultimo na lista porque ja retorna o model completo..enquanto os primeiros retornam os args

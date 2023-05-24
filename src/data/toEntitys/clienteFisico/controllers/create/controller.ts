@@ -1,18 +1,24 @@
-import { UserFisicoArgs, UserFisicoModel } from "../../../../../domain/entitys/clienteFisico/contracts.ts";
-import { checkArgsUserFisico } from "../../../../../domain/entitys/clienteFisico/usecases/create/features/checkArgs.ts";
-import { saveCreateUserFisico } from "../../../../../domain/entitys/clienteFisico/usecases/create/save/save.ts";
-import { HttpResponse, ok } from "../../../../../domain/helpers/httpResponse.ts";
+import {
+  ClienteFisicoArgs,
+  ClienteFisicoModel,
+} from "../../../../../domain/entitys/clienteFisico/contracts.ts";
+import { checkArgsClienteFisico } from "../../../../../domain/entitys/clienteFisico/usecases/create/features/checkArgs.ts";
+import { saveCreateClienteFisico } from "../../../../../domain/entitys/clienteFisico/usecases/create/save/save.ts";
+import {
+  HttpResponse,
+  ok,
+} from "../../../../../domain/helpers/httpResponse.ts";
 
 type ControllerCreateUserFisicoFN = (
-  a: UserFisicoArgs,
-) => Promise<HttpResponse<UserFisicoModel>>;
+  a: ClienteFisicoArgs,
+) => Promise<HttpResponse<ClienteFisicoModel>>;
 
 export const controllerCreateUserFisico: ControllerCreateUserFisicoFN = async (
   a,
 ) => {
-  const checkArgs: UserFisicoArgs = await checkArgsUserFisico(a);
+  const checkArgs: ClienteFisicoArgs = await checkArgsClienteFisico(a);
 
-  const model: UserFisicoModel = await saveCreateUserFisico(checkArgs);
+  const model: ClienteFisicoModel = await saveCreateClienteFisico(checkArgs);
 
   // const createLog = makeLogUser('createUserFisico', model?.id)
 

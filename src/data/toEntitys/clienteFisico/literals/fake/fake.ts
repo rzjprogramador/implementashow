@@ -1,13 +1,13 @@
-import { UserFisicoArgs } from "../../../../../domain/entitys/clienteFisico/contracts.ts";
+import { ClienteFisicoArgs } from "../../../../../domain/entitys/clienteFisico/contracts.ts";
 
-type FakeIDUserFisico = { one: string, two: string }
+type FakeIDClienteFisico = { one: string; two: string };
 
-export const fakeIDUserFisico: FakeIDUserFisico = {
-  one: '1',
-  two: '2'
-}
+export const fakeIDClienteFisico: FakeIDClienteFisico = {
+  one: "1",
+  two: "2",
+};
 
-export const fakeListUserFisicoArgsOK: UserFisicoArgs[] = [
+export const fakeListClienteFisicoArgsOK: ClienteFisicoArgs[] = [
   {
     primeiroNome: "onename",
     sobrenome: "any sobrenome one",
@@ -15,7 +15,7 @@ export const fakeListUserFisicoArgsOK: UserFisicoArgs[] = [
     dataNascimento: {
       dia: 1,
       mes: 1,
-      ano: 1970
+      ano: 1970,
     },
     tipoUser: "Fisico",
     endereco: {
@@ -36,7 +36,7 @@ export const fakeListUserFisicoArgsOK: UserFisicoArgs[] = [
     dataNascimento: {
       dia: 1,
       mes: 1,
-      ano: 1977
+      ano: 1977,
     },
     tipoUser: "Fisico",
     endereco: {
@@ -52,7 +52,7 @@ export const fakeListUserFisicoArgsOK: UserFisicoArgs[] = [
   },
 ];
 
-export const fakeListUserFisicoArgsFAIL: UserFisicoArgs[] = [
+export const fakeListClienteFisicoArgsFAIL: ClienteFisicoArgs[] = [
   {
     primeiroNome: "o",
     sobrenome: "any sobrenome one",

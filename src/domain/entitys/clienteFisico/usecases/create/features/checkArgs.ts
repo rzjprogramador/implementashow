@@ -1,9 +1,9 @@
 import { objectValuesFN } from "../../../../../../data/unique/imports/mod_deps.ts";
-import { UserFisicoArgs } from "../../../contracts.ts";
+import { ClienteFisicoArgs } from "../../../contracts.ts";
 
 const FirstNamePerson = objectValuesFN.FistNamePerson;
 
-export const checkArgsUserFisico = async (a: UserFisicoArgs) => {
+export const checkArgsClienteFisico = async (a: ClienteFisicoArgs) => {
   const args = await {
     primeiroNome: await FirstNamePerson(a.primeiroNome),
     sobrenome: a.sobrenome,
@@ -24,6 +24,6 @@ export const checkArgsUserFisico = async (a: UserFisicoArgs) => {
         uf: a.endereco.cidade.uf,
       },
     },
-  }
-  return await args
-}
+  };
+  return await args;
+};

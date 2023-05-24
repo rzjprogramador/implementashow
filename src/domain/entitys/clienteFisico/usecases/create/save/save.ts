@@ -1,10 +1,9 @@
-import { UserFisicoArgs } from "../../../contracts.ts";
-import { repositoryInUse } from "../../../variables/variables.ts";
-import { pipeCreateUserFisico } from "../pipe/index.ts";
+import { repositoryInUse } from "../../../../../../data/unique/controllerApp/clienteFisico/controllerApp.ts";
+import { ClienteFisicoArgs } from "../../../contracts.ts";
+import { pipeCreateClienteFisico } from "../pipe/index.ts";
 
-
-export const saveCreateUserFisico = (a: UserFisicoArgs) => {
-  const pipe = pipeCreateUserFisico(a);
+export const saveCreateClienteFisico = (a: ClienteFisicoArgs) => {
+  const pipe = pipeCreateClienteFisico(a);
   const save = repositoryInUse.create(pipe);
   return save;
 };

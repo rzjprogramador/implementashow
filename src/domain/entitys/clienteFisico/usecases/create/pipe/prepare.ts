@@ -1,6 +1,8 @@
-import { UserFisicoArgs, UserFisicoModel } from "../../../contracts.ts";
+import { ClienteFisicoArgs, ClienteFisicoModel } from "../../../contracts.ts";
 
-export const prepareCreateUserFisico = (a: UserFisicoArgs): UserFisicoModel => {
-  const model: UserFisicoModel = { ...a, id: "1" };
+export const prepareCreateClienteFisico = (
+  a: ClienteFisicoArgs,
+): ClienteFisicoModel => {
+  const model: ClienteFisicoModel = { ...a, id: "1" };
   return model;
 };

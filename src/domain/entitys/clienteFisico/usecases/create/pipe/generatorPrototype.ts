@@ -1,9 +1,9 @@
-import { UserFisicoArgs } from "../../../contracts.ts";
-import { membersUserFisico } from "../../../members/members.ts";
+import { ClienteFisicoArgs } from "../../../contracts.ts";
+import { membersClienteFisico } from "../../../members/members.ts";
 
-export const generatorProtoUserFisico = (a: UserFisicoArgs) => {
-  const prototypeEntity: UserFisicoArgs = Object.create(
-    membersUserFisico,
+export const generatorProtoClienteFisico = (a: ClienteFisicoArgs) => {
+  const prototypeEntity: ClienteFisicoArgs = Object.create(
+    membersClienteFisico,
   );
 
   const { primeiroNome, sobrenome, email, dataNascimento, tipoUser } = a;
