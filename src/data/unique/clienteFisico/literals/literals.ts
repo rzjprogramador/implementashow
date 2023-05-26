@@ -1,13 +1,13 @@
 import { ClienteFisicoArgs } from "../../../../domain/entitys/clienteFisico/contracts.ts";
 
-type FakeIDClienteFisico = { one: string; two: string };
+type LiteralIDClienteFisico = { one: string; two: string };
 
-export const fakeIDClienteFisico: FakeIDClienteFisico = {
+export const literalIDClienteFisico: LiteralIDClienteFisico = {
   one: "1",
   two: "2",
 };
 
-export const fakeListClienteFisicoArgsOK: ClienteFisicoArgs[] = [
+export const literalListClienteFisicoArgsOK: ClienteFisicoArgs[] = [
   {
     primeiroNome: "onename",
     sobrenome: "any sobrenome one",
@@ -52,7 +52,7 @@ export const fakeListClienteFisicoArgsOK: ClienteFisicoArgs[] = [
   },
 ];
 
-export const fakeListClienteFisicoArgsFAIL: ClienteFisicoArgs[] = [
+export const literalListClienteFisicoArgsFAIL: ClienteFisicoArgs[] = [
   {
     primeiroNome: "o",
     sobrenome: "any sobrenome one",
