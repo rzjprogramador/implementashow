@@ -1,7 +1,7 @@
+import { HttpResponse, ok } from "../../../../app/helpers/httpResponse.ts";
 import { ClienteFisicoArgs, ClienteFisicoModel } from "../../../../domain/entitys/clienteFisico/contracts.ts";
 import { checkArgsClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/checkArgs.ts";
 import { saveCreateClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/save/save.ts";
-import { HttpResponse, ok } from "../../../../domain/helpers/httpResponse.ts";
 
 type ControllerCreateClienteFisico = (
   a: ClienteFisicoArgs,
