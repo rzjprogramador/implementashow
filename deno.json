@@ -4,6 +4,6 @@
   },
   "tasks": {
     "dev": "deno run --watch main.ts",
-    "format": "prettier --check \"src/**/*.js\""
+    "format": "deno run --unstable --allow-read --allow-write --allow-run https://deno.land/x/deno.prettier/mod.ts src/"
   }
 }
