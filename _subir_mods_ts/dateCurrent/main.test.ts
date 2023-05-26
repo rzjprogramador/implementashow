@@ -15,7 +15,8 @@ Deno.test("deve retornar data agora", () => {
 /* TESTER_CONSOLE ************************************* */
 
 function show_objectDateCurrent() {
-  sut.currentYear().then((d) => console.log(d));
+  console.log(sut.currentYear());
+  // sut.currentYear().then((d) => console.log(d));
   // todo: arrumar este test esta retornando NaN ao tentar ver o ano atual
 }
 show_objectDateCurrent();

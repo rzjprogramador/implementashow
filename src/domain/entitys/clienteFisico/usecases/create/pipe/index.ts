@@ -1,10 +1,10 @@
 // deno-lint-ignore-file no-explicit-any ban-types
 import { ClienteFisicoArgs } from "../../../contracts.ts";
-import { generatorProtoClienteFisico } from "../factory/generatorPrototype.ts";
+import { createNewClienteFisicoFactory } from "../factory/generatorPrototype.ts";
 import { prepareCreateClienteFisico } from "../features/prepare.ts";
 
 const listCreateClienteFisico = [
-  generatorProtoClienteFisico,
+  createNewClienteFisicoFactory,
   prepareCreateClienteFisico,
 ];
 

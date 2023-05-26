@@ -1,32 +1,37 @@
-type RegisterPerson = { id: string }
+type RegisterPerson = { id: string };
 
-export type ClienteFisicoModel = ClienteFisicoArgs & RegisterPerson
+export type ClienteFisicoModel = ClienteFisicoArgs & RegisterPerson;
 
 export interface ClienteFisicoArgs {
-  primeiroNome: string | any
-  sobrenome: string
-  email: string
-  dataNascimento: DataNascimento
-  idade?: number
-  tipoUser: TipoUser
-  endereco: Endereco
+  // args?: ClienteFisicoArgs;
+  primeiroNome: string | any;
+  sobrenome: string;
+  email: string;
+  dataNascimento: DataNascimento;
+  // idade?: number
+  tipoUser: TipoUser;
+  endereco: Endereco;
+
+  // membrosProto
+  // showIdade?: () => number;
+  showIdade?: () => number;
 }
-type DataNascimento = { dia: number; mes: number; ano: number }
-type TipoUser = 'Fisico' | 'Juridico' | 'Empresa_Informal'
+type DataNascimento = { dia: number; mes: number; ano: number };
+type TipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
 
 interface Endereco {
-  cep: string
-  longadouro: string
-  numero: string
-  complemento: string
-  cidade: Cidade
+  cep: string;
+  longadouro: string;
+  numero: string;
+  complemento: string;
+  cidade: Cidade;
 }
 interface Cidade {
-  nome: string
-  uf: string
+  nome: string;
+  uf: string;
 }
 
 export interface ClienteFisicoRepository {
-  items?: ClienteFisicoModel[]
-  create: (m: ClienteFisicoModel) => Promise<ClienteFisicoModel>
+  items?: ClienteFisicoModel[];
+  create: (m: ClienteFisicoModel) => Promise<ClienteFisicoModel>;
 }
