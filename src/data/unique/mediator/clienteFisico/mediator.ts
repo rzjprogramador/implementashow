@@ -1,12 +1,12 @@
 import { ClienteFisicoRepository } from "../../../../domain/entitys/clienteFisico/contracts.ts";
 import { clienteFisicoRepositoryProduction } from "../../../../frameworks/repository/clienteFisico/repository.ts";
 
-interface ClienteFisicoControllerAppRepository {
+interface MediatorRepositoryClienteFisico {
   create: ClienteFisicoRepository;
 }
 
-export const clienteFisicoControllerAppRepository:
-  ClienteFisicoControllerAppRepository = {
+export const mediatorRepositoryClienteFisico:
+  MediatorRepositoryClienteFisico = {
     create: clienteFisicoRepositoryProduction,
   };
 
