@@ -1,0 +1,19 @@
+{
+  "version": "2",
+  "remote": {
+    "https://deno.land/std@0.97.0/fmt/colors.ts": "db22b314a2ae9430ae7460ce005e0a7130e23ae1c999157e3bb77cf55800f7e4",
+    "https://deno.land/std@0.97.0/testing/_diff.ts": "961eaf6d9f5b0a8556c9d835bbc6fa74f5addd7d3b02728ba7936ff93364f7a3",
+    "https://deno.land/std@0.97.0/testing/asserts.ts": "341292d12eebc44be4c3c2ca101ba8b6b5859cef2fa69d50c217f9d0bfbcfd1f",
+    "https://deno.land/x/expect@v0.2.10/expect.ts": "545ef81ace95c044ca9277b26cc8d5db8c3605106d40aff7fa135eee970df1f4",
+    "https://deno.land/x/expect@v0.2.10/matchers.ts": "ba7360b73c5031a22449fa98eb4d5dbe7f256a88dd4c22ccae96dc6c01f0b19c",
+    "https://deno.land/x/expect@v0.2.10/mock.ts": "562d4b1d735d15b0b8e935f342679096b64fe452f86e96714fe8616c0c884914",
+    "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/global/helpers/contracts.ts": "b50690c61388418159ad50c146f4ee4d4fb10cf992f0899e1e6f31168a142264",
+    "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/global/helpers/response.ts": "f8583b575a9e744f6efae5e2420d2d7d9c69a01122d0d49e14ad70e2af3a0244",
+    "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/global/sets/set_FirtsNamePerson/contracts.ts": "3e918379709c3a956ccb55c5298931c91d7428d62ff87dcd58728472a35a02d5",
+    "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/global/sets/set_FirtsNamePerson/setFirstNamePerson.ts": "4c58a03fed1eae1eacc495c5246a403d4bd19f8a5f3ee8a5e0c5287b0dec4677",
+    "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/main.ts": "98e3ecc3e3c7ed43b9547a5ec886247c68353bc51a48987f611a8d1f2ba1cda0",
+    "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/objectValuesFN/FirstNamePerson/contracts.ts": "637c4c4395e433b73d49cc60e26fdfb934ac3f77c5d67b20e7a61c3a71857fc4",
+    "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/objectValuesFN/FirstNamePerson/features/validators.ts": "873fca2f10a9e1986c7cefe74d3d28719a341d698a330328acea6728545c62b9",
+    "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/objectValuesFN/FirstNamePerson/index.ts": "17a1116693610127ca7005d56f8ab6204eb1eb6029c96aa6e432d58a585a8523"
+  }
+}

@@ -1,7 +1,10 @@
 import { HttpResponse, ok } from "../../../../app/helpers/httpResponse.ts";
-import { ClienteFisicoArgs, ClienteFisicoModel } from "../../../../domain/entitys/clienteFisico/contracts.ts";
-import { checkArgsClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/checkArgs.ts";
-import { saveCreateClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/save/save.ts";
+import {
+  ClienteFisicoArgs,
+  ClienteFisicoModel,
+} from "../../../../domain/entitys/clienteFisico/contracts.ts";
+import { saveCreateClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/save.ts";
+import { validateArgsClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/validateArgs.ts";
 
 type ControllerCreateClienteFisico = (
   a: ClienteFisicoArgs,
@@ -11,7 +14,7 @@ export const controllerCreateClienteFisico: ControllerCreateClienteFisico =
   async (
     a,
   ) => {
-    const checkArgs: ClienteFisicoArgs = await checkArgsClienteFisico(a);
+    const checkArgs: ClienteFisicoArgs = await validateArgsClienteFisico(a);
 
     const model: ClienteFisicoModel = await saveCreateClienteFisico(checkArgs);
 
