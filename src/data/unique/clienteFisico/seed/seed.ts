@@ -1,4 +1,4 @@
-import { ClienteFisicoModel } from '../../../../../../domain/entitys/clienteFisico/contracts.ts'
+import { ClienteFisicoModel } from '../../../../domain/entitys/clienteFisico/contracts.ts';
 import { fakeIDClienteFisico, fakeListClienteFisicoArgsOK } from '../fake/fake.ts'
 
 type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel }

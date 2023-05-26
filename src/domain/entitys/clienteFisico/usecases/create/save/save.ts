@@ -1,4 +1,4 @@
-import { clienteFisicoControllerAppRepository } from '../../../../../../data/unique/clienteFisico/controllerApp.ts'
+import { clienteFisicoControllerAppRepository } from '../../../../../../data/unique/mediator/clienteFisico/mediator.ts'
 import { ClienteFisicoArgs } from '../../../contracts.ts'
 import { pipeCreateClienteFisico } from '../pipe/index.ts'
 
