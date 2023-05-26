@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { literalListClienteFisicoArgsOK } from "../../../../../../data/unique/clienteFisico/literals/literals.ts";
 import { createNewClienteFisicoFactory } from "./factory.ts";
+import { literalListClienteFisicoArgsOK } from "../../../../../../../data/unique/clienteFisico/literals/literals.ts";
 
 const sut = createNewClienteFisicoFactory;
 const stubInput = literalListClienteFisicoArgsOK[0];

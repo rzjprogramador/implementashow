@@ -1,5 +1,5 @@
-import { objectDateCurrent } from "../../../../../../../_subir_mods_ts/dateCurrent/main.ts";
-import { ClienteFisicoArgs } from "../../../contracts.ts";
+import { objectDateCurrent } from "../../../../../../../../_subir_mods_ts/dateCurrent/main.ts";
+import { ClienteFisicoArgs } from "../../../../contracts.ts";
 
 class ClienteFisicoFactory {
   private constructor(public readonly args: ClienteFisicoArgs) {
