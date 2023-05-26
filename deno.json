@@ -3,7 +3,25 @@
     "std/": "https://deno.land/std@0.181.0/"
   },
   "tasks": {
-    "dev": "deno run --watch main.ts",
-    "format": "deno run --unstable --allow-read --allow-write --allow-run https://deno.land/x/deno.prettier/mod.ts src/"
+    "dev": "deno run -A --watch main.ts"
+  },
+  "lint": {
+    "include": ["src/"],
+    "exclude": ["src/testdata/", "data/fixtures/**/*.ts"],
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-unused-vars"]
+    }
+  },
+  "fmt": {
+    "useTabs": true,
+    "lineWidth": 120,
+    "indentWidth": 2,
+    "semiColons": false,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "include": ["src/"],
+    "exclude": [""]
   }
 }
