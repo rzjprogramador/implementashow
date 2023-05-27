@@ -3,16 +3,17 @@ marp: true
 ---
 
 # REQUESITOS_FLUXO_CRIACAO_ENTIDADE
-> requerimentos_fases_passosLogicos
->
-useCase_CreateEntity_features_pipe_args
-conceito: para campos argumentados.
 
-[x] - 1 - checagem ::  se ja existe :: checkExist com campos id || ID - senao existir cria novo id
-[x] - 2 - validacao :: validar argumentos
-[x] - 3 - fabricar :: fabrica entidade : criando factory.
-[x] - 4 - regrar :: aplica regras
-[x] - 5 - transformar :: por ultimo transforma adiciona props ...pronto de args tera um semiModel...este sera argumento psra features do pipe model controller
+### requerimentos_fases_passosLogicos
+
+### useCase_CreateEntity_features_pipe_args
+1. conceito: para campos argumentados.
+
+2. [x] - 1 - checagem ::  se ja existe :: checkExist com campos id || ID - senao existir cria novo id
+2. [x] - 2 - validacao :: validar argumentos
+2. [x] - 3 - fabricar :: fabrica entidade : criando factory.
+2. [x] - 4 - regrar :: aplica regras
+2. [x] - 5 - transformar :: por ultimo transforma adiciona props ...pronto de args tera um semiModel...este sera argumento psra features do pipe model controller
 
 
 ---
