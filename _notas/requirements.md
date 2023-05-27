@@ -27,13 +27,13 @@ marp: true
 
 ## controlador: com este input de pipes prontos:
 
-1.[] add ao obj responseData o info: com feedback caso sucesso. e entrega pro framework que servira a resposta ao Client.
+1. [] add ao obj responseData o info: com feedback caso sucesso. e entrega pro framework que servira a resposta ao Client.
 
 ---
 
 # TESTS_OBRIGATORIOS
-1.[] prototype da factory
-1.[] criacao objeto pela factory
+1. [] prototype da factory
+1. [] criacao objeto pela factory
 
 ---
 
