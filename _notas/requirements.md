@@ -8,10 +8,11 @@ marp: true
 useCase_CreateEntity_features_pipe_args
 conceito: para campos argumentados.
 
-[x] - 1 - validar argumentos
-[x] - 2 - fabrica entidade : criando factory.
-[x] - 3 - aplica regras
-[x] - 4 - por ultimo transforma adiciona props ...pronto de args tera um semiModel...este sera argumento psra features do pipe model controller
+[x] - 1 - checagem ::  se ja existe :: checkExist com campos id || ID - senao existir cria novo id
+[x] - 2 - validacao :: validar argumentos
+[x] - 3 - fabricar :: fabrica entidade : criando factory.
+[x] - 4 - regrar :: aplica regras
+[x] - 5 - transformar :: por ultimo transforma adiciona props ...pronto de args tera um semiModel...este sera argumento psra features do pipe model controller
 
 
 ---
