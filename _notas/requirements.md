@@ -17,14 +17,15 @@ marp: true
 
 ## feats Model Controller CreateEntity :
 
-> conceito: tudo que possa usar todos csmpos de um modelo final de entidade.
+> conceito: tudo que possa usar todos campos de um modelo final de entidade.
 
 1. [] computaCampos que precisam de valores computados vindo de outros membros :: computedFieldsEntidade
 1. [] registra LogUsuario
 1. [] por ultimo >> salva no repositorio , preciso deste retorno no controle...este salva uso no test pq é o ultimo e ja esta com tudo pronto.
 
 # Controller
-controlador: com este input de pipes prontos:
+
+## controlador: com este input de pipes prontos:
 
 1.[] add ao obj responseData o info: com feedback caso sucesso. e entrega pro framework que servira a resposta ao Client.
 
