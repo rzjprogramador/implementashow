@@ -23,14 +23,16 @@ marp: true
 1. [] registra LogUsuario
 1. [] por ultimo >> salva no repositorio , preciso deste retorno no controle...este salva uso no test pq é o ultimo e ja esta com tudo pronto.
 
+# Controller
 controlador: com este input de pipes prontos:
+
 1.[] add ao obj responseData o info: com feedback caso sucesso. e entrega pro framework que servira a resposta ao Client.
 
 ---
 
 # TESTS_OBRIGATORIOS
 1.[] prototype da factory
-1.[x] criacao objeto pela factory
+1.[] criacao objeto pela factory
 
 ---
 
