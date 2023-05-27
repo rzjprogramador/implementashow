@@ -11,11 +11,4 @@ const listFeatCreateClienteFisico = [
 const pipeArgsCreateClienteFisico = (a: ClienteFisicoArgs) =>
   listFeatCreateClienteFisico.reduce((acc: any, fn: Function) => fn(acc), a);
 
-
-export { pipeArgsCreateClienteFisico }
-
-/*
-* na lista deixar o prepare por ultimo na lista porque ja retorna o model completo..enquanto os primeiros retornam os args
-
-*
-*/
+export { pipeArgsCreateClienteFisico };
