@@ -3,21 +3,21 @@ type RegisterPerson = { id: string };
 export type ClienteFisicoModel = ClienteFisicoArgs & RegisterPerson;
 
 export interface ClienteFisicoArgs {
-  // args?: ClienteFisicoArgs;
   primeiroNome: string | any;
   sobrenome: string;
   email: string;
   dataNascimento: DataNascimento;
-  // idade?: number
+  idade?: number;
   tipoUser: TipoUser;
   endereco: Endereco;
 
-  // membrosProto
-  // showIdade?: () => number;
-  showIdade?: () => number;
+  MembersClienteFisico?: MembersClienteFisico;
 }
 type DataNascimento = { dia: number; mes: number; ano: number };
 type TipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
+export interface MembersClienteFisico {
+  showIdade?: () => number;
+}
 
 interface Endereco {
   cep: string;

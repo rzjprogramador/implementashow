@@ -1,30 +1,27 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { createNewClienteFisicoFactory } from "./factory.ts";
+import { newClienteFisicoFactory } from "./factory.ts";
 import { literalListClienteFisicoArgsOK } from "../../../../../../../data/unique/clienteFisico/literals/literals.ts";
 
-const sut = createNewClienteFisicoFactory;
+const sut = newClienteFisicoFactory;
 const stubInput = literalListClienteFisicoArgsOK[0];
 
-Deno.test("deve retornar a fabricacao do objeto da entidade clienteFisico", () => {
+Deno.test("deve retornar o objeto  factory de clienteFisico", () => {
   const instance1 = sut(stubInput);
   const actual = stubInput;
-
-  console.log(instance1);
+  console.log("INSTANCIA DA FACTORY CRIADA >> ", instance1);
 
   expect(instance1).toEqual(actual);
 });
 
 /* TESTER_CONSOLE ************************************* */
 
-function showFoo() {
+function show_factoryClienteFisico() {
   const instance1 = sut(stubInput);
-  // const instanceArg = instance1.args;
-
   console.log(instance1);
-  console.log(instance1?.showIdade?.()!);
+  // console.log(instance1?.showIdade?.()!);
   // TODO: NO OBJETO FINAL NAO APARECE O showIdade() ESTA DANDO UNDEFINED
 }
-showFoo();
+show_factoryClienteFisico();
 
 export default 1;
