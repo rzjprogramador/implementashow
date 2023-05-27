@@ -1,4 +1,4 @@
-import { mediatorRepositoryClienteFisico } from "../../../../../../data/unique/mediator/clienteFisico/mediator.ts";
+import { mediatorRepositoryClienteFisico } from "../../../../../../data/unique/clienteFisico/mediator/mediator.ts";
 import { ClienteFisicoArgs } from "../../../contracts.ts";
 import { pipeCreateClienteFisico } from "../pipe/index.ts";
 
