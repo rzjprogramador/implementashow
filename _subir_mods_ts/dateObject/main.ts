@@ -16,3 +16,6 @@ export const objectDateLog = () => {
   };
   return log;
 };
+
+// todo: mudar nome pata dateFields
+// todo: add como opcional mileseconds 

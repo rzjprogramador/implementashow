@@ -8,3 +8,5 @@ export const objectDateCurrent = {
     return this.dateNow.getFullYear();
   },
 };
+
+// todo: mudar nome para dateCurrent
