@@ -3,13 +3,16 @@ import { clienteFisicoRepositoryProduction } from "../../../../frameworks/reposi
 
 interface MediatorRepositoryClienteFisico {
   create: ClienteFisicoRepository;
+  exist: ClienteFisicoRepository;
 }
 
-export const mediatorRepositoryClienteFisico:
+const mediatorRepositoryClienteFisico:
   MediatorRepositoryClienteFisico = {
     create: clienteFisicoRepositoryProduction,
-  };
+    exist: clienteFisicoRepositoryProduction,
+};
 
+export { mediatorRepositoryClienteFisico }
 /*
  * 1x1 com useCases.
  */

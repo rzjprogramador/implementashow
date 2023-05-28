@@ -21,12 +21,12 @@ Deno.test("[Mock] deve retornar o item se ja tiver a entidade no items do repo."
   cleanRepo2();
 });
 
-Deno.test("[Mock] Sse retornou ja existe entao deve retornar undefined para quem for usar tratar.", async () => {
+Deno.test("[Mock] Se retornou ja existe entao deve retornar undefined para quem for usar tratar.", async () => {
   const input = inputSeed;
   const actual = await sut?.exist?.(input);
 
-  const res = (actual) ? undefined : actual;
-  const assertion = undefined;
+  const res = (actual) ? null : actual;
+  const assertion = null;
 
   expect(res).toEqual(assertion);
   cleanRepo2();

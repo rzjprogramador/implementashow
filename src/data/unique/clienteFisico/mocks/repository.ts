@@ -13,18 +13,21 @@ const clienteFisicoRepositoryMock: Partial<ClienteFisicoRepository> = {
   },
 
   async exist(m) {
-    const exists = await this.items?.find((m) => m?.ID == m.ID!);
-    return await exists;
+    const where = await this?.items?.find((m) => m?.ID === m.ID);
+    const res = (!where) ? null : where;
+    return await res;
   },
 };
 
-const clienteFisicoRepositoryMockWithOneSeed: Partial<ClienteFisicoRepository> = {
-  items: [seedClienteFisico.one],
+const clienteFisicoRepositoryMockWithOneSeed: Partial<ClienteFisicoRepository> =
+  {
+    items: [seedClienteFisico.one],
 
-  async exist(m) {
-    const exists = await this.items?.find((m) => m?.ID == m.ID!);
-    return await exists;
-  },
-};
+    async exist(m) {
+      const where = await this?.items?.find((m) => m?.ID === m.ID);
+      const res = (!where) ? null : where;
+      return await res;
+    },
+  };
 
-export { clienteFisicoRepositoryMock , clienteFisicoRepositoryMockWithOneSeed}
+export { clienteFisicoRepositoryMock, clienteFisicoRepositoryMockWithOneSeed };

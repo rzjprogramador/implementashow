@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-unused-vars
 import {
   ClienteFisicoModel,
   ClienteFisicoRepository,
@@ -12,7 +13,8 @@ export const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   },
 
   async exist(m) {
-    const exists = await this.items?.find(m => m?.ID == m.ID!);
-    return await exists
+    const where = await this?.items?.find((m) => m?.ID === m.ID);
+    const res = (!where) ? null : where;
+    return await res;
   },
 };

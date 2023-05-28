@@ -1,10 +1,11 @@
-import { expect } from 'https://deno.land/x/expect@v0.2.10/expect.ts'
+import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { feedbacks } from './feedbacks.ts'
+import { feedbacks } from "./feedbacks.ts";
 
-const sut = feedbacks
+const sut = feedbacks;
 
-Deno.test('deve retornar os feedbacks corretamente', () => {
-  expect(sut.createOk).toBe('criado com sucesso')
-  expect(sut.createClienteFisicoOk()).toBe('Usuario Fisico criado com sucesso')
-})
+Deno.test("deve retornar os feedbacks corretamente", () => {
+  expect(sut.createOk).toBe("criado com sucesso");
+  expect(sut.alreadyExists).toBe(`Ops... ja cadastrado!`);
+  expect(sut.createClienteFisicoOk()).toBe("Usuario Fisico criado com sucesso");
+});
