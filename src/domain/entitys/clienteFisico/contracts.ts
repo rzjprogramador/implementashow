@@ -3,6 +3,7 @@ type RegisterPerson = { id: string };
 export type ClienteFisicoModel = ClienteFisicoArgs & RegisterPerson;
 
 export interface ClienteFisicoArgs {
+  ID?: string
   primeiroNome: string | any;
   sobrenome: string;
   email: string;
@@ -34,4 +35,5 @@ interface Cidade {
 export interface ClienteFisicoRepository {
   items?: ClienteFisicoModel[];
   create: (m: ClienteFisicoModel) => Promise<ClienteFisicoModel>;
+  exist: (m: ClienteFisicoModel) => Promise<ClienteFisicoModel | undefined>
 }
