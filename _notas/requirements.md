@@ -10,7 +10,7 @@ marp: true
 1. [x] validacao :: validar argumentos
 1. [x] fabricar :: fabrica entidade : criando factory.
 1. [x] regrar :: aplica regras
-1. [x] transformar :: por ultimo transforma adiciona props ...pronto de args tera um semiModel...este sera argumento psra features do pipe model controller
+1. [x] transformar :: por ultimo transforma adiciona props ...pronto de args tera um semiModel...este sera argumento para features do pipe model controller
 
 
 ---
