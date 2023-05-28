@@ -16,3 +16,5 @@ export const objectDateLog = () => {
   };
   return log;
 };
+
+// todo: add como opcional mileseconds 
