@@ -16,3 +16,5 @@ export const createLogUser: MakeLogUserFN = (a) => {
   // const createLog = repositoryInUselogUser.production.create(inputLog);
   return inputLog;
 };
+
+// todo: mudar log para logg
