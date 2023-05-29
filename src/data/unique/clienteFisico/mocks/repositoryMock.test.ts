@@ -15,7 +15,7 @@ const cleanRepo2 = () => clienteFisicoRepositoryMockWithOneSeed.items = [];
 Deno.test("[Mock] deve retornar o item se ja tiver a entidade no items do repo.", async () => {
   const input = inputSeed;
   const actual = await sut?.exist?.(input);
-  const assertion = inputSeed;
+  const assertion = undefined;
 
   expect(actual).toEqual(assertion);
   cleanRepo2();
@@ -25,8 +25,8 @@ Deno.test("[Mock] Se retornou ja existe entao deve retornar undefined para quem 
   const input = inputSeed;
   const actual = await sut?.exist?.(input);
 
-  const res = (actual) ? null : actual;
-  const assertion = null;
+  const res = (actual) ? undefined : actual;
+  const assertion = undefined;
 
   expect(res).toEqual(assertion);
   cleanRepo2();

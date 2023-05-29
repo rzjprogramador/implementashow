@@ -13,8 +13,10 @@ export const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   },
 
   async exist(m) {
+    if (m.ID == undefined) {
+      return undefined;
+    }
     const where = await this?.items?.find((m) => m?.ID === m.ID);
-    const res = (!where) ? null : where;
-    return await res;
+    return await where;
   },
 };

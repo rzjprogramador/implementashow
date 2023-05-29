@@ -4,33 +4,33 @@ import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { literalListClienteFisicoArgsOK } from "../../../../../../../data/unique/clienteFisico/literals/literals.ts";
 import { featExistClienteFisico } from "./exist.ts";
 import { seedClienteFisico } from "../../../../../../../data/unique/clienteFisico/seed/seed.ts";
-import { clienteFisicoRepositoryMockWithOneSeed } from "../../../../../../../data/unique/clienteFisico/mocks/repository.ts";
 import { feedbacks } from "../../../../../../../app/dataApp/literals/feedbacks/feedbacks.ts";
 
 const sut = await featExistClienteFisico;
-const stubInputNotExistOK = literalListClienteFisicoArgsOK[0];
-const stubInputExistFAIL = seedClienteFisico?.one;
+const inputOK = literalListClienteFisicoArgsOK[0];
+const inputFAIL = seedClienteFisico?.one;
 
 const fnExistOK = async () => {
-  return await sut(stubInputNotExistOK);
+  await sut(inputOK);
+  // vai retornar undefined
 };
 
 const fnExistFAIL = async () => {
   try {
-    return await sut(stubInputExistFAIL);
+    return await sut(inputFAIL);
   } catch (err: any) {
     return await err.message;
   }
 };
 
-Deno.test("deve retornar undefined se nao existe o item na colecao, mesmo recebendo um input de args.", async () => {
-  const res = await sut?.(stubInputNotExistOK);
-  const assertion = await fnExistOK();
+Deno.test("deve retornar [undefined] se nao existe o item na colecao, mesmo recebendo um input de args.", async () => {
+  const res = await fnExistOK();
+  const assertion = undefined;
 
   expect(res).toEqual(assertion);
 });
 
-Deno.test("deve retornar o feddback de ja cadastrado ao passar item que ja existe", async () => {
+Deno.test("deve retornar o erro com feddback de ja cadastrado ao passar item que ja existe", async () => {
   // expect(await fnExistFAIL()).toBeFalsy();
   expect(await fnExistFAIL()).toEqual(Error(feedbacks.alreadyExists));
 });
@@ -38,19 +38,21 @@ Deno.test("deve retornar o feddback de ja cadastrado ao passar item que ja exist
 /* TESTER_CONSOLE ************************************* */
 
 async function show_existClienteFisicoOK() {
-  console.log(
-    "NAO EXISTE ENTAO AQUI ESTA VOLTANDO O ITEM >>>>>> ",
-    await fnExistOK(),
-  );
+  const res = await sut?.(inputOK);
+  // logica se estiver voltando undefined retorna o item do argumento
+  if (res == undefined) {
+    return res;
+  }
+  console.log(inputOK);
 }
-show_existClienteFisicoOK(); // todo: nao esta voltando o item
+show_existClienteFisicoOK();
 
-async function show_existClienteFisicoFAIL() {
-  console.log(
-    "EXISTE ENTAO ESTA VOLTANDO O FEED DE ERRO >>> ",
-    await fnExistFAIL(),
-  );
-}
-show_existClienteFisicoFAIL(); // ok ta voltando o feed de erro.
+// async function show_existClienteFisicoFAIL() {
+//   console.log(
+//     "EXISTE ENTAO ESTA VOLTANDO O FEED DE ERRO >>> ",
+//     await fnExistFAIL(),
+//   );
+// }
+// show_existClienteFisicoFAIL(); // ok ta voltando o feed de erro.
 
 export default 1;

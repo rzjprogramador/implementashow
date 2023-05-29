@@ -36,7 +36,7 @@ export type ExistClienteFisicoNotResponseFAIL =
   | ClienteFisicoArgs
   | ClienteFisicoModel;
 
-export type ResponseExistClienteFisico = null | ClienteFisicoModel | ClienteFisicoArgs ;
+export type ResponseExistClienteFisico =  undefined | ClienteFisicoModel | ClienteFisicoArgs ;
 
 export type ArgExistClienteFisico = ClienteFisicoArgs | ClienteFisicoModel
 
