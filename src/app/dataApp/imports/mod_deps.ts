@@ -5,6 +5,6 @@ export { objectDateCurrent } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts
 export { objectDateLog } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/DateObject/index.ts";
 export type { IObjectDateLog } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/DateObject/index.ts";
 
-export { createLogUser } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LoggUser/index.ts";
+export { createLoggUser } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LoggUser/index.ts";
 
 export { Log } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LogConsole/index.ts";
