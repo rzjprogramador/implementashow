@@ -9,7 +9,7 @@ type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel };
 
 export const seedClienteFisico: SeedClienteFisico = {
   one: {
-    id: fakerIDClienteFisico.one,
+    ID: fakerIDClienteFisico?.one,
     primeiroNome: fakerListClienteFisicoArgsOK[0].primeiroNome,
     sobrenome: fakerListClienteFisicoArgsOK[0].sobrenome,
     email: fakerListClienteFisicoArgsOK[0].email,
@@ -32,7 +32,7 @@ export const seedClienteFisico: SeedClienteFisico = {
   },
 
   two: {
-    id: fakerIDClienteFisico.two,
+    ID: fakerIDClienteFisico.two,
     primeiroNome: fakerListClienteFisicoArgsOK[1].primeiroNome,
     sobrenome: fakerListClienteFisicoArgsOK[1].sobrenome,
     email: fakerListClienteFisicoArgsOK[1].email,

@@ -1,9 +1,7 @@
-type RegisterPerson = { id: string };
-
-export type ClienteFisicoModel = ClienteFisicoArgs & RegisterPerson;
+export type ClienteFisicoModel = ClienteFisicoArgs;
 
 export interface ClienteFisicoArgs {
-  ID?: string;
+  ID?: string | any;
   primeiroNome: string | any;
   sobrenome: string;
   email: string;
@@ -36,9 +34,12 @@ export type ExistClienteFisicoNotResponseFAIL =
   | ClienteFisicoArgs
   | ClienteFisicoModel;
 
-export type ResponseExistClienteFisico =  undefined | ClienteFisicoModel | ClienteFisicoArgs ;
+export type ResponseExistClienteFisico =
+  | undefined
+  | ClienteFisicoModel
+  | ClienteFisicoArgs;
 
-export type ArgExistClienteFisico = ClienteFisicoArgs | ClienteFisicoModel
+export type ArgExistClienteFisico = Partial<ClienteFisicoModel>;
 
 export interface ClienteFisicoRepository {
   items?: ClienteFisicoModel[];
