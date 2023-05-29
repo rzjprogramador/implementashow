@@ -1,19 +1,20 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
+
 import {
-  literalIDClienteFisico,
-  literalListClienteFisicoArgsFAIL,
-  literalListClienteFisicoArgsOK,
-} from "./literals.ts";
+  fakerIDClienteFisico,
+  fakerListClienteFisicoArgsFAIL,
+  fakerListClienteFisicoArgsOK,
+} from "./faker.ts";
 
 const makeSut = () => {
   return {
-    sutOk: literalListClienteFisicoArgsOK,
-    sutFAIL: literalListClienteFisicoArgsFAIL,
+    sutOk: fakerListClienteFisicoArgsOK,
+    sutFAIL: fakerListClienteFisicoArgsFAIL,
   };
 };
 
-const sutID = literalIDClienteFisico;
+const sutID = fakerIDClienteFisico;
 
 Deno.test("[ literalOK_one ]deve retornar as props com os valores  corretos utilizados no literal", () => {
   const { sutOk } = makeSut();

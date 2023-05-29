@@ -1,11 +1,11 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { controllerCreateClienteFisico } from "./controller.ts";
-import { literalListClienteFisicoArgsOK } from "../../../../data/unique/clienteFisico/literals/literals.ts";
 import { Log } from "../../../../app/dataApp/imports/mod_deps.ts";
+import { fakerListClienteFisicoArgsOK } from "../../../../data/unique/clienteFisico/literals/fakers/faker.ts";
 
 const sut = controllerCreateClienteFisico;
-const inputOK = literalListClienteFisicoArgsOK[0];
+const inputOK = fakerListClienteFisicoArgsOK[0];
 
 Deno.test("deve retornar a criacao OK do model user_fisico com todas as propriedades.", async () => {
   const input = inputOK;

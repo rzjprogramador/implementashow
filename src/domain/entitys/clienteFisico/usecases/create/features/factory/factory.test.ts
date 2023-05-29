@@ -1,11 +1,11 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { newClienteFisicoFactory } from "./factory.ts";
-import { literalListClienteFisicoArgsOK } from "../../../../../../../data/unique/clienteFisico/literals/literals.ts";
 import { Log } from "../../../../../../../app/dataApp/imports/mod_deps.ts";
+import { fakerListClienteFisicoArgsOK } from "../../../../../../../data/unique/clienteFisico/literals/fakers/faker.ts";
 
 const sut = newClienteFisicoFactory;
-const stubInput = literalListClienteFisicoArgsOK[0];
+const stubInput = fakerListClienteFisicoArgsOK[0];
 
 Deno.test("deve retornar o objeto  factory de clienteFisico", () => {
   const instance1 = sut(stubInput);
