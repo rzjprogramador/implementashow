@@ -1,5 +1,5 @@
 const foo = "foo";
 
-const bar = "bar";
+// const bar = "bar";
 
 console.log(foo);
