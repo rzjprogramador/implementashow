@@ -1,3 +1,4 @@
+import { Log } from '../../../../app/dataApp/imports/mod_deps.ts';
 import { ClienteFisicoModel } from '../../../../domain/entitys/clienteFisico/contracts.ts';
 import { literalIDClienteFisico, literalListClienteFisicoArgsOK } from '../literals/literals.ts';
 
@@ -51,4 +52,4 @@ export const seedClienteFisico: SeedClienteFisico = {
   },
 }
 
-console.log(seedClienteFisico)
+Log(seedClienteFisico)

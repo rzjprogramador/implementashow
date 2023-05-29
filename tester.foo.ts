@@ -1,10 +1,12 @@
+import { Log } from "./src/app/dataApp/imports/mod_deps.ts";
+
 const foo = "foo";
 
 const bar2 = "bar";
 
 function bar() {
-  console.log(`Ola mundo 3`);
+  Log(`Ola mundo 3`);
 }
 
-console.log(foo);
-console.log(bar2);
+Log(foo);
+Log(bar2);

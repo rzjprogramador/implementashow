@@ -31,7 +31,7 @@
 // async function tester_() {
 //   const res = await sut(inputSut);
 //   res.then((d) => Log(d));
-//   // res.then(d => console.log(d))
+//   // res.then(d => Log(d))
 // }
 // tester_();
 

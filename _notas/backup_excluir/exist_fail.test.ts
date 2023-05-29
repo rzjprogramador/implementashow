@@ -65,16 +65,16 @@
 //   cleanRepo2();
 // });
 
-// /* TESTER_CONSOLE ************************************* */
+// /* TESTER_Log ************************************* */
 
 // function show_ExistMock() {
 //   const input = inputSeed;
 //   const operation = sut?.exist?.(input);
 //   // ver resposta
-//   operation?.then((d) => console.log("RESPOSTA DO EXIST >>> ", d));
+//   operation?.then((d) => Log.log("RESPOSTA DO EXIST >>> ", d));
 
 //   if (operation) {
-//     console.log("TEM");
+//     Log.log("TEM");
 //   }
 // }
 // show_ExistMock();
@@ -84,7 +84,7 @@
 
 
 // async function show_existClienteFisicoFAIL() {
-//   console.log(
+//   Log.log(
 //     "TEM QUE VOLTAR O FEED DE ERRO >>> ",
 //     await fnExistFAIL(),
 //   );

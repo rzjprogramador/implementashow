@@ -35,7 +35,7 @@ Deno.test({
 
 // async function show_existClienteFisicoOK() {
 //   const res = await sut?.(inputOK);
-//   console.log("RESPOSTA DO OBJ AQUI >> ", res);
+//   Log("RESPOSTA DO OBJ AQUI >> ", res);
 // }
 // show_existClienteFisicoOK();
 
