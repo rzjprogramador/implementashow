@@ -13,11 +13,7 @@ export const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   },
 
   async exist(m) {
-    if (m.ID == undefined) {
-      return undefined;
-    }
-    const where = await this?.items?.find((m) => m?.ID === m.ID);
-    return await where;
+    return await this?.items?.find((m) => m?.ID === m.ID);
   },
-  // esta pronto para retornar undefined se nao tiver o campo ID - e retornar o que voltar do loop na colecao
+  
 };
