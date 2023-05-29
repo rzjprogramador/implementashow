@@ -21,7 +21,7 @@ const fnExistOK = async () => {
 // });
 Deno.test({
   name: "deve retornar ",
-  only: true,
+  only: false,
   async fn() {
     // test complicated stuff here
     const where = await fnExistOK();

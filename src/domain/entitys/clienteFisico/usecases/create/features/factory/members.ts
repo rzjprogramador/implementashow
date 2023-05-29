@@ -1,4 +1,4 @@
-import { objectDateCurrent } from "../../../../../../../../_subir_mods_ts/dateCurrent/main.ts";
+import { objectDateCurrent } from "../../../../../../../app/dataApp/imports/mod_deps.ts";
 import {
   ClienteFisicoArgs,
   MembersClienteFisico,
