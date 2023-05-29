@@ -1,4 +1,3 @@
-import { Log } from "../../../../../../../app/dataApp/imports/mod_deps.ts";
 import { feedbacks } from "../../../../../../../app/dataApp/literals/feedbacks/feedbacks.ts";
 import { mediatorRepositoryClienteFisico } from "../../../../../../../data/unique/clienteFisico/mediator/mediator.ts";
 import { ArgExistClienteFisico } from "../../../../contracts.ts";
