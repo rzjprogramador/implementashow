@@ -4,10 +4,16 @@ import { ArgExistClienteFisico } from "../../../../contracts.ts";
 
 const featExistClienteFisico = async (m: ArgExistClienteFisico) => {
   const response = await mediatorRepositoryClienteFisico?.exist?.exist(m);
-  if (!response) {
-    return new Error(feedbacks.alreadyExists);
+
+  if (typeof response == 'undefined') {
+    return m;
+  } else {
+    throw new Error(feedbacks.alreadyExists);
+    // return new Error(feedbacks.alreadyExists);
   }
-  return response;
+
 };
+
+// este vai usar o repo.exist
 
 export { featExistClienteFisico };

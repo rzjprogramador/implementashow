@@ -19,4 +19,5 @@ export const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
     const where = await this?.items?.find((m) => m?.ID === m.ID);
     return await where;
   },
+  // esta pronto para retornar undefined se nao tiver o campo ID - e retornar o que voltar do loop na colecao
 };
