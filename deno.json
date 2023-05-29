@@ -14,5 +14,15 @@
       "include": ["ban-untagged-todo"],
       "exclude": ["no-unused-vars"]
     }
+  },
+  "fmt": {
+    "option": {
+      "useTabs": true,
+      "lineWidth": 120,
+      "indentWidth": 2,
+      "semiColons": false,
+      "singleQuote": true,
+      "proseWrap": "preserve"
+    }
   }
 }
