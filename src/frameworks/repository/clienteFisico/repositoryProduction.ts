@@ -15,5 +15,5 @@ export const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   async exist(m) {
     return await this?.items?.find((m) => m?.ID === m.ID);
   },
-  
+
 };
