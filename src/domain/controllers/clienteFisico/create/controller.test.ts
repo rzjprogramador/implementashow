@@ -12,7 +12,7 @@ Deno.test("deve retornar a criacao OK do model user_fisico com todas as propried
   const actual = await sut(input);
 
   expect(actual.statusCode).toBe(200);
-  expect(actual.data).toHaveProperty("id");
+  expect(actual.data).toHaveProperty("ID");
   expect(actual.data).toHaveProperty("primeiroNome");
   expect(actual.data).toHaveProperty("sobrenome");
   expect(actual.data).toHaveProperty("email");
