@@ -10,8 +10,8 @@ const inputOK = literalListClienteFisicoArgsOK[0];
 
 const fnExistOK = async () => {
   await sut(inputOK);
-  // vai retornar undefined
 };
+// vai retornar undefined
 
 Deno.test("deve retornar [undefined] se nao existe o item na colecao, mesmo recebendo um input de args.", async () => {
   const res = await fnExistOK();
