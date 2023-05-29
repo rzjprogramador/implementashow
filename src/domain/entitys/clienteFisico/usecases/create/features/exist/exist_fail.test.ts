@@ -1,5 +1,38 @@
 // // deno-lint-ignore-file no-explicit-any no-unused-vars
 // import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
+
+// const sutFeat = await featExistClienteFisico;
+// const inputFAIL = seedClienteFisico?.one;
+
+// TODO: O FAIL NAO VOU CONSEGUIR FAZER AQUI PORQUE ESTOU TESTANDO O REPO SEM NADA SALVO NELE POR ISTO NAO ESTOURA O ERRO.
+
+// const fnExistFAIL = async () => {
+//   try {
+//     return await sut(inputFAIL);
+//   } catch (err: any) {
+//     return await err.message.toString();
+//   }
+// };
+
+
+// Deno.test("deve retornar o erro com feddback de ja cadastrado ao passar item que ja existe", async () => {
+//   // expect(await fnExistFAIL()).toBeFalsy();
+//   expect(await fnExistFAIL()).toEqual(Error(feedbacks.alreadyExists));
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import { clienteFisicoRepositoryMockWithOneSeed } from "./repository.ts";
 // import { seedClienteFisico } from "../seed/seed.ts";
 // import {
@@ -45,5 +78,18 @@
 //   }
 // }
 // show_ExistMock();
+
+
+
+
+
+// async function show_existClienteFisicoFAIL() {
+//   console.log(
+//     "TEM QUE VOLTAR O FEED DE ERRO >>> ",
+//     await fnExistFAIL(),
+//   );
+// }
+// show_existClienteFisicoFAIL(); // ok ta voltando o feed de erro.
+
 
 // export default 1;
