@@ -1,20 +1,6 @@
 {
-  "imports": {
-    "std/": "https://deno.land/std@0.181.0/"
-  },
-  "tasks": {
-    "run": "deno run -A --watch",
-    "test": "deno test -A --watch"
-  },
-  "lint": {
-    "include": ["src/"],
-    "exclude": ["src/testdata/", "data/fixtures/**/*.ts"],
-    "rules": {
-      "tags": ["recommended"],
-      "include": ["ban-untagged-todo"],
-      "exclude": ["no-unused-vars"]
-    }
-  },
+  
+
   "fmt": {
     "option": {
       "useTabs": true,

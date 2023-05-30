@@ -1,8 +1,8 @@
-import { HttpResponse, ok } from "../../../../app/helpers/httpResponse.ts";
+import { HttpResponse, ok } from "@httpResponse";
 import {
   ClienteFisicoArgs,
   ClienteFisicoModel,
-} from "../../../../domain/entitys/clienteFisico/contracts.ts";
+} from "../../../../../src/data/unique/clienteFisico/index.ts";
 import { saveCreateClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/save.ts";
 import { validateArgsClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/validateArgs.ts";
 

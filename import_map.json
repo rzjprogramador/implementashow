@@ -1,0 +1,13 @@
+{
+  "imports": {
+  "@httpResponse": "./src/global/helpers/httpResponse.ts",
+  "@clienteFisicoContracts": "./src/data/unique/clienteFisico/contracts/contracts.ts",
+  "@clienteFisicoSeeds": "./src/data/unique/clienteFisico/seed/seed.ts",
+  "@clienteFisicoMediatorRepository": "./src/data/unique/clienteFisico/mediator/mediator.ts",
+  "@globalFeedback": "./src/global/feedbacks/feedbacks.ts",
+  "@mods": "./src/global/imports/mod_deps.ts",
+
+  "objectValuesFN": "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/main.ts",
+  "std/": "https://deno.land/std@0.181.0/"
+  }
+}

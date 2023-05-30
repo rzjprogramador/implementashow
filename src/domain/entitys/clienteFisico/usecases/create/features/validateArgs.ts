@@ -1,4 +1,4 @@
-import { objectValuesFN } from "../../../../../../app/dataApp/imports/mod_deps.ts";
+import { objectValuesFN } from "@mods";
 import { ClienteFisicoArgs } from "../../../contracts.ts";
 
 const FirstNamePerson = objectValuesFN.FistNamePerson;

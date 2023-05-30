@@ -34,7 +34,7 @@
 
 
 // import { clienteFisicoRepositoryMockWithOneSeed } from "./repository.ts";
-// import { seedClienteFisico } from "../seed/seed.ts";
+// import { seedClienteFisico } from "@clienteFisicoSeeds";
 // import {
 //   ClienteFisicoRepository,
 // } from "../../../../domain/entitys/clienteFisico/contracts.ts";

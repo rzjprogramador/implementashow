@@ -1,4 +1,4 @@
-import { ClienteFisicoArgs } from "../../../../../domain/entitys/clienteFisico/contracts.ts";
+import { ClienteFisicoArgs } from "@clienteFisicoContracts";
 
 type FakerIDClienteFisico = { one: string; two: string };
 

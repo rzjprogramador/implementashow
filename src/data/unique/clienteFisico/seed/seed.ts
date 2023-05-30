@@ -1,5 +1,5 @@
-import { Log } from "../../../../app/dataApp/imports/mod_deps.ts";
-import { ClienteFisicoModel } from "../../../../domain/entitys/clienteFisico/contracts.ts";
+import { Log } from "@mods";
+import { ClienteFisicoModel } from "@clienteFisicoContracts";
 import {
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsOK,

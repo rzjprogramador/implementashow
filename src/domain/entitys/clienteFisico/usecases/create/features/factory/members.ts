@@ -1,8 +1,8 @@
-import { objectDateCurrent } from "../../../../../../../app/dataApp/imports/mod_deps.ts";
+import { objectDateCurrent } from "@mods";
 import {
   ClienteFisicoArgs,
   MembersClienteFisico,
-} from "../../../../contracts.ts";
+} from "@clienteFisicoContracts";
 
 const membersClienteFisico: MembersClienteFisico = {
   showIdade(this: ClienteFisicoArgs) {

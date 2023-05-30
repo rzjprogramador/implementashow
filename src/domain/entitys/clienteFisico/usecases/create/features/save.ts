@@ -1,5 +1,5 @@
-import { mediatorRepositoryClienteFisico } from "../../../../../../data/unique/clienteFisico/mediator/mediator.ts";
-import { ClienteFisicoArgs } from "../../../contracts.ts";
+import { mediatorRepositoryClienteFisico } from "@clienteFisicoMediatorRepository";
+import { ClienteFisicoArgs } from "@clienteFisicoContracts";
 import { pipeArgsCreateClienteFisico } from "../pipe/pipeArgs.ts";
 
 export const saveCreateClienteFisico = (a: ClienteFisicoArgs) => {

@@ -1,4 +1,4 @@
-import { Log } from "./src/app/dataApp/imports/mod_deps.ts";
+import { Log } from "@mods";
 
 const foo = "foo";
 

@@ -1,7 +1,7 @@
 // // deno-lint-ignore-file no-explicit-any no-unused-vars
 // import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-// import { Log } from "/home/rzj/..gitAll/implementashow/src/app/dataApp/imports/mod_deps.ts";
+// import { Log } from "@mods";
 
 // const sut = (d: any) => d;
 // const inputSut = "foo";
