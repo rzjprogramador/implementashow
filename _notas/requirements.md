@@ -6,7 +6,7 @@ marp: true
 ## feats Args Create Entity
 > conceito: para campos argumentados.
 
-1. [x] checagem ::  se ja existe :: checkExist com campos id || ID - senao existir cria novo id
+1. [x] checagem ::  se ja existe :: checkExist com campos ID - senao existir devolve o mesmo input que seguira fluxo de inputs no pipe args
 1. [x] validacao :: validar argumentos
 1. [x] fabricar :: fabrica entidade : criando factory.
 1. [x] regrar :: aplica regras
