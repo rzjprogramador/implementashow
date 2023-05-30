@@ -1,18 +1,17 @@
-import { ClienteFisicoRepository } from "../../../../domain/entitys/clienteFisico/contracts.ts";
-import { clienteFisicoRepositoryProduction } from "../../../../frameworks/repository/clienteFisico/repositoryProduction.ts";
+import { ClienteFisicoRepository } from "@clienteFisico";
+import { clienteFisicoRepositoryProduction } from "@clienteFisico";
 
 interface MediatorRepositoryClienteFisico {
   create: ClienteFisicoRepository;
   exist: ClienteFisicoRepository;
 }
 
-const mediatorRepositoryClienteFisico:
-  MediatorRepositoryClienteFisico = {
-    create: clienteFisicoRepositoryProduction,
-    exist: clienteFisicoRepositoryProduction,
+const mediatorRepositoryClienteFisico: MediatorRepositoryClienteFisico = {
+  create: clienteFisicoRepositoryProduction,
+  exist: clienteFisicoRepositoryProduction,
 };
 
-export { mediatorRepositoryClienteFisico }
+export { mediatorRepositoryClienteFisico };
 /*
  * 1x1 com useCases.
  */

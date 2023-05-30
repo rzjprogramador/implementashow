@@ -1,5 +1,5 @@
-import { objectValuesFN } from "@mods";
-import { ClienteFisicoArgs } from "../../../contracts.ts";
+import { objectValuesFN } from "@rzModulesTS";
+import { ClienteFisicoArgs } from "@clienteFisico";
 
 const FirstNamePerson = objectValuesFN.FistNamePerson;
 

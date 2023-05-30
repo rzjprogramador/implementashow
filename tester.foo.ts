@@ -1,4 +1,4 @@
-import { Log } from "@mods";
+import { Log } from "@global/index.ts";
 
 const foo = "foo";
 

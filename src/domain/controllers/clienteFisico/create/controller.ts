@@ -1,16 +1,16 @@
-import { HttpResponse, ok } from "@httpResponse";
+import { HttpResponse, ok } from "@global";
 import {
   ClienteFisicoArgs,
   ClienteFisicoModel,
-} from "../../../../../src/data/unique/clienteFisico/index.ts";
-import { saveCreateClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/save.ts";
+} from "@clienteFisico";
+import { saveCreateClienteFisico } from "@clienteFisico";
 import { validateArgsClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/validateArgs.ts";
 
 type ControllerCreateClienteFisico = (
   a: ClienteFisicoArgs,
 ) => Promise<HttpResponse<ClienteFisicoModel>>;
 
-export const controllerCreateClienteFisico: ControllerCreateClienteFisico =
+const controllerCreateClienteFisico: ControllerCreateClienteFisico =
   async (
     a,
   ) => {
@@ -27,3 +27,5 @@ export const controllerCreateClienteFisico: ControllerCreateClienteFisico =
 
     return await ok(model);
   };
+
+  export { controllerCreateClienteFisico }

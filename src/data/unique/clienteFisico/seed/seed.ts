@@ -1,5 +1,6 @@
-import { Log } from "@mods";
-import { ClienteFisicoModel } from "@clienteFisicoContracts";
+import { Log } from "@rzModulesTS";
+import { ClienteFisicoModel } from "@clienteFisico";
+// "@clienteFisico"
 import {
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsOK,

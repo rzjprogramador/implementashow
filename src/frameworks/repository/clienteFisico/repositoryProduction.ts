@@ -1,10 +1,7 @@
 // deno-lint-ignore-file no-unused-vars
-import {
-  ClienteFisicoModel,
-  ClienteFisicoRepository,
-} from "../../../domain/entitys/clienteFisico/contracts.ts";
+import { ClienteFisicoModel, ClienteFisicoRepository } from "@clienteFisico";
 
-export const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
+const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   items: [],
 
   async create(m: ClienteFisicoModel) {
@@ -15,5 +12,6 @@ export const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   async exist(m) {
     return await this?.items?.find((m) => m?.ID === m.ID);
   },
-
 };
+
+export { clienteFisicoRepositoryProduction };

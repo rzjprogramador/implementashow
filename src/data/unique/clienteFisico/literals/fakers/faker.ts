@@ -1,13 +1,13 @@
-import { ClienteFisicoArgs } from "@clienteFisicoContracts";
+import { ClienteFisicoArgs } from "@clienteFisico";
 
 type FakerIDClienteFisico = { one: string; two: string };
 
-export const fakerIDClienteFisico: FakerIDClienteFisico = {
+const fakerIDClienteFisico: FakerIDClienteFisico = {
   one: "1",
   two: "2",
 };
 
-export const fakerListClienteFisicoArgsOK: ClienteFisicoArgs[] = [
+const fakerListClienteFisicoArgsOK: ClienteFisicoArgs[] = [
   {
     primeiroNome: "onename",
     sobrenome: "any sobrenome one",
@@ -52,7 +52,7 @@ export const fakerListClienteFisicoArgsOK: ClienteFisicoArgs[] = [
   },
 ];
 
-export const fakerListClienteFisicoArgsFAIL: ClienteFisicoArgs[] = [
+const fakerListClienteFisicoArgsFAIL: ClienteFisicoArgs[] = [
   {
     primeiroNome: "o",
     sobrenome: "any sobrenome one",
@@ -96,3 +96,9 @@ export const fakerListClienteFisicoArgsFAIL: ClienteFisicoArgs[] = [
     },
   },
 ];
+
+export {
+  fakerIDClienteFisico,
+  fakerListClienteFisicoArgsFAIL,
+  fakerListClienteFisicoArgsOK,
+};

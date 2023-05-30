@@ -1,7 +1,7 @@
 // // deno-lint-ignore-file no-unused-vars no-explicit-any
 // import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-// import { literalListClienteFisicoArgsOK } from "../../../../../../../data/unique/clienteFisico/literals/literals.ts";
+// import { literalListClienteFisicoArgsOK } from "@clienteFisico";
 // import { featExistClienteFisico } from "./exist.ts";
 // import { seedClienteFisico } from "@clienteFisicoSeeds";
 

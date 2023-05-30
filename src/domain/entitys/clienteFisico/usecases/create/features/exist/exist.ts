@@ -1,6 +1,6 @@
-import { feedbacks } from "@globalFeedback";
-import { mediatorRepositoryClienteFisico } from "@clienteFisicoMediatorRepository";
-import { ArgExistClienteFisico } from "../../../../contracts.ts";
+import { feedbacks } from "@global";
+import { mediatorRepositoryClienteFisico } from "@clienteFisico";
+import { ArgExistClienteFisico } from "@clienteFisico";
 
 const featExistClienteFisico = async (m: ArgExistClienteFisico) => {
 
