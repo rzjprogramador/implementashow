@@ -1,8 +1,8 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { feedbackGlobal } from "./feedbacks.ts";
+import { feedbacksGlobal } from "./feedbacks.ts";
 
-const sut = feedbackGlobal;
+const sut = feedbacksGlobal;
 
 Deno.test("deve retornar os feedbacks corretamente", () => {
   expect(sut.createOk).toBe("criado com sucesso");

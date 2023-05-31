@@ -3,8 +3,8 @@ import {
   ClienteFisicoArgs,
   ClienteFisicoModel,
 } from "@contractsClienteFisico";
-import { saveCreateClienteFisico } from "@clienteFisico";
-import { validateArgsClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/validateArgs.ts";
+import { saveCreateClienteFisico } from "@useCasesClienteFisico/create/features/save.ts";
+import { validateArgsClienteFisico } from "@useCasesClienteFisico/create/features/validateArgs.ts";
 
 type ControllerCreateClienteFisico = (
   a: ClienteFisicoArgs,

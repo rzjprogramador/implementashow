@@ -1,8 +1,8 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { controllerCreateClienteFisico } from "@clienteFisico";
-import { Log } from "@rzModulesTS";
-import { fakerListClienteFisicoArgsOK } from "@clienteFisico";
+import { controllerCreateClienteFisico } from "./controller.ts";
+import { Log } from "@modRZ";
+import { fakerListClienteFisicoArgsOK } from "@fakersClienteFisico";
 
 const sut = controllerCreateClienteFisico;
 const inputOK = fakerListClienteFisicoArgsOK[0];

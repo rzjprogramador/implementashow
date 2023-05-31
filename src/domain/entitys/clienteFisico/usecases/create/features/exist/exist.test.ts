@@ -1,10 +1,10 @@
 // deno-lint-ignore-file no-unused-vars no-explicit-any
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { seedClienteFisico } from "@uniques/clienteFisico/seed/seed.ts";
-import { Log } from "@externals/modules/mod_rzModulesTS.ts";
-import { feedbacks } from "@utils/feedbacks/feedbacks.ts";
-import { ArgExistClienteFisico, ClienteFisicoModel } from "@uniques/clienteFisico/contracts/contracts.ts";
+import { seedClienteFisico } from "@seedsClienteFisico";
+import { Log } from "@modRZ";
+import { feedbacksGlobal } from "@feedbacksGlobal";
+import { ArgExistClienteFisico, ClienteFisicoModel } from "@contractsClienteFisico";
 
 const inputWithIDMockOK: Partial<ClienteFisicoModel> = {
   primeiroNome: seedClienteFisico.one.primeiroNome,
@@ -46,7 +46,7 @@ const fnAuxFeatExistOK = async (m: ArgExistClienteFisico) => {
     return await m;
   } else {
     // Log('ja existe - entao retorno em erro uma excessao')
-    throw new Error(feedbacks.alreadyExists);
+    throw new Error(feedbacksGlobal.alreadyExists);
   }
 };
 
@@ -58,7 +58,7 @@ const fnAuxFeatExistFAIL = async (m: ArgExistClienteFisico) => {
     return await m;
   } else {
     // Log('ja existe - entao retorno em erro uma excessao')
-    throw new Error(feedbacks.alreadyExists);
+    throw new Error(feedbacksGlobal.alreadyExists);
   }
 };
 

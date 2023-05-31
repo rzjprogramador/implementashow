@@ -3,10 +3,9 @@ interface FeedbackGlobal {
   alreadyExists: string;
 }
 
-const feedbackGlobal: FeedbackGlobal = {
+const feedbacksGlobal: FeedbackGlobal = {
   createOk: "criado com sucesso",
   alreadyExists: `Ops... ja cadastrado!`,
-
 };
 
-export { feedbackGlobal }
+export { feedbacksGlobal };
