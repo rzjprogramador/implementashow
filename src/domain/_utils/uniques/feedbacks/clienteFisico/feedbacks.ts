@@ -1,4 +1,4 @@
-import { feedbackGlobal } from "@feedbackGlobal";
+import { feedbacksGlobal } from "@feedbacksGlobal";
 
 interface FeedbackClienteFisico {
   createClienteFisicoOk: () => string;
@@ -6,7 +6,7 @@ interface FeedbackClienteFisico {
 
 const feedbackClienteFisico: FeedbackClienteFisico = {
   createClienteFisicoOk() {
-    return `Usuario Fisico ${feedbackGlobal.createOk}`;
+    return `Usuario Fisico ${feedbacksGlobal.createOk}`;
   },
 };
 

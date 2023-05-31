@@ -1,4 +1,4 @@
-import { ClienteFisicoArgs } from "../../../../../../../../src/data/unique/clienteFisico/index.ts";
+import { ClienteFisicoArgs } from "@contractsClienteFisico";
 import { membersClienteFisico } from "./members.ts";
 
 const clienteFisicoFactory = (a: ClienteFisicoArgs) => {

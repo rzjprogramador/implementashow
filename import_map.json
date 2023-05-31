@@ -5,7 +5,6 @@
   "@controllerClienteFisico/": "./src/gateways/controllers/clienteFisico/",
   "@useCasesClienteFisico/": "./src/domain/entitys/clienteFisico/usecases/",
 
-
   "@contractsClienteFisico": "./src/domain/_utils/uniques/contracts/clienteFisico/contracts.ts",
   "@fakersClienteFisico": "./src/domain/_utils/uniques/fakers/clienteFisico/fakers.ts",
   "@mediatorClienteFisico": "./src/domain/_utils/uniques/mediator/clienteFisico/mediator.ts",
