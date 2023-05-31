@@ -101,7 +101,7 @@ Deno.test({
   only: false,
   async fn() {
     const where = await tratExcessaoController();
-    const feedbackFAIL = feedbacks.alreadyExists;
+    const feedbackFAIL = feedbacksGlobal.alreadyExists;
     // Log("RETORNE falha WHERE >> ", where);
     expect(where).toEqual(feedbackFAIL);
   },
