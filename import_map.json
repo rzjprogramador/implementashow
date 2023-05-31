@@ -1,7 +1,16 @@
 {
   "imports": {
-  "@global": "./src/root/imports/importRoots_global.ts",
-  "@rzModulesTS": "./src/root/imports/importRoots_rzModulesTS.ts",
-  "@clienteFisico": "./src/root/imports/importRoots_clienteFisico.ts"
+  "@/": "./src/",
+  "@utils/": "./src/domain/_utils/",
+
+  "@contractsClienteFisico": "./src/domain/_utils/uniques/contracts/clienteFisico/contracts.ts",
+  "@fakersClienteFisico": "./src/domain/_utils/uniques/fakers/clienteFisico/fakers.ts",
+  "@mediatorClienteFisico": "./src/domain/_utils/uniques/mediator/clienteFisico/mediator.ts",
+  "@seedsClienteFisico": "./src/domain/_utils/uniques/seed/clienteFisico/seeds.ts",
+  "@feedbackClienteFisico": "./src/domain/_utils/uniques/feedbacks/clienteFisico/feedbacks.ts",
+  "@repoClienteFisico": "./src/externals/repository/clienteFisico/repositoryProduction.ts",
+
+  "@feedbackGlobal": "./src/domain/_utils/uniques/feedbacks/global/feedbacks.ts",
+  "@modRZ": "./src/externals/modules/mod_rzModulesTS.ts"
   }
 }

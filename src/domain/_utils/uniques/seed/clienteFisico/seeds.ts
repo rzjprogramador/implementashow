@@ -1,10 +1,9 @@
-import { Log } from "@rzModulesTS";
-import { ClienteFisicoModel } from "@clienteFisico";
-// "@clienteFisico"
+import { Log } from "@modRZ";
+import { ClienteFisicoModel } from "@contractsClienteFisico";
 import {
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsOK,
-} from "../literals/fakers/faker.ts";
+} from "@fakersClienteFisico";
 
 type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel };
 

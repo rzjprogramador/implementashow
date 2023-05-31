@@ -1,4 +1,4 @@
-import { ClienteFisicoArgs } from "@clienteFisico";
+import { ClienteFisicoArgs } from "@contractsClienteFisico";
 
 type FakerIDClienteFisico = { one: string; two: string };
 

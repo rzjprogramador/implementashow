@@ -11,6 +11,12 @@ USAR ======
 
 "@clienteFisico"
 
+===
+backup 2
+
+"@global": "./src/root/imports/importRoots_global.ts",
+  "@rzModulesTS": "./src/root/imports/importRoots_rzModulesTS.ts",
+  "@clienteFisico": "./src/root/imports/importRoots_clienteFisico.ts"
 
 ====
 
