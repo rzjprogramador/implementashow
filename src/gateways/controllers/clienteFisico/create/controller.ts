@@ -1,8 +1,8 @@
-import { HttpResponse, ok } from "@global";
+import { HttpResponse, ok } from "@httpResponse";
 import {
   ClienteFisicoArgs,
   ClienteFisicoModel,
-} from "@clienteFisico";
+} from "@contractsClienteFisico";
 import { saveCreateClienteFisico } from "@clienteFisico";
 import { validateArgsClienteFisico } from "../../../../domain/entitys/clienteFisico/usecases/create/features/validateArgs.ts";
 

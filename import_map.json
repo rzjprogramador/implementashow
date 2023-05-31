@@ -1,7 +1,6 @@
 {
   "imports": {
   "@/": "./src/",
-  "@utils/": "./src/domain/_utils/",
 
   "@contractsClienteFisico": "./src/domain/_utils/uniques/contracts/clienteFisico/contracts.ts",
   "@fakersClienteFisico": "./src/domain/_utils/uniques/fakers/clienteFisico/fakers.ts",
@@ -11,6 +10,7 @@
   "@repoClienteFisico": "./src/externals/repository/clienteFisico/repositoryProduction.ts",
 
   "@feedbackGlobal": "./src/domain/_utils/uniques/feedbacks/global/feedbacks.ts",
-  "@modRZ": "./src/externals/modules/mod_rzModulesTS.ts"
+  "@modRZ": "./src/externals/modules/mod_rzModulesTS.ts",
+  "@httpResponse": "./src/domain/_utils/helpers/httpResponse.ts"
   }
 }
