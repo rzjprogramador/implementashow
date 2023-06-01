@@ -1,4 +1,4 @@
-import { ClienteFisicoArgs } from "@clienteFisico";
+import { ClienteFisicoArgs } from "@clienteFisicoContracts";
 
 type IFakerIDClienteFisico = { one: string; two: string };
 

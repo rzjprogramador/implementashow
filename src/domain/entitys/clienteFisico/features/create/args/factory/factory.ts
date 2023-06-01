@@ -1,4 +1,4 @@
-import { ClienteFisicoArgs } from "@clienteFisico";
+import { ClienteFisicoArgs } from "@clienteFisicoContracts";
 import { membersClienteFisico } from "./members.ts";
 
 const clienteFisicoFactory = (a: ClienteFisicoArgs) => {

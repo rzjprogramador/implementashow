@@ -1,8 +1,8 @@
+import { ClienteFisicoModel } from "@clienteFisicoContracts";
 import {
-  ClienteFisicoModel,
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsOK,
-} from "@clienteFisico";
+} from "@clienteFisicoFakes";
 
 type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel };
 

@@ -13,7 +13,7 @@
   "@repoClienteFisico": "./src/externals/repository/clienteFisico/repositoryProduction.ts",
 
   "@feedbacksGlobal": "./src/domain/_utils/uniques/feedbacks/global/feedbacks.ts",
-  "@modRZ": "./src/externals/modules/modRzModulesTS.ts",
+  "@rzModulesTS": "./src/externals/modules/rzModulesTSModulesTS.ts",
   "@globalHelpers": "./src/domain/_utils/helpers/httpResponse.ts"
   }
 }

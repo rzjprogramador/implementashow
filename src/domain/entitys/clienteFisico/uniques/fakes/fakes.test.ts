@@ -2,10 +2,10 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import {
+  fakerIDClienteFisico,
   fakerListClienteFisicoArgsFAIL,
   fakerListClienteFisicoArgsOK,
-  fakerIDClienteFisico,
-} from "@clienteFisico";
+} from "@clienteFisicoFakes";
 
 const makeSut = () => {
   return {

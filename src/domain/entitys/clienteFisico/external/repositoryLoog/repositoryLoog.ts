@@ -1,10 +1,9 @@
-import { LogPersonModel } from '../../../../_subir_mods_ts/objectLogs/logUser/contracts.ts'
-import { LogUserType } from '../../../../_subir_mods_ts/objectLogs/logUser/contracts.ts'
+import { LoggPersonModel, LoggUserType } from "@todo_rzModLoggUser"
 
-export const logUserRepositoryProduction: LogUserType = {
+const logUserRepositoryProduction: LoggUserType = {
   items: [],
 
-  create(props: LogPersonModel) {
+  create(props: LoggPersonModel) {
     if (props) {
       this?.items?.push(props)!
       return props
@@ -17,3 +16,5 @@ export const logUserRepositoryProduction: LogUserType = {
     return this?.items!
   },
 }
+
+export { logUserRepositoryProduction }

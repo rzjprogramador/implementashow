@@ -2,11 +2,20 @@
   "imports": {
   "@/": "./src/",
 
-  "@globalFeedbacks": "./src/infra/feedbacks/feedbacks.ts",
-  "@globalHelpersHttpResponse": "./src/infra/helpers/httpResponse/httpResponse.ts",
-  "@modRZ": "./src/externals/modules/rzModulesTS.ts",
+  "@feedbacks": "./src/infra/feedbacks/feedbacks.ts",
+  "@httpResponse": "./src/infra/helpers/httpResponse/httpResponse.ts",
 
+  "@rzModulesTS": "./src/externals/modules/rzModulesTS.ts",
+  "@todo_rzModLoggUser": "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LoggUser/index.ts",
+  "@todo_rzModLog": "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LogConsole/index.ts",
 
-  "@clienteFisico": "./src/domain/entitys/clienteFisico/index.ts"
+  "@clienteFisicoContracts": "./src/domain/entitys/clienteFisico/uniques/contracts/clienteFisico/contracts.ts",
+  "@clienteFisicoMediator": "./src/domain/entitys/clienteFisico/uniques/mediator/mediator.ts",
+  "@clienteFisicoRepositoryProduction": "./src/domain/entitys/clienteFisico/external/repositoryEntityProduction/repositoryProduction.ts",
+  "@clienteFisicoLogUserRepositoryProduction": "./src/domain/entitys/clienteFisico/external/repositoryLoog/repositoryLoog.ts",
+
+  "@clienteFisicoFakes": "./src/domain/entitys/clienteFisico/uniques/fakes/fakes.ts",
+  "@clienteFisicoSeeds": "./src/domain/entitys/clienteFisico/uniques/seed/seeds.ts"
+
   }
 }

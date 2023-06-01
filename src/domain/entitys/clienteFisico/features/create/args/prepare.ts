@@ -1,4 +1,4 @@
-import { ClienteFisicoArgs, ClienteFisicoModel } from "@clienteFisico";
+import { ClienteFisicoArgs, ClienteFisicoModel } from "@clienteFisicoContracts";
 
 export const prepareCreateClienteFisico = (
   a: ClienteFisicoArgs,

@@ -1,7 +1,7 @@
-import { HttpResponse, ok } from "@globalHelpersHttpResponse";
-import { ClienteFisicoArgs, ClienteFisicoModel } from "@clienteFisico";
-import { saveCreateClienteFisico } from "@clienteFisico";
-import { validateArgsClienteFisico } from "@clienteFisico";
+import { HttpResponse, ok } from "@httpResponse";
+import { ClienteFisicoArgs, ClienteFisicoModel } from "@clienteFisicoContracts";
+import { validateArgsClienteFisico } from "../../../features/create/args/validateArgs.ts";
+import { saveCreateClienteFisico } from "../../../features/create/args/save.ts";
 
 type ControllerCreateClienteFisico = (
   a: ClienteFisicoArgs,
