@@ -21,8 +21,8 @@ export * from "@/domain/entitys/clienteFisico/uniques/mediator/mediator.ts";
 // EXTERNALS >> REPOSITORY PRODUCTION
 export * from "@/domain/entitys/clienteFisico/external/repositoryEntityProduction/repositoryProduction.ts";
 
-// PIPE ARGS
-export * from "@/domain/entitys/clienteFisico/features/create/args/validateArgs.ts";
+// PIPE ARGS - CREATE
+export * from "@/domain/entitys/clienteFisico/usecases/create/create.ts";
 
 // /* *************************************************** */
 

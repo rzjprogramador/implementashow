@@ -3,7 +3,7 @@ import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { seedClienteFisico } from "@clienteFisico";
 import { Log } from "@modRZ";
-import { feedbacksGlobal } from "@global";
+import { feedbacksGlobal } from "@globalFeedbacks";
 import { ArgExistClienteFisico, ClienteFisicoModel } from "@clienteFisico";
 
 const inputWithIDMockOK: Partial<ClienteFisicoModel> = {

@@ -1,4 +1,4 @@
-import { HttpResponse, ok } from "@globalHelpers";
+import { HttpResponse, ok } from "@globalHelpersHttpResponse";
 import { ClienteFisicoArgs, ClienteFisicoModel } from "@clienteFisico";
 import { saveCreateClienteFisico } from "@clienteFisico";
 import { validateArgsClienteFisico } from "@clienteFisico";
