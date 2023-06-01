@@ -2,8 +2,8 @@
   "imports": {
   "@/": "./src/",
 
-  "@feedbacks": "./src/infra/feedbacks/feedbacks.ts",
-  "@httpResponse": "./src/infra/helpers/httpResponse/httpResponse.ts",
+  "@feedbacks": "./src/global/feedbacks/feedbacks.ts",
+  "@httpResponse": "./src/global/helpers/httpResponse/httpResponse.ts",
 
   "@rzModulesTS": "./src/externals/modules/rzModulesTS.ts",
   "@todo_rzModLoggUser": "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LoggUser/index.ts",
