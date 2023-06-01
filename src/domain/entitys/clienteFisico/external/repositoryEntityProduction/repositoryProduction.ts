@@ -1,5 +1,8 @@
 // deno-lint-ignore-file no-unused-vars
-import { ClienteFisicoModel, ClienteFisicoRepository } from "@clienteFisicoContracts";
+import {
+  ClienteFisicoModel,
+  ClienteFisicoRepository,
+} from "@contractsClienteFisico";
 
 const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   items: [],

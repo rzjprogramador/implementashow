@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any ban-types
-import { ClienteFisicoArgs } from "@clienteFisicoContracts";
-import { newClienteFisicoFactory } from "../features/create/args/factory/factory.ts";
-import { prepareCreateClienteFisico } from "../features/create/args/prepare.ts";
+import { ClienteFisicoArgs } from "@contractsClienteFisico";
+import { newClienteFisicoFactory } from "../../features/create/args/factory/factory.ts";
+import { prepareCreateClienteFisico } from "../../features/create/args/prepare.ts";
 
 const listFeatCreateClienteFisico = [
   newClienteFisicoFactory,

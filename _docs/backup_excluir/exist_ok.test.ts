@@ -3,7 +3,7 @@
 
 // import { literalListClienteFisicoArgsOK } from "@clienteFisico";
 // import { featExistClienteFisico } from "./exist.ts";
-// import { seedClienteFisico } from "@clienteFisicoSeeds";
+// import { seedClienteFisico } from "@seedsClienteFisico";
 
 // const sut = await featExistClienteFisico;
 // const inputOK = literalListClienteFisicoArgsOK[0];

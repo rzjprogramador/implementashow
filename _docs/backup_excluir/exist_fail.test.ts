@@ -14,27 +14,13 @@
 //   }
 // };
 
-
 // Deno.test("deve retornar o erro com feddback de ja cadastrado ao passar item que ja existe", async () => {
 //   // expect(await fnExistFAIL()).toBeFalsy();
 //   expect(await fnExistFAIL()).toEqual(Error(feedbacks.alreadyExists));
 // });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { clienteFisicoRepositoryMockWithOneSeed } from "./repository.ts";
-// import { seedClienteFisico } from "@clienteFisicoSeeds";
+// import { seedClienteFisico } from "@seedsClienteFisico";
 // import {
 //   ClienteFisicoRepository,
 // } from "../../../../domain/entitys/clienteFisico/contracts.ts";
@@ -79,10 +65,6 @@
 // }
 // show_ExistMock();
 
-
-
-
-
 // async function show_existClienteFisicoFAIL() {
 //   Log.log(
 //     "TEM QUE VOLTAR O FEED DE ERRO >>> ",
@@ -90,6 +72,5 @@
 //   );
 // }
 // show_existClienteFisicoFAIL(); // ok ta voltando o feed de erro.
-
 
 // export default 1;

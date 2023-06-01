@@ -1,7 +1,6 @@
-import { mediatorRepositoryClienteFisico } from "@clienteFisicoMediator";
-import { ClienteFisicoArgs } from "@clienteFisicoContracts";
-import { pipeArgsCreateClienteFisico } from "../../../pipes/createPipeArgs.ts";
-
+import { mediatorRepositoryClienteFisico } from "@mediatorClienteFisico";
+import { ClienteFisicoArgs } from "@contractsClienteFisico";
+import { pipeArgsCreateClienteFisico } from "../../../pipes/pipeArgs/createPipeArgs.ts";
 
 const saveCreateClienteFisico = (a: ClienteFisicoArgs) => {
   const pipe = pipeArgsCreateClienteFisico(a);

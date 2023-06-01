@@ -5,7 +5,7 @@ import {
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsFAIL,
   fakerListClienteFisicoArgsOK,
-} from "@clienteFisicoFakes";
+} from "@fakesClienteFisico";
 
 const makeSut = () => {
   return {

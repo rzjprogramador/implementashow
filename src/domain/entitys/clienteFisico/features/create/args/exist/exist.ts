@@ -1,5 +1,5 @@
-import { ArgExistClienteFisico } from "@clienteFisicoContracts";
-import { mediatorRepositoryClienteFisico } from "@clienteFisicoMediator";
+import { ArgExistClienteFisico } from "@contractsClienteFisico";
+import { mediatorRepositoryClienteFisico } from "@mediatorClienteFisico";
 import { feedbacksGlobal } from "@feedbacks";
 
 const featExistClienteFisico = async (m: ArgExistClienteFisico) => {

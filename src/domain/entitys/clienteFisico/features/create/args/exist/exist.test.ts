@@ -1,10 +1,13 @@
 // deno-lint-ignore-file no-unused-vars no-explicit-any
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { seedClienteFisico } from "@clienteFisicoSeeds";
+import { seedClienteFisico } from "@seedsClienteFisico";
 import { Log } from "@rzModulesTS";
 import { feedbacksGlobal } from "@feedbacks";
-import { ArgExistClienteFisico, ClienteFisicoModel } from "@clienteFisicoContracts";
+import {
+  ArgExistClienteFisico,
+  ClienteFisicoModel,
+} from "@contractsClienteFisico";
 
 const inputWithIDMockOK: Partial<ClienteFisicoModel> = {
   primeiroNome: seedClienteFisico.one.primeiroNome,

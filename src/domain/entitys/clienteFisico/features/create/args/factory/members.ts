@@ -1,6 +1,6 @@
 import { objectDateCurrent } from "@rzModulesTS";
-import { ClienteFisicoArgs } from "@clienteFisicoContracts";
-import { MembersClienteFisico } from "@clienteFisicoContracts";
+import { ClienteFisicoArgs } from "@contractsClienteFisico";
+import { MembersClienteFisico } from "@contractsClienteFisico";
 
 const membersClienteFisico: MembersClienteFisico = {
   showIdade(this: ClienteFisicoArgs) {

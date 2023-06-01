@@ -1,5 +1,5 @@
 import { HttpResponse, ok } from "@httpResponse";
-import { ClienteFisicoArgs, ClienteFisicoModel } from "@clienteFisicoContracts";
+import { ClienteFisicoArgs, ClienteFisicoModel } from "@contractsClienteFisico";
 import { validateArgsClienteFisico } from "../../../features/create/args/validateArgs.ts";
 import { saveCreateClienteFisico } from "../../../features/create/args/save.ts";
 

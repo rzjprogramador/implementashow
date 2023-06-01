@@ -3,19 +3,20 @@
   "@/": "./src/",
 
   "@feedbacks": "./src/global/feedbacks/feedbacks.ts",
-  "@httpResponse": "./src/global/helpers/httpResponse/httpResponse.ts",
+  "@httpResponse": "./src/domain/helpers/httpResponse/httpResponse.ts",
 
   "@rzModulesTS": "./src/externals/modules/rzModulesTS.ts",
+
   "@todo_rzModLoggUser": "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LoggUser/index.ts",
   "@todo_rzModLog": "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LogConsole/index.ts",
 
-  "@clienteFisicoContracts": "./src/domain/entitys/clienteFisico/uniques/contracts/clienteFisico/contracts.ts",
-  "@clienteFisicoMediator": "./src/domain/entitys/clienteFisico/uniques/mediator/mediator.ts",
-  "@clienteFisicoRepositoryProduction": "./src/domain/entitys/clienteFisico/external/repositoryEntityProduction/repositoryProduction.ts",
-  "@clienteFisicoLogUserRepositoryProduction": "./src/domain/entitys/clienteFisico/external/repositoryLoog/repositoryLoog.ts",
+  "@contractsClienteFisico": "./src/domain/entitys/clienteFisico/uniques/contracts/clienteFisico/contracts.ts",
+  "@mediatorClienteFisico": "./src/domain/entitys/clienteFisico/uniques/mediator/mediator.ts",
 
-  "@clienteFisicoFakes": "./src/domain/entitys/clienteFisico/uniques/fakes/fakes.ts",
-  "@clienteFisicoSeeds": "./src/domain/entitys/clienteFisico/uniques/seed/seeds.ts"
+  "@externalClienteFisico": "./src/domain/entitys/clienteFisico/external/index.ts",
+
+  "@fakesClienteFisico": "./src/domain/entitys/clienteFisico/uniques/fakes/fakes.ts",
+  "@seedsClienteFisico": "./src/domain/entitys/clienteFisico/uniques/seed/seeds.ts"
 
   }
 }
