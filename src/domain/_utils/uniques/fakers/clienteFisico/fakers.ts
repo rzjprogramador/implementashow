@@ -1,8 +1,8 @@
-import { ClienteFisicoArgs } from "@contractsClienteFisico";
+import { ClienteFisicoArgs } from "@clienteFisico";
 
-type FakerIDClienteFisico = { one: string; two: string };
+type IFakerIDClienteFisico = { one: string; two: string };
 
-const fakerIDClienteFisico: FakerIDClienteFisico = {
+const fakerIDClienteFisico: IFakerIDClienteFisico = {
   one: "1",
   two: "2",
 };
@@ -98,7 +98,9 @@ const fakerListClienteFisicoArgsFAIL: ClienteFisicoArgs[] = [
 ];
 
 export {
-  fakerIDClienteFisico,
   fakerListClienteFisicoArgsFAIL,
   fakerListClienteFisicoArgsOK,
+  fakerIDClienteFisico,
 };
+
+export type { IFakerIDClienteFisico };

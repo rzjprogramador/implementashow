@@ -1,6 +1,8 @@
-import { mediatorRepositoryClienteFisico } from "@mediatorClienteFisico";
-import { feedbacksGlobal } from "@feedbacksGlobal";
-import { ArgExistClienteFisico } from "@contractsClienteFisico";
+import {
+  ArgExistClienteFisico,
+  mediatorRepositoryClienteFisico,
+} from "@clienteFisico";
+import { feedbacksGlobal } from "@global";
 
 const featExistClienteFisico = async (m: ArgExistClienteFisico) => {
   const operation = await mediatorRepositoryClienteFisico?.exist?.exist(m);

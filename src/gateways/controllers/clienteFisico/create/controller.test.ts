@@ -2,7 +2,7 @@ import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { controllerCreateClienteFisico } from "./controller.ts";
 import { Log } from "@modRZ";
-import { fakerListClienteFisicoArgsOK } from "@fakersClienteFisico";
+import { fakerListClienteFisicoArgsOK } from "@clienteFisico";
 
 const sut = controllerCreateClienteFisico;
 const inputOK = fakerListClienteFisicoArgsOK[0];
@@ -24,11 +24,11 @@ Deno.test("deve retornar a criacao OK do model user_fisico com todas as propried
 
 /* TESTER_CONSOLE ************************************* */
 
-function show_controllerCreateClienteFisico() {
-  sut(inputOK)
-    .then((d) => Log(d))
-    .catch((err) => Log(err.message));
-}
+// function show_controllerCreateClienteFisico() {
+//   sut(inputOK)
+//     .then((d) => Log(d))
+//     .catch((err) => Log(err.message));
+// }
 // show_controllerCreateClienteFisico();
 
 export default 1;

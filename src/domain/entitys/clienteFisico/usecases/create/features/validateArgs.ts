@@ -1,5 +1,5 @@
 import { objectValuesFN } from "@modRZ";
-import { ClienteFisicoArgs } from "@contractsClienteFisico";
+import { ClienteFisicoArgs } from "@clienteFisico";
 
 const FirstNamePerson = objectValuesFN.FistNamePerson;
 

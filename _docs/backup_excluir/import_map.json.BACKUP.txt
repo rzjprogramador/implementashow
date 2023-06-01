@@ -5,15 +5,15 @@
   "@controllerClienteFisico/": "./src/gateways/controllers/clienteFisico/",
   "@useCasesClienteFisico/": "./src/domain/entitys/clienteFisico/usecases/",
 
-  "@contractsClienteFisico": "./src/domain/_utils/uniques/contracts/clienteFisico/contracts.ts",
+  "@clienteFisico": "./src/domain/_utils/uniques/contracts/clienteFisico/contracts.ts",
   "@fakersClienteFisico": "./src/domain/_utils/uniques/fakers/clienteFisico/fakers.ts",
   "@mediatorClienteFisico": "./src/domain/_utils/uniques/mediator/clienteFisico/mediator.ts",
-  "@seedsClienteFisico": "./src/domain/_utils/uniques/seed/clienteFisico/seeds.ts",
+  "@clienteFisico": "./src/domain/_utils/uniques/seed/clienteFisico/seeds.ts",
   "@feedbackClienteFisico": "./src/domain/_utils/uniques/feedbacks/clienteFisico/feedbacks.ts",
   "@repoClienteFisico": "./src/externals/repository/clienteFisico/repositoryProduction.ts",
 
   "@feedbacksGlobal": "./src/domain/_utils/uniques/feedbacks/global/feedbacks.ts",
   "@modRZ": "./src/externals/modules/modRzModulesTS.ts",
-  "@httpResponse": "./src/domain/_utils/helpers/httpResponse.ts"
+  "@globalHelpers": "./src/domain/_utils/helpers/httpResponse.ts"
   }
 }

@@ -1,4 +1,4 @@
-import { feedbacksGlobal } from "@feedbacksGlobal";
+import { feedbacksGlobal } from "@global";
 
 interface FeedbackClienteFisico {
   createClienteFisicoOk: () => string;

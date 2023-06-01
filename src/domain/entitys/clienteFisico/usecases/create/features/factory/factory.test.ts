@@ -3,7 +3,7 @@ import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { newClienteFisicoFactory } from "./factory.ts";
 import { Log } from "@modRZ";
-import { fakerListClienteFisicoArgsOK } from "@fakersClienteFisico";
+import { fakerListClienteFisicoArgsOK } from "@clienteFisico";
 
 const sut = newClienteFisicoFactory;
 const stubInput = fakerListClienteFisicoArgsOK[0];

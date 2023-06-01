@@ -1,5 +1,5 @@
 // deno-lint-ignore-file no-explicit-any ban-types
-import { ClienteFisicoArgs } from "@contractsClienteFisico";
+import { ClienteFisicoArgs } from "@clienteFisico";
 import { newClienteFisicoFactory } from "../features/factory/factory.ts";
 import { prepareCreateClienteFisico } from "../features/prepare.ts";
 

@@ -1,13 +1,12 @@
-import { Log } from "@modRZ";
-import { ClienteFisicoModel } from "@contractsClienteFisico";
+import { ClienteFisicoModel } from "@clienteFisico";
 import {
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsOK,
-} from "@fakersClienteFisico";
+} from "../../fakers/clienteFisico/fakers.ts";
 
 type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel };
 
-export const seedClienteFisico: SeedClienteFisico = {
+const seedClienteFisico: SeedClienteFisico = {
   one: {
     ID: fakerIDClienteFisico?.one,
     primeiroNome: fakerListClienteFisicoArgsOK[0].primeiroNome,
@@ -55,4 +54,12 @@ export const seedClienteFisico: SeedClienteFisico = {
   },
 };
 
-Log(seedClienteFisico);
+// Log(seedClienteFisico);
+
+export { seedClienteFisico };
+
+/*
+macete_erro_terminal: aparece a variavel em vermelho escrito <error:> e a classe do Erro na frente.
+
+classeDeErro : ReferenceError , causasPossiveis: falta de exportacao do artefato que esta USANDO ou que esta sendo USADO.
+*/

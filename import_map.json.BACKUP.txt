@@ -1,0 +1,10 @@
+{
+  "imports": {
+  "@/": "./src/",
+  "@global": "./src/domain/_utils/uniques/global/index.ts",
+  "@globalHelpers": "./src/domain/_utils/helpers/index.ts",
+  "@modRZ": "./src/externals/modules/index.ts",
+
+  "@clienteFisico": "./src/domain/entitys/clienteFisico/index.ts"
+  }
+}

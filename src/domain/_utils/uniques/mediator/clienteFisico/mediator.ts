@@ -1,5 +1,5 @@
-import { ClienteFisicoRepository } from "@contractsClienteFisico";
-import { clienteFisicoRepositoryProduction } from "@repoClienteFisico";
+import { ClienteFisicoRepository } from "@clienteFisico";
+import { clienteFisicoRepositoryProduction } from "@clienteFisico";
 
 interface MediatorRepositoryClienteFisico {
   create: ClienteFisicoRepository;
