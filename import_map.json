@@ -1,0 +1,12 @@
+{
+  "imports": {
+  "@/": "./src/",
+
+  "@globalFeedbacks": "./src/infra/feedbacks/feedbacks.ts",
+  "@globalHelpersHttpResponse": "./src/infra/helpers/httpResponse/httpResponse.ts",
+  "@modRZ": "./src/externals/modules/rzModulesTS.ts",
+
+
+  "@clienteFisico": "./src/domain/entitys/clienteFisico/index.ts"
+  }
+}
