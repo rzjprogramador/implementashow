@@ -16,7 +16,9 @@
   "@externalClienteFisico": "./src/domain/entitys/clienteFisico/external/index.ts",
 
   "@fakesClienteFisico": "./src/domain/entitys/clienteFisico/uniques/fakes/fakes.ts",
-  "@seedsClienteFisico": "./src/domain/entitys/clienteFisico/uniques/seed/seeds.ts"
+  "@seedsClienteFisico": "./src/domain/entitys/clienteFisico/uniques/seed/seeds.ts",
+
+  "@featuresArgsCreateClienteFisico/": "./src/domain/entitys/clienteFisico/features/create/"
 
   }
 }
