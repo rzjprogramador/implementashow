@@ -2,8 +2,8 @@
 import {
   ClienteFisicoArgs,
 } from "../../../clienteFisico/deps.deps.ts";
-import { prepareCreateClienteFisico } from "../subDeps.deps.ts";
-import { newClienteFisicoFactory } from "./extraDeps.deps.ts";
+import { newClienteFisicoFactory, prepareCreateClienteFisico } from "../../deps.deps.ts";
+// import { prepareCreateClienteFisico } from "../../deps.deps.ts";
 
 
 const listFeatCreateClienteFisico = [

@@ -3,3 +3,7 @@ instalar_modulo_prettier:
 
 IMPORTACOES DEP :
 
+erro_comum_em_importacoes_modulos:
+erro: error: SyntaxError: The requested module 'files.ts' does not provide an export name ...
+causa: é porque estou duplicando a importacao/exportacao deste mesmo artefato provavelmente neste mesmo arquivo... ou em putro lugar esta ação ja esta sendo feita.
+solucao: faça esta acão em somente um luigar e somente uma vez.
