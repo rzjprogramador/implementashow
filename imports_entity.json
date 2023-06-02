@@ -1,0 +1,5 @@
+{
+  "imports": {
+  "@ttt": "./src/pasta3/tres.ts"
+  }
+}

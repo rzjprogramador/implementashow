@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@/": "./src/",
+  "@ddd": "./src/pasta2/dois.ts"
+  }
+}

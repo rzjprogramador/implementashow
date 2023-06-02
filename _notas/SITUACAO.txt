@@ -1,0 +1,6 @@
+nos codigos nao funciona a variavel de nenhum dos esquemas.
+
+---
+NOVOS CONCEITOS
+
+restartarServidor: "se as importarcoes demorar apra fazer efeito restart o ts cbuscando no painel d ecomandos o comando: Restart TS Server ou Reload no vscode.",

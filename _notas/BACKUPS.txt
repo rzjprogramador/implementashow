@@ -1,0 +1,7 @@
+
+"@/": "./src/",
+
+backup chamando o js config no settings vscode:
+"deno.importMap": "./rootImportMaps.js"
+ou
+"deno.importMap": "./import_map.json"

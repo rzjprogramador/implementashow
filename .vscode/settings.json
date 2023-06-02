@@ -1,0 +1,4 @@
+{
+  "deno.config": "./deno.json",
+  "importMap": "./import_map.json"
+}
