@@ -1,4 +1,4 @@
-import { ClienteFisicoArgs, ClienteFisicoModel } from "../../../deps.ts";
+import { ClienteFisicoArgs, ClienteFisicoModel } from "../../../deps.deps.ts";
 
 export const prepareCreateClienteFisico = (
   a: ClienteFisicoArgs,

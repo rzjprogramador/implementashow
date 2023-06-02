@@ -1,4 +1,4 @@
-import { feedbacksGlobal } from "../../../../../global/deps.ts";
+import { feedbacksGlobal } from "../../../../../global/deps.deps.ts";
 
 interface FeedbackClienteFisico {
   createClienteFisicoOk: () => string;
