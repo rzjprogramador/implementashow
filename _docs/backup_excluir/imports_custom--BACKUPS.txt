@@ -1,3 +1,0 @@
-"@clienteFisicoRepositoryProduction": "./src/domain/entitys/clienteFisico/external/repositoryEntityProduction/repositoryProduction.ts",
-
-  "@clienteFisicoLogUserRepositoryProduction": "./src/domain/entitys/clienteFisico/external/repositoryLoog/repositoryLoog.ts",
