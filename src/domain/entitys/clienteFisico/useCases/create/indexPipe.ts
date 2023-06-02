@@ -3,7 +3,7 @@ import {
   ClienteFisicoArgs,
 } from "../../../clienteFisico/deps.ts";
 import { prepareCreateClienteFisico } from "../subDeps.ts";
-import { newClienteFisicoFactory } from "./features/factory.ts";
+import { newClienteFisicoFactory } from "./extraDeps.ts";
 
 
 const listFeatCreateClienteFisico = [
