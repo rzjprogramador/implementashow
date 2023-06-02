@@ -3,3 +3,5 @@
  */
 
 export * from "./create/extraDeps.ts";
+
+export * from "./create/indexPipe.ts";

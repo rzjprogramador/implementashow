@@ -1,9 +1,9 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { newClienteFisicoFactory } from "./factory.ts";
 import { Log } from "../../../../../../externals/deps.ts";
 import { fakerListClienteFisicoArgsOK } from "../../../deps.ts";
+import { newClienteFisicoFactory } from "./factory.ts";
 
 const sut = newClienteFisicoFactory;
 const stubInput = fakerListClienteFisicoArgsOK[0];
