@@ -1,6 +1,5 @@
-import { objectDateCurrent } from "@rzModulesTS";
-import { ClienteFisicoArgs } from "@contractsClienteFisico";
-import { MembersClienteFisico } from "@contractsClienteFisico";
+import { objectDateCurrent } from "../../../../../../externals/deps.ts";
+import { ClienteFisicoArgs, MembersClienteFisico } from "../../../deps.ts";
 
 const membersClienteFisico: MembersClienteFisico = {
   showIdade(this: ClienteFisicoArgs) {

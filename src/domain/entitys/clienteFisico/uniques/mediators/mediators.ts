@@ -1,5 +1,4 @@
-import { clienteFisicoRepositoryProduction } from "@externalClienteFisico";
-import { ClienteFisicoRepository } from "@contractsClienteFisico";
+import { clienteFisicoRepositoryProduction, ClienteFisicoRepository } from "../../deps.ts";
 
 interface MediatorRepositoryClienteFisico {
   create: ClienteFisicoRepository;

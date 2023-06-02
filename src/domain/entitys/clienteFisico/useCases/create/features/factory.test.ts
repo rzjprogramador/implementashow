@@ -2,8 +2,8 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { newClienteFisicoFactory } from "./factory.ts";
-import { Log } from "@rzModulesTS";
-import { fakerListClienteFisicoArgsOK } from "@fakesClienteFisico";
+import { Log } from "../../../../../../externals/deps.ts";
+import { fakerListClienteFisicoArgsOK } from "../../../deps.ts";
 
 const sut = newClienteFisicoFactory;
 const stubInput = fakerListClienteFisicoArgsOK[0];

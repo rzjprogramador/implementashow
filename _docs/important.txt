@@ -1,2 +1,5 @@
 instalar_modulo_prettier:
 ```deno install --unstable --allow-read --allow-write --allow-run https://deno.land/x/deno.prettier/mod.ts```
+
+IMPORTACOES DEP :
+

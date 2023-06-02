@@ -2,7 +2,7 @@
 import {
   ClienteFisicoModel,
   ClienteFisicoRepository,
-} from "@contractsClienteFisico";
+} from "../../deps.ts";
 
 const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   items: [],
