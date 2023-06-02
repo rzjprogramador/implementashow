@@ -1,4 +1,4 @@
-import { Log } from "@global/index.ts";
+import { Log } from "../rzModulesTS/_subir_mods_ts/LogConsole/index.ts";
 
 const foo = "foo";
 
