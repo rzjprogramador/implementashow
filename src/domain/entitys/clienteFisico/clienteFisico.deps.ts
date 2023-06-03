@@ -18,9 +18,13 @@ export * from "./useCases/create/features/validateArgs.ts";
 export * from "./useCases/create/indexPipe.ts";
 // USECASES FINALLY  ***************************************
 
-// DIRETORYIES_AUX ENTITY **********************************************
-export * from "./uniques/subDeps.deps.ts";
-
 // USECASES CONTROLLER **********************************************
 export * from "./../clienteFisico/controllers/create/controller.ts";
-// export * from "./controllers/subDeps.deps.ts";
+
+// DIRETORIES_AUX ENTITY **********************************************
+// UNIQUES
+export * from "../clienteFisico/uniques/contracts/contracts.ts";
+export * from "../clienteFisico/uniques/fakes/fakes.ts";
+export * from "../clienteFisico/uniques/feedbacks/feedbacks.ts";
+export * from "../clienteFisico/uniques/mediators/mediators.ts";
+export * from "../clienteFisico/uniques/seeds/seeds.ts";

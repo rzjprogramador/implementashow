@@ -5,7 +5,7 @@ import {
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsFAIL,
   fakerListClienteFisicoArgsOK,
-} from "./../subDeps.deps.ts";
+} from "./../../clienteFisico.deps.ts";
 
 const makeSut = () => {
   return {
