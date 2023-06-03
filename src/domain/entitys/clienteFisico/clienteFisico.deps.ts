@@ -1,4 +1,8 @@
-/** * DEPS ENTITY */
+/** *
+ *  DEPS ENTITY
+ *  REGISTRE E DEPOIS RECUPERE TODOS ARTEFATOS DO MODULO AQUI.
+ * importante: ['ordemDeProcedencia do Uso é importante', ]
+ * */
 
 // EXTERNALS FOR ENTITY **********************************************
 export * from "./externalsForEntity/repositoryEntityProduction/repositoryProduction.ts";
