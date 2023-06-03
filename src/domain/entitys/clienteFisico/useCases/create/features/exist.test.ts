@@ -2,7 +2,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { Log } from "../../../../../../externals/externalsDeps.deps.ts";
-import { feedbacksGlobal } from "../../../../../../global/globalDeps.deps.ts";
+import { feedbacksGlobal } from "../../../../../global/globalDeps.deps.ts";
 import {
   ArgExistClienteFisico,
   ClienteFisicoModel,

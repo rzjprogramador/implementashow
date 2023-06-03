@@ -2,7 +2,7 @@ import {
   ArgExistClienteFisico,
   mediatorRepositoryClienteFisico,
 } from "../../../clienteFisico.deps.ts";
-import { feedbacksGlobal } from "../../../../../../global/globalDeps.deps.ts";
+import { feedbacksGlobal } from "../../../../../global/globalDeps.deps.ts";
 
 const featExistClienteFisico = async (m: ArgExistClienteFisico) => {
   const operation = await mediatorRepositoryClienteFisico?.exist?.exist(m);
