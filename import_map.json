@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@rootDeps": "./topLevel/deps/_rootDeps.deps.ts",
+    "@depsClienteFisico": "./topLevel/deps/_rootDeps.deps.ts"
+  }
+}

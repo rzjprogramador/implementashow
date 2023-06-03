@@ -1,8 +1,13 @@
+// import {
+//   ClienteFisicoModel,
+//   fakerIDClienteFisico,
+//   fakerListClienteFisicoArgsOK,
+// } from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
 import {
   ClienteFisicoModel,
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsOK,
-} from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
+} from "@depsClienteFisico";
 
 type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel };
 

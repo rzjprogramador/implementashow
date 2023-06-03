@@ -3,7 +3,8 @@
  *
  *  REGISTRE E DEPOIS RECUPERE TODOS ARTEFATOS DO MODULO AQUI.
  * manutencaoMudancas: [
-  [x] se mudar de pasta >> dará manutencao somente nos arquivos entidadeDeps referente e no arquivo fonteMudado que mandou sua referencia para o ROOT_MASTER_DEPS_ALL_APP
+  [x] se mudar de pasta >> dará manutencao somente nos arquivos entidadeDeps referente -usando o mapeamento import_map.json
+  [x] se nao usar o mapeamento import_map.json a manutencao em troca de apsta sera nos arquivos entidadeDeps e no arquivo fonteMudado que mandou sua referencia para o ROOT_MASTER_DEPS_ALL_APP
  ],
  */
 
