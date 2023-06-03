@@ -1,0 +1,24 @@
+instalar_modulo_prettier:
+```deno install --unstable --allow-read --allow-write --allow-run https://deno.land/x/deno.prettier/mod.ts```
+
+IMPORTACOES DEP :
+
+cuidados_ao_exportar_para_modularizar:
+"cuidado para nao duplicar a importacao/exportacao deste mesmo artefato provavelmente neste mesmo arquivo... ou em putro lugar esta ação ja esta sendo feita",
+
+ordem_de_procedencia_imports:
+"a justa ordem de modularizacoes dep tambem é importante e pode causar erros, mantenha a ordem dos export * tudo.",
+
+fez_alguma_mudanca_enquanto_confere_em_tempo_real_no_console: 'as vezes é preciso restatar o server ou o run console que esta rodando a app para ver refletir as mudanças em tempo de execucao...pode ser visualizando em watch autoReload um run, test, server, etc... tudoq ue for no console e em autoReload.'
+
+erro_comum_em_importacoes_modulos:
+`error: "SyntaxError: The requested module, does not provide an export name",
+traducao: ""O módulo solicitado não fornece um nome de exportação,
+
+causa: "o artefato nao esta sendo exportado."`.
+
+solucao: ['faça esta acão em somente um lugar e somente uma vez.', 'as vezes é preciso restatar o server ou o run console que esta rodando a app para ver refletir as mudanças em tempo de execucao.', ],
+
+origens_de_erros_via_console:
+`<at> e o link é o arquivo onde esta a origem do erro
+<uncaught error> é por onde o erro refletiu e se propagou e nao a origem do erro.`,
