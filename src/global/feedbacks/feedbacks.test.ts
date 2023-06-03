@@ -1,6 +1,6 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { feedbacksGlobal } from "../deps.deps.ts";
+import { feedbacksGlobal } from "../globalDeps.deps.ts";
 
 const sut = feedbacksGlobal;
 

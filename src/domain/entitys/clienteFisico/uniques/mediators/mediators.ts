@@ -1,5 +1,5 @@
 import { clienteFisicoRepositoryProduction } from "../../externalsForEntity/subDeps.deps.ts";
-import { ClienteFisicoRepository } from "../../deps.deps.ts";
+import { ClienteFisicoRepository } from "../../clienteFisico.deps.ts";
 
 interface MediatorRepositoryClienteFisico {
   create: ClienteFisicoRepository;
