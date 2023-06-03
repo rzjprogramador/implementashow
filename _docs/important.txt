@@ -3,7 +3,15 @@ instalar_modulo_prettier:
 
 IMPORTACOES DEP :
 
+ordem_de_procedencia_imports:
+"a justa ordem de modularizacoes dep tambem é importante e pode causar erros, mantenha a ordem dos export * tudo.",
+
 erro_comum_em_importacoes_modulos:
-erro: error: SyntaxError: The requested module 'files.ts' does not provide an export name ...
-causa: é porque estou duplicando a importacao/exportacao deste mesmo artefato provavelmente neste mesmo arquivo... ou em putro lugar esta ação ja esta sendo feita.
-solucao: faça esta acão em somente um luigar e somente uma vez.
+`erro: error: SyntaxError: The requested module 'files.ts' does not provide an export name ...
+causa: é porque estou duplicando a importacao/exportacao deste mesmo artefato provavelmente neste mesmo arquivo... ou em putro lugar esta ação ja esta sendo feita`.
+
+solucao: 'faça esta acão em somente um luigar e somente uma vez.',
+
+origens_de_erros_via_console:
+`<at> e o link é o arquivo onde esta a origem do erro
+<uncaught error> é por onde o erro refletiu e se propagou e nao a origem do erro.`,

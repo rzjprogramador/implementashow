@@ -1,5 +1,4 @@
-import { clienteFisicoRepositoryProduction } from "../../externalsForEntity/subDeps.deps.ts";
-import { ClienteFisicoRepository } from "../../clienteFisico.deps.ts";
+import { clienteFisicoRepositoryProduction, ClienteFisicoRepository } from "../../clienteFisico.deps.ts";
 
 interface MediatorRepositoryClienteFisico {
   create: ClienteFisicoRepository;
@@ -12,6 +11,7 @@ const mediatorRepositoryClienteFisico: MediatorRepositoryClienteFisico = {
 };
 
 export { mediatorRepositoryClienteFisico };
+
 /*
  * 1x1 com useCases.
  */

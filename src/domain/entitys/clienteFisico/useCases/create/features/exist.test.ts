@@ -93,7 +93,7 @@ Deno.test({
     // test
     const input = inputWithIDMockOK.ID;
     const where = await sutOK(input);
-    Log("RETORNE O ARG  >> ", where);
+    // Log("RETORNE O ARG  >> ", where);
     expect(where).toEqual(input);
   },
 });
