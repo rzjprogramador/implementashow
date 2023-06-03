@@ -1,4 +1,1 @@
-// deno-lint-ignore-file no-unused-vars
-import { fakerListClienteFisicoArgsOK } from "@clienteFisico";
-
-const foo = fakerListClienteFisicoArgsOK;
+console.log("Hello Word App!");
