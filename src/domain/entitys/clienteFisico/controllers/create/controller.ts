@@ -5,7 +5,7 @@ import {
   ok,
   saveCreateClienteFisico,
   validateArgsClienteFisico,
-} from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
+} from "@depsClienteFisico";
 
 type ControllerCreateClienteFisico = (
   a: ClienteFisicoArgs,

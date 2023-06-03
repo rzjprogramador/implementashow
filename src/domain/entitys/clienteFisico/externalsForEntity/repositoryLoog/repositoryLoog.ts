@@ -1,20 +1,20 @@
-import { LoggPersonModel, LoggUserType } from "../../../../../../../rzModulesTS/_subir_mods_ts/LoggUser/index.ts"
+import { LoggPersonModel, LoggUserType } from "@depsExternals";
 
 const logUserRepositoryProduction: LoggUserType = {
   items: [],
 
   create(props: LoggPersonModel) {
     if (props) {
-      this?.items?.push(props)!
-      return props
+      this?.items?.push(props)!;
+      return props;
     } else {
-      return false
+      return false;
     }
   },
 
   list() {
-    return this?.items!
+    return this?.items!;
   },
-}
+};
 
-export { logUserRepositoryProduction }
+export { logUserRepositoryProduction };

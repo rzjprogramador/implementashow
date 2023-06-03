@@ -1,6 +1,7 @@
 {
   "imports": {
     "@rootDeps": "./topLevel/deps/_rootDeps.deps.ts",
+    "@depsExternals": "./topLevel/deps/_rootDeps.deps.ts",
     "@depsClienteFisico": "./topLevel/deps/_rootDeps.deps.ts"
   }
 }

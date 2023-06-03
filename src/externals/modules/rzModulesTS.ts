@@ -1,10 +1,19 @@
 export { objectValuesFN } from "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/main.ts";
 
-export { objectDateCurrent } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/DateCurrent/index.ts";
+// TODO -- POR ENQUANTO PUXANDO TODAS IMPORTACOES DO PCFIXO *******************/
 
-export { objectDateLog } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/DateObject/index.ts";
-export type { IObjectDateLog } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/DateObject/index.ts";
+export { objectDateCurrent } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/main.ts";
+export { objectDateLog } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/main.ts";
+export type { IObjectDateLog } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/main.ts";
+// LogConsole
+export { Log } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/main.ts";
 
-export { createLoggUser } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LoggUser/index.ts";
+// LoogUser ============================================================
+// Logg - obs: todo:: estranho estou trazendo tudo la do subir modules fixoPc - para poder usar os tipos : ArgsLoggPerson, LoggPersonModel
+export * from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/main.ts";
 
-export { Log } from "/home/rzj/..gitAll/rzModulesTS/_subir_mods_ts/LogConsole/index.ts";
+export { createLoggUser } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/main.ts";
+
+// finally LoggUser =============================================
+
+// finally - // TODO -- POR ENQUANTO PUXANDO TODAS IMPORTACOES DO PCFIXO *******/
