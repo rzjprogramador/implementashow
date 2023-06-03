@@ -2,7 +2,7 @@ import {
   ClienteFisicoModel,
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsOK,
-} from "../../clienteFisico.deps.ts";
+} from "../../../../../../topLevel/deps/_deps.deps.ts";
 
 type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel };
 

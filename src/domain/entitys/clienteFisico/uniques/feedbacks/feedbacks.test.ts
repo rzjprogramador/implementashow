@@ -1,6 +1,6 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { feedbackClienteFisico } from "../../clienteFisico.deps.ts";
+import { feedbackClienteFisico } from "./feedbacks.ts";
 
 const sut = feedbackClienteFisico;
 

@@ -1,11 +1,13 @@
 import {
   ClienteFisicoArgs,
   ClienteFisicoModel,
-} from "../../../clienteFisico.deps.ts";
+} from "../../../../../../../topLevel/deps/_deps.deps.ts";
 
-export const prepareCreateClienteFisico = (
+const prepareCreateClienteFisico = (
   a: ClienteFisicoArgs,
 ): ClienteFisicoModel => {
   const model: ClienteFisicoModel = { ...a, ID: "1" };
   return model;
 };
+
+export { prepareCreateClienteFisico }
