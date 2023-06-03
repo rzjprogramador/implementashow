@@ -1,7 +1,7 @@
 import {
   ClienteFisicoArgs,
   ClienteFisicoModel,
-} from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
+} from "@depsClienteFisico";
 
 const prepareCreateClienteFisico = (
   a: ClienteFisicoArgs,

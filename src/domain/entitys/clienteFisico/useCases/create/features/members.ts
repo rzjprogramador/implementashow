@@ -1,8 +1,5 @@
-import { objectDateCurrent } from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
-import {
-  ClienteFisicoArgs,
-  MembersClienteFisico,
-} from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
+import { objectDateCurrent } from "@depsExternals";
+import { ClienteFisicoArgs, MembersClienteFisico } from "@depsClienteFisico";
 
 const membersClienteFisico: MembersClienteFisico = {
   showIdade(this: ClienteFisicoArgs) {

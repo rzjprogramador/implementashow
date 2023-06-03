@@ -1,7 +1,7 @@
 import {
   ClienteFisicoRepository,
   clienteFisicoRepositoryProduction,
-} from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
+} from "@depsClienteFisico";
 
 interface MediatorRepositoryClienteFisico {
   create: ClienteFisicoRepository;

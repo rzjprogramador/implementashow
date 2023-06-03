@@ -3,7 +3,7 @@ import {
   ClienteFisicoArgs,
   newClienteFisicoFactory,
   prepareCreateClienteFisico,
-} from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
+} from "@depsClienteFisico";
 
 const listFeatCreateClienteFisico = [
   newClienteFisicoFactory,

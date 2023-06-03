@@ -1,7 +1,7 @@
 import {
   ClienteFisicoArgs,
   membersClienteFisico,
-} from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
+} from "@depsClienteFisico";
 
 const clienteFisicoFactory = (a: ClienteFisicoArgs) => {
   // a.primeiroNome = a.primeiroNome ?? 'foo' // aqui caso precise dar valor default a campo.

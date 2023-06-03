@@ -1,5 +1,5 @@
-import { objectValuesFN } from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
-import { ClienteFisicoArgs } from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
+import { objectValuesFN } from "@depsExternals";
+import { ClienteFisicoArgs } from "@depsClienteFisico";
 
 const FirstNamePerson = objectValuesFN.FistNamePerson;
 

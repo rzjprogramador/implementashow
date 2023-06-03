@@ -2,7 +2,7 @@ import {
   ArgExistClienteFisico,
   feedbacksGlobal,
   mediatorRepositoryClienteFisico,
-} from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
+} from "@depsClienteFisico";
 
 const featExistClienteFisico = async (m: ArgExistClienteFisico) => {
   const operation = await mediatorRepositoryClienteFisico?.exist?.exist(m);

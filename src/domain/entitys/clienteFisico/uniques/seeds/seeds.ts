@@ -1,8 +1,3 @@
-// import {
-//   ClienteFisicoModel,
-//   fakerIDClienteFisico,
-//   fakerListClienteFisicoArgsOK,
-// } from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
 import {
   ClienteFisicoModel,
   fakerIDClienteFisico,
