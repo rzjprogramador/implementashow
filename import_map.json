@@ -1,5 +1,6 @@
 {
   "imports": {
+    "@/": "./src/",
     "@rootDeps": "./topLevel/deps/_rootDeps.deps.ts",
     "@depsExternals": "./topLevel/deps/_rootDeps.deps.ts",
     "@depsGlobal": "./topLevel/deps/_rootDeps.deps.ts",
