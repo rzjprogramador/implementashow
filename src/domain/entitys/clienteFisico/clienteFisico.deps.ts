@@ -15,7 +15,7 @@ export * from "./useCases/create/features/save.ts";
 export * from "./useCases/create/features/validateArgs.ts";
 
 // MASTER_PIPE_ARGS - CREATE ENTITY
-export * from "./useCases/create/indexPipe.ts";
+export * from "./useCases/create/masterPipeArgs.ts";
 // USECASES FINALLY  ***************************************
 
 // USECASES CONTROLLER **********************************************
