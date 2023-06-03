@@ -2,46 +2,21 @@
  *  DEPS ENTITY
  *  REGISTRE E DEPOIS RECUPERE TODOS ARTEFATOS DO MODULO AQUI.
  * manutencaoMudancas: [
-  [x] se mudar de pasta >> manutencao somente aqui
-  [x] se mudar de pasta >> manutencao somente aqui
+  [x] se mudar de pasta >> manutencao somente aqui ou no deps da entidade
+  [x] todo: esta dando manutencao em um arquivo extra , quando muda de pasta um artefato
  ],
  */
 
-
-// externals
+/* 1- externals *************************************************** */
 export * from "./../../src/externals/modules/rzModulesTS.ts";
+/* finally - externals *************************************************** */
 
-// clienteFisico
-export * from "./../../src/domain/entitys/clienteFisico/uniques/contracts/contracts.ts";
+/* 2- All Entitys*************************************************** */
+export * from "./clienteFisico.deps.ts";
 
-// create - features
-export * from "./../../src/domain/entitys/clienteFisico/useCases/create/features/exist.ts";
-export * from "./../../src/domain/entitys/clienteFisico/useCases/create/features/factory.ts";
-export * from "./../../src/domain/entitys/clienteFisico/useCases/create/features/members.ts";
-export * from "./../../src/domain/entitys/clienteFisico/useCases/create/features/prepare.ts";
-export * from "./../../src/domain/entitys/clienteFisico/useCases/create/features/save.ts";
-export * from "./../../src/domain/entitys/clienteFisico/useCases/create/features/validateArgs.ts";
-// masterPipeArgs
-export * from "./../../src/domain/entitys/clienteFisico/useCases/create/masterPipeArgs.ts";
+/* finally - All Entitys*************************************************** */
 
-// externalsForEntity
-export * from "./../../src/domain/entitys/clienteFisico/externalsForEntity/repositoryEntityProduction/repositoryProduction.ts";
-export * from "./../../src/domain/entitys/clienteFisico/externalsForEntity/repositoryEntityProduction/repositoryProduction.ts";
-export * from "./../../src/domain/entitys/clienteFisico/externalsForEntity/repositoryLoog/repositoryLoog.ts";
-
-// helpers global entitys
+/* 3- helpers global entitys *************************************************** */
 export * from "./../../src/domain/helpers/feedbacks/feedbacks.ts";
 export * from "./../../src/domain/helpers/httpResponse/httpResponse.ts";
-
-// controller
-export * from "./../../src/domain/entitys/clienteFisico/controllers/create/controller.ts";
-
-// uniques
-
-// export * from "./../../src/domain/entitys/clienteFisico/uniques/fakes/fakes.ts" // fake
-
-export * from "../../foo/fakes/fakes.ts"; // fake
-
-export * from "./../../src/domain/entitys/clienteFisico/uniques/feedbacks/feedbacks.ts";
-export * from "./../../src/domain/entitys/clienteFisico/uniques/mediators/mediators.ts";
-export * from "./../../src/domain/entitys/clienteFisico/uniques/seeds/seeds.ts";
+/* finally - helpers global entitys *************************************************** */
