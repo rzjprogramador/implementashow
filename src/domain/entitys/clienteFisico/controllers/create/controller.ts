@@ -1,11 +1,11 @@
 import {
   ClienteFisicoArgs,
   ClienteFisicoModel,
-  saveCreateClienteFisico,
-  validateArgsClienteFisico,
   HttpResponse,
   ok,
-} from "../../../../../../topLevel/deps/_deps.deps.ts";
+  saveCreateClienteFisico,
+  validateArgsClienteFisico,
+} from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
 
 type ControllerCreateClienteFisico = (
   a: ClienteFisicoArgs,

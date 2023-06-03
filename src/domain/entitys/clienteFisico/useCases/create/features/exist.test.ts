@@ -4,10 +4,10 @@ import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import {
   ArgExistClienteFisico,
   ClienteFisicoModel,
-  seedClienteFisico,
   feedbacksGlobal,
   Log,
-} from "../../../../../../../topLevel/deps/_deps.deps.ts";
+  seedClienteFisico,
+} from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
 
 const inputWithIDMockOK: Partial<ClienteFisicoModel> = {
   primeiroNome: seedClienteFisico.one.primeiroNome,

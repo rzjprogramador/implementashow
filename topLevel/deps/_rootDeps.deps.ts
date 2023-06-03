@@ -1,9 +1,9 @@
 /** *
- *  DEPS ENTITY
+ *  ROOT_MASTER_DEPS_ALL_APP
+ *
  *  REGISTRE E DEPOIS RECUPERE TODOS ARTEFATOS DO MODULO AQUI.
  * manutencaoMudancas: [
-  [x] se mudar de pasta >> manutencao somente aqui ou no deps da entidade
-  [x] todo: esta dando manutencao em um arquivo extra , quando muda de pasta um artefato
+  [x] se mudar de pasta >> dará manutencao somente nos arquivos entidadeDeps referente e no arquivo fonteMudado que mandou sua referencia para o ROOT_MASTER_DEPS_ALL_APP
  ],
  */
 
@@ -12,7 +12,7 @@ export * from "./../../src/externals/modules/rzModulesTS.ts";
 /* finally - externals *************************************************** */
 
 /* 2- All Entitys*************************************************** */
-export * from "./clienteFisico.deps.ts";
+export * from "./clienteFisicoDeps.ts";
 
 /* finally - All Entitys*************************************************** */
 

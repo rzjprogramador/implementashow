@@ -2,7 +2,7 @@
 import {
   ClienteFisicoModel,
   ClienteFisicoRepository,
-} from "../../../../../../topLevel/deps/_deps.deps.ts";
+} from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
 
 const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
   items: [],

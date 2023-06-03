@@ -2,7 +2,7 @@ import {
   ClienteFisicoArgs,
   mediatorRepositoryClienteFisico,
   pipeArgsCreateClienteFisico,
-} from "../../../../../../../topLevel/deps/_deps.deps.ts";
+} from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
 
 const saveCreateClienteFisico = (a: ClienteFisicoArgs) => {
   const pipe = pipeArgsCreateClienteFisico(a);

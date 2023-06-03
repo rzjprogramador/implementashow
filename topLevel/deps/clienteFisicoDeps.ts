@@ -26,7 +26,9 @@ export * from "./../../src/domain/entitys/clienteFisico/controllers/create/contr
 
 // uniques
 export * from "./../../src/domain/entitys/clienteFisico/uniques/fakes/fakes.ts"; // fake
-// export * from "../../foo/fakes/fakes.ts"; // fake
+
+// export * from "../../src/tester/fakes/fakes.ts"; // fake
+
 export * from "./../../src/domain/entitys/clienteFisico/uniques/feedbacks/feedbacks.ts";
 export * from "./../../src/domain/entitys/clienteFisico/uniques/mediators/mediators.ts";
 export * from "./../../src/domain/entitys/clienteFisico/uniques/seeds/seeds.ts";

@@ -1,4 +1,4 @@
-import { ClienteFisicoArgs } from "../../../../../../topLevel/deps/_deps.deps.ts";
+import { ClienteFisicoArgs } from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
 
 type IFakerIDClienteFisico = { one: string; two: string };
 

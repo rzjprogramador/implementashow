@@ -1,4 +1,7 @@
-import { clienteFisicoRepositoryProduction, ClienteFisicoRepository } from "../../../../../../topLevel/deps/_deps.deps.ts";
+import {
+  ClienteFisicoRepository,
+  clienteFisicoRepositoryProduction,
+} from "../../../../../../topLevel/deps/_rootDeps.deps.ts";
 
 interface MediatorRepositoryClienteFisico {
   create: ClienteFisicoRepository;

@@ -1,5 +1,5 @@
-import { objectValuesFN } from "../../../../../../../topLevel/deps/_deps.deps.ts";
-import { ClienteFisicoArgs } from "../../../../../../../topLevel/deps/_deps.deps.ts";
+import { objectValuesFN } from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
+import { ClienteFisicoArgs } from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
 
 const FirstNamePerson = objectValuesFN.FistNamePerson;
 
@@ -28,4 +28,4 @@ const validateArgsClienteFisico = async (a: ClienteFisicoArgs) => {
   return await args;
 };
 
-export { validateArgsClienteFisico }
+export { validateArgsClienteFisico };

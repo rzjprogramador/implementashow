@@ -1,8 +1,8 @@
-import { objectDateCurrent } from "../../../../../../../topLevel/deps/_deps.deps.ts";
+import { objectDateCurrent } from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
 import {
   ClienteFisicoArgs,
   MembersClienteFisico,
-} from "../../../../../../../topLevel/deps/_deps.deps.ts";
+} from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
 
 const membersClienteFisico: MembersClienteFisico = {
   showIdade(this: ClienteFisicoArgs) {
