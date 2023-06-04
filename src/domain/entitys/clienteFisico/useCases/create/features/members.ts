@@ -1,8 +1,8 @@
-import { mkeObjectDateCurrent } from "@depsExternals";
-import { ClienteFisicoArgs, MembersClienteFisico } from "@depsClienteFisico";
+import { mkeObjectDateCurrent } from "@externals";
+import { IClienteFisicoArgs, IMembersClienteFisico } from "@clienteFisico";
 
-const membersClienteFisico: MembersClienteFisico = {
-  showIdade(this: ClienteFisicoArgs) {
+const membersClienteFisico: IMembersClienteFisico = {
+  showIdade(this: IClienteFisicoArgs) {
     const year = mkeObjectDateCurrent.currentYear();
     return year - this?.dataNascimento?.ano;
   },

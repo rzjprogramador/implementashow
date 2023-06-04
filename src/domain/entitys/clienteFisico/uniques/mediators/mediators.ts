@@ -1,14 +1,14 @@
 import {
-  ClienteFisicoRepository,
   clienteFisicoRepositoryProduction,
-} from "@depsClienteFisico";
+  IClienteFisicoRepository,
+} from "@clienteFisico";
 
-interface MediatorRepositoryClienteFisico {
-  create: ClienteFisicoRepository;
-  exist: ClienteFisicoRepository;
+interface IMediatorRepositoryClienteFisico {
+  create: IClienteFisicoRepository;
+  exist: IClienteFisicoRepository;
 }
 
-const mediatorRepositoryClienteFisico: MediatorRepositoryClienteFisico = {
+const mediatorRepositoryClienteFisico: IMediatorRepositoryClienteFisico = {
   create: clienteFisicoRepositoryProduction,
   exist: clienteFisicoRepositoryProduction,
 };

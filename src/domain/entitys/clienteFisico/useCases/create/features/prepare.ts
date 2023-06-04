@@ -1,12 +1,9 @@
-import {
-  ClienteFisicoArgs,
-  ClienteFisicoModel,
-} from "@depsClienteFisico";
+import { IClienteFisicoArgs, IClienteFisicoModel } from "@clienteFisico";
 
 const prepareCreateClienteFisico = (
-  a: ClienteFisicoArgs,
-): ClienteFisicoModel => {
-  const model: ClienteFisicoModel = { ...a, ID: "1" };
+  a: IClienteFisicoArgs,
+): IClienteFisicoModel => {
+  const model: IClienteFisicoModel = { ...a, ID: "1" };
   return model;
 };
 

@@ -2,20 +2,20 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import {
-  ArgExistClienteFisico,
-  ClienteFisicoModel,
+  IArgExistClienteFisico,
+  IClienteFisicoModel,
   seedClienteFisico,
-} from "@depsClienteFisico";
-import { feedbacksGlobal } from "@depsGlobal";
-import { mkeLog } from "@depsExternals";
+} from "@clienteFisico";
+import { feedbacksGlobal } from "@global";
+import { mkeLog } from "@externals";
 
-const inputWithIDMockOK: Partial<ClienteFisicoModel> = {
+const inputWithIDMockOK: Partial<IClienteFisicoModel> = {
   primeiroNome: seedClienteFisico.one.primeiroNome,
   sobrenome: seedClienteFisico.one.sobrenome,
   // O INPUT OK >>  NAO TEM ID
 };
 
-const inputWithoutIDMockFAIL: Partial<ClienteFisicoModel> = {
+const inputWithoutIDMockFAIL: Partial<IClienteFisicoModel> = {
   ID: seedClienteFisico?.one,
   primeiroNome: seedClienteFisico.one.primeiroNome,
   sobrenome: seedClienteFisico.one.sobrenome,
@@ -24,8 +24,8 @@ const inputWithoutIDMockFAIL: Partial<ClienteFisicoModel> = {
 
 const repositoryMockOK = {
   items: [],
-  async exist(m: Partial<ClienteFisicoModel>) {
-    return await this?.items?.find((m: Partial<ClienteFisicoModel>) =>
+  async exist(m: Partial<IClienteFisicoModel>) {
+    return await this?.items?.find((m: Partial<IClienteFisicoModel>) =>
       m.ID === m.ID
     );
   },
@@ -33,15 +33,15 @@ const repositoryMockOK = {
 
 const repositoryMockFAIL = {
   items: [inputWithIDMockOK],
-  async exist(m: Partial<ClienteFisicoModel>) {
-    return await this?.items?.find((m: Partial<ClienteFisicoModel>) =>
+  async exist(m: Partial<IClienteFisicoModel>) {
+    return await this?.items?.find((m: Partial<IClienteFisicoModel>) =>
       m?.ID === m.ID
     );
   },
 };
 
 // NESTES 2 FEAT MOCKADOS ESTOU MUDANDO SOMENTE O REPO ONDE SALVAM - 1 COM 1 ITEM AJ O OUTRO VAZIO.
-const fnAuxFeatExistOK = async (m: ArgExistClienteFisico) => {
+const fnAuxFeatExistOK = async (m: IArgExistClienteFisico) => {
   // ESTE METODO REFLETE A IMPLEMENATCAO DO SUT REAL <featExistClienteFisico>
   const operation = await repositoryMockOK?.exist(m);
   if (typeof operation == "undefined") {
@@ -53,7 +53,7 @@ const fnAuxFeatExistOK = async (m: ArgExistClienteFisico) => {
   }
 };
 
-const fnAuxFeatExistFAIL = async (m: ArgExistClienteFisico) => {
+const fnAuxFeatExistFAIL = async (m: IArgExistClienteFisico) => {
   // ESTE METODO REFLETE A IMPLEMENATCAO DO SUT REAL <featExistClienteFisico>
   const operation = await repositoryMockFAIL?.exist(m);
   if (typeof operation == "undefined") {
@@ -65,11 +65,11 @@ const fnAuxFeatExistFAIL = async (m: ArgExistClienteFisico) => {
   }
 };
 
-const featExistClienteFisicoMockOK = async (m: ArgExistClienteFisico) => {
+const featExistClienteFisicoMockOK = async (m: IArgExistClienteFisico) => {
   return await fnAuxFeatExistOK(m);
 };
 
-const featExistClienteFisicoMockFAIL = async (m: ArgExistClienteFisico) => {
+const featExistClienteFisicoMockFAIL = async (m: IArgExistClienteFisico) => {
   await fnAuxFeatExistFAIL(m);
 };
 

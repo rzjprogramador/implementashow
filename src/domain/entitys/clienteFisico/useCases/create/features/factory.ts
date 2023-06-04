@@ -1,9 +1,6 @@
-import {
-  ClienteFisicoArgs,
-  membersClienteFisico,
-} from "@depsClienteFisico";
+import { IClienteFisicoArgs, membersClienteFisico } from "@clienteFisico";
 
-const clienteFisicoFactory = (a: ClienteFisicoArgs) => {
+const clienteFisicoFactory = (a: IClienteFisicoArgs) => {
   // a.primeiroNome = a.primeiroNome ?? 'foo' // aqui caso precise dar valor default a campo.
   const entity = Object.create(membersClienteFisico);
   const merge = Object.assign(entity, a);
@@ -11,7 +8,7 @@ const clienteFisicoFactory = (a: ClienteFisicoArgs) => {
 };
 
 // make desta factory : para ser utilizado na app
-const newClienteFisicoFactory = (a: ClienteFisicoArgs) => {
+const newClienteFisicoFactory = (a: IClienteFisicoArgs) => {
   return clienteFisicoFactory(a);
 };
 

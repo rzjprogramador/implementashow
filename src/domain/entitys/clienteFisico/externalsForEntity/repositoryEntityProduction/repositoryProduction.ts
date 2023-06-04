@@ -1,13 +1,10 @@
 // deno-lint-ignore-file no-unused-vars
-import {
-  ClienteFisicoModel,
-  ClienteFisicoRepository,
-} from "@depsClienteFisico";
+import { IClienteFisicoModel, IClienteFisicoRepository } from "@clienteFisico";
 
-const clienteFisicoRepositoryProduction: ClienteFisicoRepository = {
+const clienteFisicoRepositoryProduction: IClienteFisicoRepository = {
   items: [],
 
-  async create(m: ClienteFisicoModel) {
+  async create(m: IClienteFisicoModel) {
     await this?.items?.push(m);
     return await m;
   },

@@ -1,50 +1,52 @@
-export type ClienteFisicoModel = ClienteFisicoArgs;
+export type IClienteFisicoModel = IClienteFisicoArgs;
 
-export interface ClienteFisicoArgs {
+export interface IClienteFisicoArgs {
   ID?: string | any;
   primeiroNome: string | any;
   sobrenome: string;
   email: string;
-  dataNascimento: DataNascimento;
+  dataNascimento: IDataNascimento;
   idade?: number;
-  tipoUser: TipoUser;
-  endereco: Endereco;
+  tipoUser: ITipoUser;
+  endereco: IEndereco;
 
-  MembersClienteFisico?: MembersClienteFisico;
+  MembersClienteFisico?: IMembersClienteFisico;
 }
-type DataNascimento = { dia: number; mes: number; ano: number };
-type TipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
-export interface MembersClienteFisico {
+type IDataNascimento = { dia: number; mes: number; ano: number };
+
+type ITipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
+
+export interface IMembersClienteFisico {
   showIdade?: () => number;
 }
 
-interface Endereco {
+interface IEndereco {
   cep: string;
   longadouro: string;
   numero: string;
   complemento: string;
-  cidade: Cidade;
+  cidade: ICidade;
 }
-interface Cidade {
+interface ICidade {
   nome: string;
   uf: string;
 }
 
-export type ExistClienteFisicoNotResponseFAIL =
-  | ClienteFisicoArgs
-  | ClienteFisicoModel;
+export type IExistClienteFisicoNotResponseFAIL =
+  | IClienteFisicoArgs
+  | IClienteFisicoModel;
 
-export type ResponseExistClienteFisico =
+export type IResponseExistClienteFisico =
   | undefined
-  | ClienteFisicoModel
-  | ClienteFisicoArgs;
+  | IClienteFisicoModel
+  | IClienteFisicoArgs;
 
-export type ArgExistClienteFisico = Partial<ClienteFisicoModel>;
+export type IArgExistClienteFisico = Partial<IClienteFisicoModel>;
 
-export interface ClienteFisicoRepository {
-  items?: ClienteFisicoModel[];
-  create: (m: ClienteFisicoModel) => Promise<ClienteFisicoModel>;
+export interface IClienteFisicoRepository {
+  items?: IClienteFisicoModel[];
+  create: (m: IClienteFisicoModel) => Promise<IClienteFisicoModel>;
   exist: (
-    m: ArgExistClienteFisico,
-  ) => Promise<ResponseExistClienteFisico>;
+    m: IArgExistClienteFisico,
+  ) => Promise<IResponseExistClienteFisico>;
 }

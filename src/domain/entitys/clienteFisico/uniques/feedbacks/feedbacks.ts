@@ -1,10 +1,10 @@
-import { feedbacksGlobal } from "@depsGlobal";
+import { feedbacksGlobal } from "@global";
 
-interface FeedbackClienteFisico {
+interface IFeedbackClienteFisico {
   createClienteFisicoOk: () => string;
 }
 
-const feedbackClienteFisico: FeedbackClienteFisico = {
+const feedbackClienteFisico: IFeedbackClienteFisico = {
   createClienteFisicoOk() {
     return `Usuario Fisico ${feedbacksGlobal.createOk}`;
   },

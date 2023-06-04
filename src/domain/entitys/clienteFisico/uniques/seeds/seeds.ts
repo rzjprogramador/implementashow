@@ -1,12 +1,12 @@
 import {
-  ClienteFisicoModel,
   fakerIDClienteFisico,
   fakerListClienteFisicoArgsOK,
-} from "@depsClienteFisico";
+  IClienteFisicoModel,
+} from "@clienteFisico";
 
-type SeedClienteFisico = { one: ClienteFisicoModel; two: ClienteFisicoModel };
+type ISeedClienteFisico = { one: IClienteFisicoModel; two: IClienteFisicoModel };
 
-const seedClienteFisico: SeedClienteFisico = {
+const seedClienteFisico: ISeedClienteFisico = {
   one: {
     ID: fakerIDClienteFisico?.one,
     primeiroNome: fakerListClienteFisicoArgsOK[0].primeiroNome,

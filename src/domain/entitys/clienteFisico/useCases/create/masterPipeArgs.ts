@@ -1,16 +1,16 @@
 // deno-lint-ignore-file no-explicit-any ban-types
 import {
-  ClienteFisicoArgs,
+  IClienteFisicoArgs,
   newClienteFisicoFactory,
   prepareCreateClienteFisico,
-} from "@depsClienteFisico";
+} from "@clienteFisico";
 
 const listFeatCreateClienteFisico = [
   newClienteFisicoFactory,
   prepareCreateClienteFisico,
 ];
 
-const pipeArgsCreateClienteFisico = (a: ClienteFisicoArgs) =>
+const pipeArgsCreateClienteFisico = (a: IClienteFisicoArgs) =>
   listFeatCreateClienteFisico.reduce((acc: any, fn: Function) => fn(acc), a);
 
 export { pipeArgsCreateClienteFisico };

@@ -1,10 +1,10 @@
 import {
-  ClienteFisicoArgs,
+  IClienteFisicoArgs,
   mediatorRepositoryClienteFisico,
   pipeArgsCreateClienteFisico,
-} from "@depsClienteFisico";
+} from "@clienteFisico";
 
-const saveCreateClienteFisico = (a: ClienteFisicoArgs) => {
+const saveCreateClienteFisico = (a: IClienteFisicoArgs) => {
   const pipe = pipeArgsCreateClienteFisico(a);
   const save = mediatorRepositoryClienteFisico.create.create(pipe);
   return save;

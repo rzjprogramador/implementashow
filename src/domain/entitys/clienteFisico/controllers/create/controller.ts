@@ -1,22 +1,22 @@
 import {
-  ClienteFisicoArgs,
-  ClienteFisicoModel,
-  HttpResponse,
+  IClienteFisicoArgs,
+  IClienteFisicoModel,
+  IHttpResponse,
   ok,
   saveCreateClienteFisico,
   validateArgsClienteFisico,
-} from "@depsClienteFisico";
+} from "@clienteFisico";
 
 type ControllerCreateClienteFisico = (
-  a: ClienteFisicoArgs,
-) => Promise<HttpResponse<ClienteFisicoModel>>;
+  a: IClienteFisicoArgs,
+) => Promise<IHttpResponse<IClienteFisicoModel>>;
 
 const controllerCreateClienteFisico: ControllerCreateClienteFisico = async (
   a,
 ) => {
-  const checkArgs: ClienteFisicoArgs = await validateArgsClienteFisico(a);
+  const checkArgs: IClienteFisicoArgs = await validateArgsClienteFisico(a);
 
-  const model: ClienteFisicoModel = await saveCreateClienteFisico(checkArgs);
+  const model: IClienteFisicoModel = await saveCreateClienteFisico(checkArgs);
 
   // TODO: CRIE NO PIPE UM mkeLog USER COM A REPLICA DO MODULO ABAIXO
   // const createmkeLog = remakerCreatemkeLoggUser('createClienteFisico', model?.id)

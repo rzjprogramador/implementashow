@@ -1,9 +1,9 @@
-interface FeedbackGlobal {
+interface IFeedbackGlobal {
   createOk: string;
   alreadyExists: string;
 }
 
-const feedbacksGlobal: FeedbackGlobal = {
+const feedbacksGlobal: IFeedbackGlobal = {
   createOk: "criado com sucesso",
   alreadyExists: `Ops... ja cadastrado!`,
 };

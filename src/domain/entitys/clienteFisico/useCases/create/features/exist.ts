@@ -1,10 +1,10 @@
 import {
-  ArgExistClienteFisico,
   feedbacksGlobal,
+  IArgExistClienteFisico,
   mediatorRepositoryClienteFisico,
-} from "@depsClienteFisico";
+} from "@clienteFisico";
 
-const featExistClienteFisico = async (m: ArgExistClienteFisico) => {
+const featExistClienteFisico = async (m: IArgExistClienteFisico) => {
   const operation = await mediatorRepositoryClienteFisico?.exist?.exist(m);
   if (typeof operation == "undefined") {
     // mkeLog('nao existe - entao retorno o dado enviado de  entrada')

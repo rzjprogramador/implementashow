@@ -1,4 +1,4 @@
-import { ClienteFisicoArgs } from "@depsClienteFisico";
+import { IClienteFisicoArgs } from "@clienteFisico";
 
 type IFakerIDClienteFisico = { one: string; two: string };
 
@@ -7,7 +7,7 @@ const fakerIDClienteFisico: IFakerIDClienteFisico = {
   two: "2",
 };
 
-const fakerListClienteFisicoArgsOK: ClienteFisicoArgs[] = [
+const fakerListClienteFisicoArgsOK: IClienteFisicoArgs[] = [
   {
     primeiroNome: "onename",
     sobrenome: "any sobrenome one",
@@ -52,7 +52,7 @@ const fakerListClienteFisicoArgsOK: ClienteFisicoArgs[] = [
   },
 ];
 
-const fakerListClienteFisicoArgsFAIL: ClienteFisicoArgs[] = [
+const fakerListClienteFisicoArgsFAIL: IClienteFisicoArgs[] = [
   {
     primeiroNome: "o",
     sobrenome: "any sobrenome one",

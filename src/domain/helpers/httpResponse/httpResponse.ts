@@ -1,17 +1,17 @@
 // deno-lint-ignore-file no-explicit-any
 
-type HttpResponse<T = any> = {
+type IHttpResponse<T = any> = {
   data: T;
   statusCode?: number;
-  info?: InfoController;
+  info?: IInfoController;
 };
 
-interface InfoController {
+interface IInfoController {
   feedback: string;
   mkeLogRegistrado: boolean;
 }
 
-const ok = (d: any): HttpResponse => ({
+const ok = (d: any): IHttpResponse => ({
   data: d,
   statusCode: 200,
   // info: {
@@ -20,4 +20,4 @@ const ok = (d: any): HttpResponse => ({
   // },
 });
 
-export { type HttpResponse, type InfoController, ok };
+export { type IHttpResponse, type IInfoController, ok };

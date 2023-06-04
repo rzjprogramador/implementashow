@@ -1,9 +1,9 @@
-import { ImkeLoggPersonModel, ImkeLoggUserType } from "@depsExternals";
+import { IMakeILoggPersonModel, IMakeILoggUserType } from "@externals";
 
-const logUserRepositoryProduction: ImkeLoggUserType = {
+const logUserRepositoryProduction: IMakeILoggUserType = {
   items: [],
 
-  async create(props: ImkeLoggPersonModel) {
+  async create(props: IMakeILoggPersonModel) {
     if (props) {
       await this?.items?.push(props)!;
       return await props;
@@ -19,4 +19,3 @@ const logUserRepositoryProduction: ImkeLoggUserType = {
 
 export { logUserRepositoryProduction };
 
-// useLib - todo: problemaType
