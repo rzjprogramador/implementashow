@@ -1,1 +1,1 @@
-console.log("Hello Word App!");
+console.mkeLog("Hello Word App!");

@@ -20,7 +20,7 @@ marp: true
 > conceito: tudo que possa usar todos campos de um modelo final de entidade.
 
 1. [] computaCampos que precisam de valores computados vindo de outros membros :: computedFieldsEntidade
-1. [] registra LoggUsuario
+1. [] registra mkeLoggUsuario
 1. [] por ultimo >> salva no repositorio , preciso deste retorno no controle...este salva uso no test pq é o ultimo e ja esta com tudo pronto.
 
 # Controller

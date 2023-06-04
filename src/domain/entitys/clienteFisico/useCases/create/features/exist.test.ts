@@ -4,10 +4,10 @@ import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import {
   ArgExistClienteFisico,
   ClienteFisicoModel,
-  feedbacksGlobal,
-  Log,
   seedClienteFisico,
-} from "../../../../../../../topLevel/deps/_rootDeps.deps.ts";
+} from "@depsClienteFisico";
+import { feedbacksGlobal } from "@depsGlobal";
+import { mkeLog } from "@depsExternals";
 
 const inputWithIDMockOK: Partial<ClienteFisicoModel> = {
   primeiroNome: seedClienteFisico.one.primeiroNome,
@@ -45,10 +45,10 @@ const fnAuxFeatExistOK = async (m: ArgExistClienteFisico) => {
   // ESTE METODO REFLETE A IMPLEMENATCAO DO SUT REAL <featExistClienteFisico>
   const operation = await repositoryMockOK?.exist(m);
   if (typeof operation == "undefined") {
-    // Log('nao existe - entao retorno o dado enviado de  entrada')
+    // mkeLog('nao existe - entao retorno o dado enviado de  entrada')
     return await m;
   } else {
-    // Log('ja existe - entao retorno em erro uma excessao')
+    // mkeLog('ja existe - entao retorno em erro uma excessao')
     throw new Error(feedbacksGlobal.alreadyExists);
   }
 };
@@ -57,10 +57,10 @@ const fnAuxFeatExistFAIL = async (m: ArgExistClienteFisico) => {
   // ESTE METODO REFLETE A IMPLEMENATCAO DO SUT REAL <featExistClienteFisico>
   const operation = await repositoryMockFAIL?.exist(m);
   if (typeof operation == "undefined") {
-    // Log('nao existe - entao retorno o dado enviado de  entrada')
+    // mkeLog('nao existe - entao retorno o dado enviado de  entrada')
     return await m;
   } else {
-    // Log('ja existe - entao retorno em erro uma excessao')
+    // mkeLog('ja existe - entao retorno em erro uma excessao')
     throw new Error(feedbacksGlobal.alreadyExists);
   }
 };
@@ -93,7 +93,7 @@ Deno.test({
     // test
     const input = inputWithIDMockOK.ID;
     const where = await sutOK(input);
-    // Log("RETORNE O ARG  >> ", where);
+    // mkeLog("RETORNE O ARG  >> ", where);
     expect(where).toEqual(input);
   },
 });
@@ -105,7 +105,7 @@ Deno.test({
   async fn() {
     const where = await tratExcessaoController();
     const feedbackFAIL = feedbacksGlobal.alreadyExists;
-    // Log("RETORNE falha WHERE >> ", where);
+    // mkeLog("RETORNE falha WHERE >> ", where);
     expect(where).toEqual(feedbackFAIL);
   },
 });
@@ -114,7 +114,7 @@ Deno.test({
 
 async function show_OK() {
   const res = await sutOK(inputWithIDMockOK);
-  Log("AQUI OK ESTA RETORNANDO O ARGUMENTO >> ", res);
+  mkeLog("AQUI OK ESTA RETORNANDO O ARGUMENTO >> ", res);
   return res;
 }
 // show_OK();
@@ -124,6 +124,6 @@ async function show_FAIL() {
   return await tratExcessaoController();
 }
 // viewConsole excessaoPromessa do Erro FAIL
-// show_FAIL().then((d) => Log(d));
+// show_FAIL().then((d) => mkeLog(d));
 
 export default 1;

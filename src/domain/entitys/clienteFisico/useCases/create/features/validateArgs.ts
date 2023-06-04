@@ -1,7 +1,7 @@
-import { objectValuesFN } from "@depsExternals";
+import { mkeObjectValuesFN } from "@depsExternals";
 import { ClienteFisicoArgs } from "@depsClienteFisico";
 
-const FirstNamePerson = objectValuesFN.FistNamePerson;
+const FirstNamePerson = mkeObjectValuesFN.FistNamePerson;
 
 const validateArgsClienteFisico = async (a: ClienteFisicoArgs) => {
   const args = await {
@@ -29,3 +29,5 @@ const validateArgsClienteFisico = async (a: ClienteFisicoArgs) => {
 };
 
 export { validateArgsClienteFisico };
+
+// useLib

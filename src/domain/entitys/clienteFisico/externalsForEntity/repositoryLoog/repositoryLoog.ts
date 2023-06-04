@@ -1,20 +1,22 @@
-import { LoggPersonModel, LoggUserType } from "@depsExternals";
+import { ImkeLoggPersonModel, ImkeLoggUserType } from "@depsExternals";
 
-const logUserRepositoryProduction: LoggUserType = {
+const logUserRepositoryProduction: ImkeLoggUserType = {
   items: [],
 
-  create(props: LoggPersonModel) {
+  async create(props: ImkeLoggPersonModel) {
     if (props) {
-      this?.items?.push(props)!;
-      return props;
+      await this?.items?.push(props)!;
+      return await props;
     } else {
-      return false;
+      return await false;
     }
   },
 
-  list() {
-    return this?.items!;
+  async list() {
+    return await this?.items!;
   },
 };
 
 export { logUserRepositoryProduction };
+
+// useLib - todo: problemaType

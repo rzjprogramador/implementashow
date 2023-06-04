@@ -1,35 +1,26 @@
 // deno-lint-ignore-file no-unused-vars
 
 // dateMomentRZ ============================================================
-export { objectValuesFN as remakerObjectValuesFN } from "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/main.ts";
 
-// TODO -- POR ENQUANTO PUXANDO TODAS IMPORTACOES DO PCFIXO *******************/
+// TUDO DE dateMomentRZ
+import { objectDateCurrent } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/dateMomentRZ/index.ts";
+export const mkeObjectDateCurrent = objectDateCurrent;
 
-export * from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/dateMomentRZ/index.ts";
-// export { objectDateCurrent as remakerObjectDateCurrent } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/dateMomentRZ/index.ts";
+// devToolsRZ ============================================================
+import { Log } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/devToolsRZ/index.ts";
+export const mkeLog = Log;
 
-export type { IObjectDateLog } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/dateMomentRZ/index.ts";
-// export type { IObjectDateLog } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/dateMomentRZ/index.ts";
+// appUserRZ ============================================================
+import {
+  ILoggPersonModel,
+  ILoggUserType,
+} from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/appUserRZ/loggUser/index.ts";
+export type {
+  ILoggPersonModel as ImkeLoggPersonModel,
+  ILoggUserType as ImkeLoggUserType,
+};
 
-// devToolsRZ >> LogConsole ============================================================
-export * from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/devToolsRZ/index.ts";
-// export { Log } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/devToolsRZ/index.ts";
-//
+// objectValuesFN ============================================================
+export { objectValuesFN as mkeObjectValuesFN } from "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/main.ts";
 
-// LoogUser ============================================================
-// Logg - obs: todo:: conferir estranho estou trazendo tudo la do subir modules fixoPc - para poder usar os tipos : ArgsLoggPerson, LoggPersonModel
-
-export * from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/appUserRZ/loggUser/index.ts";
-// export {
-//   createLoggUser as remakerCreateLoggUser,
-//   type IArgsLoggPerson,
-//   type ILoggPersonModel,
-// } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/appUserRZ/loggUser/index.ts";
-
-// finally LoggUser =============================================
-
-// finally - // TODO -- POR ENQUANTO PUXANDO TODAS IMPORTACOES DO PCFIXO *******/
-
-/*
-nomeacoes: replicar os imports com a inicial <remaker>
-*/
+/* */

@@ -54,7 +54,7 @@ const seedClienteFisico: SeedClienteFisico = {
   },
 };
 
-// Log(seedClienteFisico);
+// mkeLog(seedClienteFisico);
 
 export { seedClienteFisico };
 
