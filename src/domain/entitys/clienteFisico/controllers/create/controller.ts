@@ -18,7 +18,8 @@ const controllerCreateClienteFisico: ControllerCreateClienteFisico = async (
 
   const model: ClienteFisicoModel = await saveCreateClienteFisico(checkArgs);
 
-  // const createLog = makeLogUser('createClienteFisico', model?.id)
+  // TODO: CRIE NO PIPE UM LOG USER COM A REPLICA DO MODULO ABAIXO
+  // const createLog = remakerCreateLoggUser('createClienteFisico', model?.id)
 
   // const info: InfoController = {
   //   feedback: feedbacks.createClienteFisicoOk(),
