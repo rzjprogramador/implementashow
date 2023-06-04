@@ -17,8 +17,4 @@ export { objectValuesFN as mkeObjectValuesFN } from "https://raw.githubuserconte
 
 /*
 
-import_export_replicar_modulos: "ao inves de importar e depois criar nova var para uso das replicas, faz assim : exporta o endereco do modulo que traz tudo, , { extrai os artefatosAlvo as mkeNovaVariavel_ParaReplicaDeUso }"
-
-info: "as variaveis de replica após a keyword <as> são variaveis novas e elas que sera usadas pela app."
-
 */
