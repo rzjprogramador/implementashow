@@ -14,6 +14,6 @@ export type {
   ILoggUserType as IMakeILoggUserType,
 } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/appUserRZ/loggUser/index.ts";
 
-// objectValuesFN ============================================================
-// REPLICA DE TODOS objectValuesFN ->
-export { _FirstNamePerson as FirstNamePerson } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/objectValuesFN/index.ts";
+// // objectValuesFN ============================================================
+// // REPLICA DE TODOS objectValuesFN ->
+// export { _FirstNamePerson as FirstNamePerson } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/objectValuesFN/index.ts";

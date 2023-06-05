@@ -1,4 +1,4 @@
-import { FirstNamePerson } from "@externals";
+import { FirstNamePerson } from "@objectValues";
 import { IClienteFisicoArgs } from "@clienteFisico";
 
 const validateArgsClienteFisico = async (a: IClienteFisicoArgs) => {
