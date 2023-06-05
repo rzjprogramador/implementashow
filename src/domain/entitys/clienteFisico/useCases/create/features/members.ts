@@ -1,12 +1,12 @@
-import { mkeObjectDateCurrent } from "@externals";
+import { superDate } from "@externals";
 import { IClienteFisicoArgs, IMembersClienteFisico } from "@clienteFisico";
 
 const membersClienteFisico: IMembersClienteFisico = {
   showIdade(this: IClienteFisicoArgs) {
-    const year = mkeObjectDateCurrent.currentYear();
+    const year = superDate.currentYear();
     return year - this?.dataNascimento?.ano;
   },
 };
 
 export { membersClienteFisico };
-// usaLib
+// usaLib -- arrumando superDate

@@ -2,7 +2,7 @@
 
 // import { controllerCreateClienteFisico } from "./controller.ts";
 // import { fakerListClienteFisicoArgsOK } from "@clienteFisico";
-// import { mkeLog } from "@externals";
+// import { Log } from "@externals";
 
 // const sut = controllerCreateClienteFisico;
 // const inputOK = fakerListClienteFisicoArgsOK[0];
@@ -22,14 +22,14 @@
 //   expect(actual.data).toHaveProperty("endereco");
 // });
 
-// mkeLog("ola");
+// Log("ola");
 
 // /* TESTER_CONSOLE ************************************* */
 
 // // function show_controllerCreateClienteFisico() {
 // //   sut(inputOK)
-// //     .then((d) => mkeLog(d))
-// //     .catch((err) => mkeLog(err.message));
+// //     .then((d) => Log(d))
+// //     .catch((err) => Log(err.message));
 // // }
 // // show_controllerCreateClienteFisico();
 

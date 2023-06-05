@@ -18,12 +18,12 @@ const controllerCreateClienteFisico: ControllerCreateClienteFisico = async (
 
   const model: IClienteFisicoModel = await saveCreateClienteFisico(checkArgs);
 
-  // TODO: CRIE NO PIPE UM mkeLog USER COM A REPLICA DO MODULO ABAIXO
-  // const createmkeLog = remakerCreatemkeLoggUser('createClienteFisico', model?.id)
+  // TODO: CRIE NO PIPE UM Log USER COM A REPLICA DO MODULO ABAIXO
+  // const createLog = remakerCreateLoggUser('createClienteFisico', model?.id)
 
   // const info: InfoController = {
   //   feedback: feedbacks.createClienteFisicoOk(),
-  //   mkeLogRegistrado: !!createmkeLog
+  //   LogRegistrado: !!createLog
   // };
 
   return await ok(model);

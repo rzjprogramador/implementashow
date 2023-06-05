@@ -3,10 +3,10 @@
  */
 
 // dateMomentRZ ============================================================
-export { objectDateCurrent as mkeObjectDateCurrent } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/dateMomentRZ/index.ts";
+export { _superDate as superDate } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/superDateRZ/index.ts";
 
 // devToolsRZ ============================================================
-export { Log as mkeLog } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/devToolsRZ/index.ts";
+export { _Log as Log } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/devToolsRZ/index.ts";
 
 // appUserRZ ============================================================
 export type {

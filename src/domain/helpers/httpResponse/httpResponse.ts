@@ -8,7 +8,7 @@ type IHttpResponse<T = any> = {
 
 interface IInfoController {
   feedback: string;
-  mkeLogRegistrado: boolean;
+  LogRegistrado: boolean;
 }
 
 const ok = (d: any): IHttpResponse => ({
@@ -16,7 +16,7 @@ const ok = (d: any): IHttpResponse => ({
   statusCode: 200,
   // info: {
   //   feedback: info.feedback,
-  //   mkeLogRegistrado: info.mkeLogRegistrado,
+  //   LogRegistrado: info.LogRegistrado,
   // },
 });
 
