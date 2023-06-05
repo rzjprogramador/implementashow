@@ -15,4 +15,5 @@ export type {
 } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/appUserRZ/loggUser/index.ts";
 
 // objectValuesFN ============================================================
-export { objectValuesFN as mkeObjectValuesFN } from "https://raw.githubusercontent.com/rzjprogramador/lib_rzj_typescript/v1.0.0_objectsValueFN/main.ts";
+// REPLICA DE TODOS objectValuesFN ->
+export { _FirstNamePerson as FirstNamePerson } from "/home/rzj/..gitAll/rzModulesTS_FIXOPC/objectValuesFN/index.ts";

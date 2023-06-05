@@ -1,7 +1,5 @@
-import { mkeObjectValuesFN } from "@externals";
+import { FirstNamePerson } from "@externals";
 import { IClienteFisicoArgs } from "@clienteFisico";
-
-const FirstNamePerson = mkeObjectValuesFN.FistNamePerson;
 
 const validateArgsClienteFisico = async (a: IClienteFisicoArgs) => {
   const args = await {

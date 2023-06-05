@@ -9,7 +9,7 @@
  */
 
 /* 1- externals *************************************************** */
-export * from "./externalsLibsDeps.ts";
+export * from "./externalsLibsRZDeps.ts";
 /* finally - externals *************************************************** */
 
 /* 2- All Entitys*************************************************** */
