@@ -1,9 +1,9 @@
-import { superDate } from "@externals";
+import { SuperDateTS } from "@externals";
 import { IClienteFisicoArgs, IMembersClienteFisico } from "@clienteFisico";
 
 const membersClienteFisico: IMembersClienteFisico = {
   showIdade(this: IClienteFisicoArgs) {
-    const year = superDate.currentYear();
+    const year = SuperDateTS.currentYear();
     return year - this?.dataNascimento?.ano;
   },
 };
