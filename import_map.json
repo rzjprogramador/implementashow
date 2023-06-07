@@ -1,9 +1,9 @@
 {
   "imports": {
     "@/": "./src/",
-    "@externals": "./toplevel/deps/_rootDeps.deps.ts",
-    "@objectValues": "./toplevel/deps/_rootDeps.deps.ts",
-    "@global": "./toplevel/deps/_rootDeps.deps.ts",
-    "@clienteFisico": "./toplevel/deps/_rootDeps.deps.ts"
+    "@externals": "./roots/deps/_rootDeps.deps.ts",
+    "@objectValues": "./roots/deps/_rootDeps.deps.ts",
+    "@global": "./roots/deps/_rootDeps.deps.ts",
+    "@clienteFisico": "./roots/deps/_rootDeps.deps.ts"
   }
 }
