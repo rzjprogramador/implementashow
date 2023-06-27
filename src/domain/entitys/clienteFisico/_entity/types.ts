@@ -51,7 +51,11 @@ interface IClienteFisicoRepository {
   ) => Promise<IResponseExistClienteFisico>;
 }
 
+// functions
+type ClienteFisicoEntityFN = (d: IClienteFisicoArgs) => Promise<IClienteFisicoArgs>
+
 // -- disponibilizar --
 export type {
   IClienteFisicoArgs,
+  ClienteFisicoEntityFN
 }

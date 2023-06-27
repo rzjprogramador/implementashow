@@ -1,20 +1,22 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { IClienteFisicoArgs, Log, clienteFisicoEntity } from './mod.ts'
+import { IClienteFisicoArgs, Log, clienteFisicoEntity, fakesArgsClienteFisico } from './mod.ts'
 
 
 const sut = clienteFisicoEntity
-// const inputSut: fakesArgsClienteFisico
+const inputSutOk_one: IClienteFisicoArgs = fakesArgsClienteFisico.OK.one
 
+Deno.test({
+  name: "deve retornar ->  && .",
+  only: false,
+  async fn() {
+    const where = await sut(inputSutOk_one);
+    Log('  >>>>>>> ', where)
+    expect(where).toEqual(inputSutOk_one);
+  },
 
-// Deno.test("[ deve retornar ->  && .", () => {
-//   const input = inputSut;
-//   const where = sut(input);
-//   const assertion: any = "foo";
-//   Log('  >>>>>>> ', where)
-//   expect(where).toEqual(assertion);
-// });
+});
 
 // /* TESTER_CONSOLE ************************************* */
 
