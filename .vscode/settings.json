@@ -1,4 +1,0 @@
-{
-  "deno.config": "./deno.json",
-  "deno.importMap": "./import_map.json"
-}
