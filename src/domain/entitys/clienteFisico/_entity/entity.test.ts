@@ -17,6 +17,17 @@ Deno.test({
 
 });
 
+Deno.test({
+  name: "[ OK.members ] deve conter o membro { showIdade } na herdado na entidade final.",
+  only: false,
+  async fn() {
+    const where = await sut(inputSutOk_one);
+    // Log('  >>>>>>> ', where)
+    expect(where).toHaveProperty('showIdade');
+  },
+
+});
+
 // /* TESTER_CONSOLE ************************************* */
 
 // viewConsole : tester_Show_CreateEntityArgs

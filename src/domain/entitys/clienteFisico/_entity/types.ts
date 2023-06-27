@@ -13,7 +13,7 @@ interface IClienteFisicoArgs extends IMembersClienteFisico {
   endereco: IEndereco;
 }
 
-// Extends -> Members Entity
+// Extends -> Members Entity :: obs: todas props devem ser opcionais.
 interface IMembersClienteFisico {
   showIdade?: () => number;
 }
