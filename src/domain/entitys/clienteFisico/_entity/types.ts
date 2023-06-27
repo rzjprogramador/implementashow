@@ -54,5 +54,6 @@ interface ICidade {
 // -- Disponibilizar --
 export type {
   IClienteFisicoArgs,
+  IMembersClienteFisico,
   ClienteFisicoEntityFN
 }
