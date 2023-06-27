@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { IClienteFisicoArgs, Log, clienteFisicoEntity, fakesArgsClienteFisico } from './mod.ts'
