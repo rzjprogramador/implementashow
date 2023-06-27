@@ -3,12 +3,11 @@ import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { IClienteFisicoArgs, Log, clienteFisicoEntity, fakesArgsClienteFisico } from './mod.ts'
 
-
 const sut = clienteFisicoEntity
 const inputSutOk_one: IClienteFisicoArgs = fakesArgsClienteFisico.OK.one
 
 Deno.test({
-  name: "deve retornar ->  && .",
+  name: "[ Ok.Args ] deve retornar os mesmos argumentos que receber.",
   only: false,
   async fn() {
     const where = await sut(inputSutOk_one);
@@ -20,15 +19,8 @@ Deno.test({
 
 // /* TESTER_CONSOLE ************************************* */
 
-// async function tester_() {
-//   const res = await sut(inputSut);
-//   res.then(d => Log(d))
-//   // res.then(d => Log(d))
-// }
-// tester_();
+// viewConsole : tester_Show_CreateEntityArgs
+// sut(inputSutOk_one).then((d: any) => Log(d))
 
-/*
-* PARA RODAR ONLY SÓ ESTE TEST ```deno test <caminhoDesteArquivo>```
-*/
 
 export default 1;
