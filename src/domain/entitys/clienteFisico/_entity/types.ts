@@ -1,6 +1,6 @@
-export type IClienteFisicoModel = IClienteFisicoArgs;
+type IClienteFisicoModel = IClienteFisicoArgs;
 
-export interface IClienteFisicoArgs {
+interface IClienteFisicoArgs {
   ID?: string | any;
   primeiroNome: string | any;
   sobrenome: string;
@@ -16,7 +16,7 @@ type IDataNascimento = { dia: number; mes: number; ano: number };
 
 type ITipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
 
-export interface IMembersClienteFisico {
+interface IMembersClienteFisico {
   showIdade?: () => number;
 }
 
@@ -32,21 +32,26 @@ interface ICidade {
   uf: string;
 }
 
-export type IExistClienteFisicoNotResponseFAIL =
+type IExistClienteFisicoNotResponseFAIL =
   | IClienteFisicoArgs
   | IClienteFisicoModel;
 
-export type IResponseExistClienteFisico =
+type IResponseExistClienteFisico =
   | undefined
   | IClienteFisicoModel
   | IClienteFisicoArgs;
 
-export type IArgExistClienteFisico = Partial<IClienteFisicoModel>;
+type IArgExistClienteFisico = Partial<IClienteFisicoModel>;
 
-export interface IClienteFisicoRepository {
+interface IClienteFisicoRepository {
   items?: IClienteFisicoModel[];
   create: (m: IClienteFisicoModel) => Promise<IClienteFisicoModel>;
   exist: (
     m: IArgExistClienteFisico,
   ) => Promise<IResponseExistClienteFisico>;
+}
+
+// -- disponibilizar --
+export type {
+  IClienteFisicoArgs,
 }

@@ -1,3 +1,8 @@
-import { Log } from "./mod.ts";
+// deno-lint-ignore-file no-unused-vars
+import { IClienteFisicoArgs, Log } from "./mod.ts";
 
-Log('Alo entidade clienteFisico')
+const clienteFisicoEntity = (d: IClienteFisicoArgs) => {
+  return d
+}
+
+export { clienteFisicoEntity }
