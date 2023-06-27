@@ -1,6 +1,8 @@
+// -- Model -> Result Principe Entity
 type IClienteFisicoModel = IClienteFisicoArgs;
 
-interface IClienteFisicoArgs {
+// -- Args Entity
+interface IClienteFisicoArgs extends IMembersClienteFisico {
   ID?: string | any;
   primeiroNome: string | any;
   sobrenome: string;
@@ -9,16 +11,32 @@ interface IClienteFisicoArgs {
   idade?: number;
   tipoUser: ITipoUser;
   endereco: IEndereco;
-
-  MembersClienteFisico?: IMembersClienteFisico;
 }
-type IDataNascimento = { dia: number; mes: number; ano: number };
 
-type ITipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
-
+// Extends -> Members Entity
 interface IMembersClienteFisico {
   showIdade?: () => number;
 }
+
+// -- Repository --
+interface IClienteFisicoRepository {
+  items?: IClienteFisicoModel[];
+  create: (m: IClienteFisicoModel) => Promise<IClienteFisicoModel>;
+  exist: (
+    m: IArgExistClienteFisico,
+  ) => Promise<| undefined | IClienteFisicoModel | IClienteFisicoArgs>;
+}
+
+// -- Functions --
+type ClienteFisicoEntityFN = (d: IClienteFisicoArgs) => Promise<IClienteFisicoArgs>
+
+// -- Methods --
+type IArgExistClienteFisico = Partial<IClienteFisicoModel>;
+
+// -- Complet Entity --
+type IDataNascimento = { dia: number; mes: number; ano: number };
+
+type ITipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
 
 interface IEndereco {
   cep: string;
@@ -27,34 +45,13 @@ interface IEndereco {
   complemento: string;
   cidade: ICidade;
 }
+
 interface ICidade {
   nome: string;
   uf: string;
 }
 
-type IExistClienteFisicoNotResponseFAIL =
-  | IClienteFisicoArgs
-  | IClienteFisicoModel;
-
-type IResponseExistClienteFisico =
-  | undefined
-  | IClienteFisicoModel
-  | IClienteFisicoArgs;
-
-type IArgExistClienteFisico = Partial<IClienteFisicoModel>;
-
-interface IClienteFisicoRepository {
-  items?: IClienteFisicoModel[];
-  create: (m: IClienteFisicoModel) => Promise<IClienteFisicoModel>;
-  exist: (
-    m: IArgExistClienteFisico,
-  ) => Promise<IResponseExistClienteFisico>;
-}
-
-// functions
-type ClienteFisicoEntityFN = (d: IClienteFisicoArgs) => Promise<IClienteFisicoArgs>
-
-// -- disponibilizar --
+// -- Disponibilizar --
 export type {
   IClienteFisicoArgs,
   ClienteFisicoEntityFN

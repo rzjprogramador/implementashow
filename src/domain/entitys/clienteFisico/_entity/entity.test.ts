@@ -12,7 +12,7 @@ Deno.test({
   only: false,
   async fn() {
     const where = await sut(inputSutOk_one);
-    Log('  >>>>>>> ', where)
+    // Log('  >>>>>>> ', where)
     expect(where).toEqual(inputSutOk_one);
   },
 
