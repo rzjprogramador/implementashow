@@ -1,17 +1,26 @@
-import { ClienteFisicoEntityFN, IClienteFisicoArgs, membersClienteFisico } from "./mod.ts";
+import { SuperDate, IClienteFisicoArgs, } from "./mod.ts";
 
-const clienteFisicoFactory = (a: IClienteFisicoArgs) => {
-  const entity = Object.create(membersClienteFisico);
-  const merge = Object.assign(entity, a);
-  return merge;
-};
+class FactoryClienteFisico {
+  constructor(public readonly props: IClienteFisicoArgs) {
+    this.props.idade = this.showIdade()
+  }
 
-// add_membros_entidade: Para isto a entidade será criada contendo a factory e seus membros e publicada.
-
-const clienteFisicoEntity: ClienteFisicoEntityFN = async (d) => {
-  const entity = clienteFisicoFactory(d)
-  return await entity
+  // members
+  showIdade() {
+    const year = SuperDate.currentYear();
+    return year - this.props.dataNascimento.ano;
+  }
 }
 
+// maker
+const factoryClienteFisico = (props: IClienteFisicoArgs) => {
+  const instance = new FactoryClienteFisico(props)
+  return instance.props
+}
 
-export { clienteFisicoEntity }
+export { factoryClienteFisico }
+
+/*
+no maker tive que retornar .props que é o empacota as props usadas no construtor.
+e apra poder acessar essa props tive que deixar public a sua configuracao, mas protegida com Readonly somente leitura após primeira atribuição ou atribuição via metodo.
+*/

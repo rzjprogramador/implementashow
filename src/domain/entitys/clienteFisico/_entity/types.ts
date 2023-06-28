@@ -8,14 +8,14 @@ interface IClienteFisicoArgs extends IMembersClienteFisico {
   sobrenome: string;
   email: string;
   dataNascimento: IDataNascimento;
-  idade?: number;
+  idade?: IMembersClienteFisico["showIdade"];
   tipoUser: ITipoUser;
   endereco: IEndereco;
 }
 
 // Extends -> Members Entity :: obs: todas props devem ser opcionais.
 interface IMembersClienteFisico {
-  showIdade?: () => number;
+  showIdade?: number;
 }
 
 // -- Repository --
