@@ -27,10 +27,7 @@ interface IClienteFisicoRepository {
   ) => Promise<| undefined | IClienteFisicoModel | IClienteFisicoArgs>;
 }
 
-// -- Functions --
-type ClienteFisicoEntityFN = (d: IClienteFisicoArgs) => Promise<IClienteFisicoArgs>
-
-// -- Methods --
+// -- Repository_Member_Methods --
 type IArgExistClienteFisico = Partial<IClienteFisicoModel>;
 
 // -- Complet Entity --
@@ -55,5 +52,4 @@ interface ICidade {
 export type {
   IClienteFisicoArgs,
   IMembersClienteFisico,
-  ClienteFisicoEntityFN
 }
