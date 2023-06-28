@@ -19,7 +19,7 @@ Deno.test({
 });
 
 Deno.test({
-  name: "[ OK.members ] deve conter o membro { showIdade } na herdado na entidade final.",
+  name: "[ OK.members ] deve conter o membro { showIdade () } herdado na entidade final.",
   only: false,
   async fn() {
     const where = await sut(inputSutOk_one);
