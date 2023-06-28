@@ -1,4 +1,4 @@
-import { SuperDate, IClienteFisicoArgs, } from "./mod.ts";
+import { SuperDate, IClienteFisicoArgs, } from "../mod.ts";
 
 class FactoryClienteFisico {
   constructor(public readonly props: IClienteFisicoArgs) {

@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { IClienteFisicoArgs, Log, factoryClienteFisico, fakesArgsClienteFisico } from './mod.ts'
+import { IClienteFisicoArgs, Log, factoryClienteFisico, fakesArgsClienteFisico } from './../mod.ts'
 
 const sut = factoryClienteFisico
 const inputSutOk_one: IClienteFisicoArgs = fakesArgsClienteFisico.OK.one

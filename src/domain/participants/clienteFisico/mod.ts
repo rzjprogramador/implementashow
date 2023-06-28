@@ -1,10 +1,10 @@
 // FONTE UNICA DESTA ENTIDADE
 
 /* puxar tudo das replicas remotas -> para ser usado na entidade. */
-export * from '../../../../_roots/deps/depsRemote/replicas.deps.ts'
+export * from '../../../_roots/deps/depsRemote/replicas.deps.ts'
 
 /* re-exportar artefatos da entidade -- Ond eprecisarem de artefatos desta entidade -> buscaram aqui a importacao. */
-export * from './factory.ts'
+export * from './_factory/factory.ts'
 export * from './types.ts'
 
-export * from '../uniques/fakes/fakes.ts'
+export * from './uniques/fakes/fakes.ts'
