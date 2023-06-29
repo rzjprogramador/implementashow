@@ -1,7 +1,7 @@
-// deno-lint-ignore-file no-unused-vars
+// deno-lint-ignore-file no-unused-vars no-explicit-any
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import {  Log, ArgsClienteFisico, factoryClienteFisico, fakesArgsClienteFisico } from './../mod.ts'
+import { Log, ArgsClienteFisico, factoryClienteFisico, fakesArgsClienteFisico } from './../mod.ts'
 
 const sut = factoryClienteFisico
 const inputSutOk_one: ArgsClienteFisico = fakesArgsClienteFisico.OK.one
@@ -35,5 +35,12 @@ Deno.test({
 // viewConsole : tester_Show_CreateEntityArgs
 // sut(inputSutOk_one).then((d: any) => Log(d))
 
+async function show() {
+  const instance1 = await sut(inputSutOk_one)
+  instance1.primeiroNome = 'foooooooo'
+  // TODO NAO DEVERIA SER POSSIVEL - MAS ESTA SENDO PORQUE AS PROPS ESTAO PUBLICAS
+  Log(instance1)
+}
+// show()
 
 export default 1;

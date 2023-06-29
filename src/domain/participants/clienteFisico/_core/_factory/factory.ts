@@ -13,9 +13,9 @@ class FactoryClienteFisico {
 }
 
 // maker
-const factoryClienteFisico = (props: ArgsClienteFisico) => {
-  const instance = new FactoryClienteFisico(props)
-  return instance.props
+const factoryClienteFisico = async (props: ArgsClienteFisico) => {
+  const instance = await new FactoryClienteFisico(props)
+  return await instance.props
 }
 
 export { factoryClienteFisico }
