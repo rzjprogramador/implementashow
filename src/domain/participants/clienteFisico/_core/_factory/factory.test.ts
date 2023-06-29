@@ -1,10 +1,10 @@
 // deno-lint-ignore-file no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { IClienteFisicoArgs, Log, factoryClienteFisico, fakesArgsClienteFisico } from './../mod.ts'
+import {  Log, ArgsClienteFisico, factoryClienteFisico, fakesArgsClienteFisico } from './../mod.ts'
 
 const sut = factoryClienteFisico
-const inputSutOk_one: IClienteFisicoArgs = fakesArgsClienteFisico.OK.one
+const inputSutOk_one: ArgsClienteFisico = fakesArgsClienteFisico.OK.one
 
 Deno.test({
   name: "[ Ok.Args ] deve retornar os mesmos argumentos que receber.",

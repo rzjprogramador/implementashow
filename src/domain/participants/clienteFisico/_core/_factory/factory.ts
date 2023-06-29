@@ -1,7 +1,7 @@
-import { SuperDate, IClienteFisicoArgs, } from "../mod.ts";
+import { SuperDate, ArgsClienteFisico, } from "../mod.ts";
 
 class FactoryClienteFisico {
-  constructor(public readonly props: IClienteFisicoArgs) {
+  constructor(public readonly props: ArgsClienteFisico) {
     this.props.idade = this.showIdade()
   }
 
@@ -13,7 +13,7 @@ class FactoryClienteFisico {
 }
 
 // maker
-const factoryClienteFisico = (props: IClienteFisicoArgs) => {
+const factoryClienteFisico = (props: ArgsClienteFisico) => {
   const instance = new FactoryClienteFisico(props)
   return instance.props
 }
