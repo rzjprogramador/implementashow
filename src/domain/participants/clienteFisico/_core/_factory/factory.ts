@@ -8,19 +8,14 @@ class FactoryClienteFisico {
   // members
   showIdade() {
     const year = SuperDate.currentYear();
-    const res = year - this.props.dataNascimento.ano;
-    return res
+    return year - this.props.dataNascimento.ano;
   }
 }
 
 // maker
-const factoryClienteFisico = (props: ArgsClienteFisico): ArgsClienteFisico => {
-  return new FactoryClienteFisico(props).props
+const factoryClienteFisico = async (props: ArgsClienteFisico): Promise<ArgsClienteFisico> => {
+  return await new FactoryClienteFisico(props).props
 }
-// const factoryClienteFisico = async (props: ArgsClienteFisico) => {
-//   const instance = await new FactoryClienteFisico(props)
-//   return await instance.props
-// }
 
 export { factoryClienteFisico }
 

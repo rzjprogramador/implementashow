@@ -11,9 +11,8 @@ Deno.test({
   only: false,
   async fn() {
     const where = await sut(inputSutOk_one);
-    // Log('  >>>>>>> ', where)
+    Log('  >>>>>>> ', where)
     expect(where).toEqual(inputSutOk_one);
-    // TODO: SHOW IDADE
   },
 
 });
@@ -23,7 +22,7 @@ Deno.test({
   only: false,
   async fn() {
     const where = await sut(inputSutOk_one);
-    expect(where.showIdade).not.toBeDefined()
+    expect(await where.showIdade).not.toBeDefined()
     // TODO: SHOW IDADE - o membro sai undefined no console.
   },
 

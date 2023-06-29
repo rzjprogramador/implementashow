@@ -7,8 +7,8 @@ import { listCreateClienteFisico } from "./resources.ts";
 
 
 // -- Transform Entity Args in Model --
-const usecaseCreateClienteFisico = (args: ArgsClienteFisico): ClienteFisicoModel => {
-  return PipeFNGeneric(args, listCreateClienteFisico)
+const usecaseCreateClienteFisico = async (args: ArgsClienteFisico): Promise<ClienteFisicoModel> => {
+  return await PipeFNGeneric(args, listCreateClienteFisico)
 }
 
 export {

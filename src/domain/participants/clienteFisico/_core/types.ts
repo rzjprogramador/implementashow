@@ -12,15 +12,15 @@ interface ArgsClienteFisico extends MembersClienteFisico {
   sobrenome: string;
   email: string;
   dataNascimento: DataNascimento;
-  idade?: number;
-  // idade?: MembersClienteFisico["showIdade"];
+  // idade?: number;
+  idade?: MembersClienteFisico["showIdade"];
   tipoUser: TipoUser;
   endereco: Endereco;
 }
 
 // Extends -> Members Entity :: obs: todas props devem ser opcionais.
 interface MembersClienteFisico {
-  showIdade?: () => number;
+  showIdade?: number;
 }
 
 // -- Repository --
