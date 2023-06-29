@@ -8,3 +8,6 @@ export * from './_factory/factory.ts'
 export * from './types.ts'
 
 export * from './../uniques/fakes/fakes.ts'
+
+// -- UseCases --
+// export * from '../usecases/create/create.ts'

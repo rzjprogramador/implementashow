@@ -8,11 +8,13 @@ import {
 /* Replicas -> replicar nos mod.ts de cada entidade para uso. */
 const { log: Log } = superLibsTS
 const { superDate: SuperDate } = superLibsTS
+const { pipeFNGeneric: PipeFNGeneric } = superLibsTS
 
-
+// exportacaodas replicas para uso na app
 export {
   Log,
   SuperDate,
+  PipeFNGeneric,
 }
 
 

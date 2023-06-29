@@ -1,23 +1,26 @@
 // deno-lint-ignore-file no-explicit-any
 
 // -- Model -> Result Principe Entity
-type ClienteFisicoModel = ArgsClienteFisico;
+interface ClienteFisicoModel extends ArgsClienteFisico {
+  ID?: string;
+  IDB?: string;
+}
 
 // -- Args Entity
 interface ArgsClienteFisico extends MembersClienteFisico {
-  ID?: string | any;
   primeiroNome: string | any;
   sobrenome: string;
   email: string;
   dataNascimento: DataNascimento;
-  idade?: MembersClienteFisico["showIdade"];
+  idade?: number;
+  // idade?: MembersClienteFisico["showIdade"];
   tipoUser: TipoUser;
   endereco: Endereco;
 }
 
 // Extends -> Members Entity :: obs: todas props devem ser opcionais.
 interface MembersClienteFisico {
-  showIdade?: number;
+  showIdade?: () => number;
 }
 
 // -- Repository --
@@ -50,5 +53,6 @@ interface Cidade {
 // -- Disponibilizar --
 export type {
   ArgsClienteFisico,
+  ClienteFisicoModel,
   MembersClienteFisico,
 }

@@ -23,9 +23,8 @@ Deno.test({
   only: false,
   async fn() {
     const where = await sut(inputSutOk_one);
-    // Log('  >>>>>>> ', where)
-    // expect(where).toHaveProperty('showIdade');
-    // TODO: SHOW IDADE
+    expect(where.showIdade).not.toBeDefined()
+    // TODO: SHOW IDADE - o membro sai undefined no console.
   },
 
 });
