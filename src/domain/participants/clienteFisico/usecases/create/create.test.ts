@@ -28,7 +28,7 @@ async function tester_() {
   // console.log(instance1)
   // console.log(instance1.ID)
   // console.log('ACESSANDO MEBRO >>>>>>>', instance1?.showIdade)
-  sut(inputSut.OK.one).then((d: any) => Log(d.showIdade))
+  // sut(inputSut.OK.one).then((d: any) => Log(d.showIdade))
 }
 tester_();
 

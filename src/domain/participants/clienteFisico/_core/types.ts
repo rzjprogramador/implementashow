@@ -3,11 +3,15 @@
 // -- Model -> Result Principe Entity
 interface ClienteFisicoModel extends ArgsClienteFisico {
   ID?: string;
-  IDB?: string;
+  // IDB?: string;
 }
 
 // -- Args Entity
-interface ArgsClienteFisico extends MembersClienteFisico {
+interface ArgsClienteFisico {
+  args: ArgsCF
+}
+
+type ArgsCF = {
   primeiroNome: string | any;
   sobrenome: string;
   email: string;
@@ -17,7 +21,7 @@ interface ArgsClienteFisico extends MembersClienteFisico {
   tipoUser: TipoUser;
   endereco: Endereco;
 }
-
+// extends MembersClienteFisico
 // Extends -> Members Entity :: obs: todas props devem ser opcionais.
 interface MembersClienteFisico {
   showIdade?: number;
@@ -53,6 +57,7 @@ interface Cidade {
 // -- Disponibilizar --
 export type {
   ArgsClienteFisico,
+  ArgsCF,
   ClienteFisicoModel,
   MembersClienteFisico,
 }
