@@ -1,17 +1,16 @@
 import {
   PipeFNGeneric,
   type ArgsClienteFisico,
-  type ClienteFisicoModel,
 } from "../../_base/mod.ts";
-import { listforPipeCreateClienteFisico } from "./featuresForPipe/featuresForPipe.ts";
+import { listforPipeCreateClienteFisico } from "./listFeaturesForPipe/listArgsFeatures.ts";
 
 
-// -- Transform Entity Args in Model --
-const usecaseCreateClienteFisico = async (args: ArgsClienteFisico): Promise<ClienteFisicoModel> => {
-  return await PipeFNGeneric<ArgsClienteFisico, ClienteFisicoModel>(args, listforPipeCreateClienteFisico)
-}
+// -- Pipe Ok Args -- daqui sai os argumentos validos para o objetivo de criacao no controle.
+
+const caseCreateClienteFisicoArgsValid = async (arg: ArgsClienteFisico, list = listforPipeCreateClienteFisico) => await PipeFNGeneric<ArgsClienteFisico, ArgsClienteFisico>(arg, list)
+
 
 export {
-  usecaseCreateClienteFisico
+  caseCreateClienteFisicoArgsValid
 }
 

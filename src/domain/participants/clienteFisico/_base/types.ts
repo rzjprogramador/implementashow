@@ -1,3 +1,4 @@
+import type { DataNascimento, Endereco } from "../../../../_roots/deps/replicasLocal.deps.ts";
 
 interface ClienteFisicoModel {
   args: ArgsClienteFisico
@@ -26,23 +27,8 @@ interface ClienteFisicoRepository {
   ) => Promise<| undefined | ClienteFisicoModel | ClienteFisicoModel>;
 }
 
-// -- Complet Entity --
-type DataNascimento = { dia: number; mes: number; ano: number };
-
 type TipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
 
-interface Endereco {
-  cep: string;
-  longadouro: string;
-  numero: string;
-  complemento: string;
-  cidade: Cidade;
-}
-
-interface Cidade {
-  nome: string;
-  uf: string;
-}
 
 // -- Disponibilizar --
 export type {
