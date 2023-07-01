@@ -14,10 +14,11 @@ const featAddRegistersClienteFisico = (args: ClienteFisicoModel): ClienteFisicoM
   return args
 }
 
-// -- List for Pipe --
-const listCreateClienteFisico: Function[] = [createFactoryClienteFisico, featAddRegistersClienteFisico,]
+// ---------------------------------------------------------------------------
+// -- List EXPORT for Pipe --
+const listforPipeCreateClienteFisico: Function[] = [createFactoryClienteFisico, featAddRegistersClienteFisico,]
 
 export {
-  listCreateClienteFisico
+  listforPipeCreateClienteFisico
 }
 
