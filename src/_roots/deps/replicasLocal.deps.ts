@@ -1,2 +1,2 @@
 // Helpers
-export * from '../helpers/core/base.entity.ts'
+export * from '../helpers/bases/base.factory.entity.ts'
