@@ -24,7 +24,7 @@ const validateFieldsArgsClienteFisico = async (args: ClienteFisicoModel): Promis
       mes: args.args.dataNascimento.mes,
       ano: args.args.dataNascimento.ano,
     },
-    idade?: args.args.idade,
+    idade: args.args.idade,
     tipoUser: args.args.tipoUser,
     endereco: {
       cep: args.args.endereco.cep,

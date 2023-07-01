@@ -1,10 +1,10 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { usecaseCreateClienteFisico } from "./create.ts";
+import { caseCreateClienteFisicoArgsValid } from "./create.ts";
 import { Log, fakesArgsClienteFisico } from "../../_base/mod.ts";
 
 
-const sut = usecaseCreateClienteFisico
+const sut = caseCreateClienteFisicoArgsValid
 const inputSut = fakesArgsClienteFisico
 
 Deno.test({
