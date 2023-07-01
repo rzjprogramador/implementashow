@@ -1,7 +1,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { usecaseCreateClienteFisico } from "./create.ts";
-import { Log, fakesArgsClienteFisico } from "../../_core/mod.ts";
+import { Log, fakesArgsClienteFisico } from "../../_base/mod.ts";
 
 
 const sut = usecaseCreateClienteFisico

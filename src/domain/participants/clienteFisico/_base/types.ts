@@ -1,28 +1,18 @@
-// deno-lint-ignore-file no-explicit-any
 
-// -- Model -> Result Principe Entity
-interface ClienteFisicoModel extends ArgsClienteFisico {
-  ID?: string;
-  // IDB?: string;
+interface ClienteFisicoModel {
+  args: ArgsClienteFisico
+  ID?: string
 }
 
-// -- Args Entity
-interface ArgsClienteFisico {
-  args: ArgsCF
-}
-
-type ArgsCF = {
-  primeiroNome: string | any;
+type ArgsClienteFisico = {
+  primeiroNome: string;
   sobrenome: string;
   email: string;
   dataNascimento: DataNascimento;
-  // idade?: number;
   idade?: MembersClienteFisico["showIdade"];
   tipoUser: TipoUser;
   endereco: Endereco;
 }
-// extends MembersClienteFisico
-// Extends -> Members Entity :: obs: todas props devem ser opcionais.
 interface MembersClienteFisico {
   showIdade?: number;
 }
@@ -33,7 +23,7 @@ interface ClienteFisicoRepository {
   create: (m: ClienteFisicoModel) => Promise<ClienteFisicoModel>;
   exist: (
     m: Partial<ClienteFisicoModel>
-  ) => Promise<| undefined | ClienteFisicoModel | ArgsClienteFisico>;
+  ) => Promise<| undefined | ClienteFisicoModel | ClienteFisicoModel>;
 }
 
 // -- Complet Entity --
@@ -56,8 +46,7 @@ interface Cidade {
 
 // -- Disponibilizar --
 export type {
-  ArgsClienteFisico,
-  ArgsCF,
   ClienteFisicoModel,
+  ArgsClienteFisico,
   MembersClienteFisico,
 }

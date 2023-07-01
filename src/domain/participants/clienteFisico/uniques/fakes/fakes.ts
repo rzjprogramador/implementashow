@@ -1,14 +1,14 @@
-import { ArgsClienteFisico, ArgsCF } from "./../../_core/mod.ts";
+import { ClienteFisicoModel, ArgsClienteFisico } from "./../../_base/mod.ts";
 
 // -- Para uso nos tests da entidade e no seed --
 type FakeArgsClienteFisico = {
   OK: {
-    one: ArgsCF,
-    two: ArgsCF
+    one: ArgsClienteFisico,
+    two: ArgsClienteFisico
   },
   FAIL: {
-    one: ArgsCF,
-    two: ArgsCF
+    one: ArgsClienteFisico,
+    two: ArgsClienteFisico
   },
 }
 

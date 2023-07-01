@@ -1,20 +1,8 @@
-// deno-lint-ignore-file no-unused-vars
+/*
+* Modules Remote Principal
+* Replicas -> replicar nos mod.ts de cada entidade para uso.
+*/
 
-/* Modules Remote Principal*/
-import {
-  superLibsTS, type ISuperLibsTS
-} from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
-
-/* Replicas -> replicar nos mod.ts de cada entidade para uso. */
-const { log: Log } = superLibsTS
-const { superDate: SuperDate } = superLibsTS
-const { pipeFNGeneric: PipeFNGeneric } = superLibsTS
-
-// exportacaodas replicas para uso na app
-export {
-  Log,
-  SuperDate,
-  PipeFNGeneric,
-}
-
-
+export { log as Log } from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
+export { superDateTS as SuperDateTS } from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
+export { pipeGeneric as PipeFNGeneric } from "/home/rzj/..gitAll/SuperLibsTS/main.ts";

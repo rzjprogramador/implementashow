@@ -1,17 +1,16 @@
 // deno-lint-ignore-file ban-types
 import {
   makerFactoryClienteFisico,
-  type ArgsCF,
   type ArgsClienteFisico,
   type ClienteFisicoModel,
-} from "../../_core/mod.ts";
+} from "../../_base/mod.ts";
 
 // -- Feats --
-const createFactoryClienteFisico = async (args: ArgsCF) => {
+const createFactoryClienteFisico = async (args: ArgsClienteFisico) => {
   return await makerFactoryClienteFisico(args)
 }
 
-const featAddRegistersClienteFisico = (args: ArgsClienteFisico): ClienteFisicoModel => {
+const featAddRegistersClienteFisico = (args: ClienteFisicoModel): ClienteFisicoModel => {
   return args
 }
 

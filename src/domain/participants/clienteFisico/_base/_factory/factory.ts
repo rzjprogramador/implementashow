@@ -1,25 +1,25 @@
-import { SuperDate, ArgsCF, BaseEntityPerson, } from "../mod.ts";
+import { SuperDateTS, ArgsClienteFisico, BaseEntityPerson, } from "../mod.ts";
 
-class FactoryClienteFisico extends BaseEntityPerson<ArgsCF> {
-  private constructor(args: ArgsCF, ID: string) {
+class FactoryClienteFisico extends BaseEntityPerson<ArgsClienteFisico> {
+  private constructor(args: ArgsClienteFisico, ID: string) {
     super(args, ID)
     this.args.idade = this.showIdade()
   }
 
-  static async create(args: ArgsCF, ID?: string) {
+  static async create(args: ArgsClienteFisico, ID?: string) {
     const entity = new FactoryClienteFisico(args, ID!)
     return await entity
   }
 
   // members
   showIdade() {
-    const year = SuperDate.currentYear();
+    const year = SuperDateTS.currentYear();
     return year - this.args.dataNascimento.ano;
   }
 }
 
 // maker
-const makerFactoryClienteFisico = async (args: ArgsCF, ID?: string) => {
+const makerFactoryClienteFisico = async (args: ArgsClienteFisico, ID?: string) => {
   return await FactoryClienteFisico.create(args, ID)
 }
 

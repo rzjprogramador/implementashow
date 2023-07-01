@@ -1,10 +1,9 @@
-// deno-lint-ignore-file no-unused-vars no-explicit-any
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { Log, ArgsClienteFisico, ArgsCF, makerFactoryClienteFisico, fakesArgsClienteFisico } from './../mod.ts'
+import { Log, ArgsClienteFisico, makerFactoryClienteFisico, fakesArgsClienteFisico } from './../mod.ts'
 
 const sut = makerFactoryClienteFisico
-const inputSutOk_one: ArgsCF = fakesArgsClienteFisico.OK.one
+const inputSutOk_one: ArgsClienteFisico = fakesArgsClienteFisico.OK.one
 
 Deno.test({
   name: "[ Ok.Args ] deve conter as props com os valores.",
