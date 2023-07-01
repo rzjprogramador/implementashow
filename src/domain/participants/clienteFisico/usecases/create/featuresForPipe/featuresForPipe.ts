@@ -3,7 +3,7 @@ import {
   makerFactoryClienteFisico,
   type ArgsClienteFisico,
   type ClienteFisicoModel,
-} from "../../_base/mod.ts";
+} from "../../../_base/mod.ts";
 
 // -- Feats --
 const createFactoryClienteFisico = async (args: ArgsClienteFisico) => {

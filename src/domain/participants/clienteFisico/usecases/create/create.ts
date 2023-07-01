@@ -3,7 +3,7 @@ import {
   type ArgsClienteFisico,
   type ClienteFisicoModel,
 } from "../../_base/mod.ts";
-import { listforPipeCreateClienteFisico } from "./resources.ts";
+import { listforPipeCreateClienteFisico } from "./featuresForPipe/featuresForPipe.ts";
 
 
 // -- Transform Entity Args in Model --
