@@ -14,7 +14,7 @@ const featAddRegistersClienteFisico = (args: ClienteFisicoModel): ClienteFisicoM
   return args
 }
 
-// -- List --
+// -- List for Pipe --
 const listCreateClienteFisico: Function[] = [createFactoryClienteFisico, featAddRegistersClienteFisico,]
 
 export {
