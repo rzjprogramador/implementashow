@@ -1,13 +1,18 @@
-import { caseCreateClienteFisicoArgsValid } from "../../usecases/create/create.ts"
+import { pipeCaseCreateClienteFisico } from "../../usecases/create/create.pipe.ts"
 
 /**
  * daqui sairá o executeController do objetivo para ser utilizado no endpointServer para resposta ao clienteRequest
 */
 
-export const executeCreateClienteFisico = async () => {
-  const res = await caseCreateClienteFisicoArgsValid
+class CreateClienteFisico {
+  private constructor() { }
 
-  // gravar o validado
+  static async execute() {
+    // const res = await pipeCaseCreateClienteFisico
+    // gravar o validado
+    return await'oi1'
+  }
 
-  return res
 }
+
+export { CreateClienteFisico }
