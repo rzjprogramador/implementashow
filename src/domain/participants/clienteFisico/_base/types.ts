@@ -1,4 +1,4 @@
-import type { DataNascimento, Endereco } from "../../../../_roots/deps/replicas.local.deps.ts";
+import type { DataNascimento, Endereco } from "@replicasLocal";
 
 interface ClienteFisicoModel {
   args: ArgsClienteFisico

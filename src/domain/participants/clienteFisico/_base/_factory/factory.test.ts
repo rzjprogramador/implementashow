@@ -1,6 +1,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { Log, ArgsClienteFisico, makerFactoryClienteFisico, fakesArgsClienteFisico } from './../mod.ts'
+import { Log } from '@replicasRemote'
+import { ArgsClienteFisico, makerFactoryClienteFisico, fakesArgsClienteFisico } from '@clienteFisico'
 
 const sut = makerFactoryClienteFisico
 const inputSutOk_one: ArgsClienteFisico = fakesArgsClienteFisico.OK.one

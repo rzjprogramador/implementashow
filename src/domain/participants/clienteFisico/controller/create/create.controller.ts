@@ -1,4 +1,4 @@
-import { pipeCaseCreateClienteFisico } from "../../usecases/create/create.pipe.ts"
+import { pipeCaseCreateClienteFisico } from "@clienteFisico"
 
 /**
  * daqui sairá o executeController do objetivo para ser utilizado no endpointServer para resposta ao clienteRequest

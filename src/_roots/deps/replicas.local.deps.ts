@@ -1,12 +1,12 @@
-// Helpers
+/**
+ * Replicar aqui todas dependencias fora da entidade :exemplo tudo que esta em: [ helpers/ ]
+*/
+
+// Base Entitys
 export * from '../helpers/bases/base.factory.entity.ts'
 
 // -- Types Global --
-export * from '../helpers/global/types.global.ts'
+export * from '../helpers/types/types.global.ts'
 
-// -- Object Values -- Locais
-export * from '../helpers/objectValues/participante/fistname.ts'
-
-export * from '../helpers/objectValues/participante/sobrenome.ts'
-
-export * from '../helpers/objectValues/participante/email.ts'
+// -- Object Values --
+export * from '../helpers/objectValues/participants/_index.ts'

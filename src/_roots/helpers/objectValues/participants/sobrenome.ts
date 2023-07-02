@@ -1,3 +1,3 @@
-import { minString } from "../../../deps/replicas.remote.deps.ts";
+import { minString } from "@replicasRemote";
 
 export const Sobrenome = async (arg: string) => await minString(arg)

@@ -3,8 +3,8 @@ import {
   makerFactoryClienteFisico,
   type ArgsClienteFisico,
   type ClienteFisicoModel,
-} from "../../../_base/mod.ts";
-import { FirstName, Sobrenome, Email } from '../../../../../../_roots/deps/replicas.local.deps.ts'
+} from "@clienteFisico";
+import { FirstName, Sobrenome, Email } from "@replicasLocal"
 
 // -- Feats --
 // -- fabricar + validar_argumentos +

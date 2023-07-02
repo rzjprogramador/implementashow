@@ -1,8 +1,5 @@
-import {
-  PipeFNGeneric,
-  type ArgsClienteFisico,
-} from "../../_base/mod.ts";
-import { listforPipeCreateClienteFisico } from "./listFeaturesForPipe/listArgsFeatures.ts";
+import { PipeFNGeneric } from "@replicasRemote";
+import { listforPipeCreateClienteFisico, type ArgsClienteFisico, } from "@clienteFisico";
 
 
 // -- Pipe Ok Args -- daqui sai os argumentos validos para o objetivo de criacao no controle.

@@ -1,7 +1,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { pipeCaseCreateClienteFisico } from "./create.pipe.ts";
-import { Log, fakesArgsClienteFisico } from "../../_base/mod.ts";
+import { Log } from "@replicasRemote";
+import { pipeCaseCreateClienteFisico, fakesArgsClienteFisico } from "@clienteFisico";
 
 
 const sut = pipeCaseCreateClienteFisico

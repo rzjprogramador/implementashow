@@ -1,4 +1,4 @@
-import { ClienteFisicoModel, ArgsClienteFisico } from "./../../_base/mod.ts";
+import { ClienteFisicoModel, ArgsClienteFisico } from "@clienteFisico";
 
 // -- Para uso nos tests da entidade e no seed --
 type FakeArgsClienteFisico = {

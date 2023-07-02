@@ -1,4 +1,6 @@
-import { SuperDateTS, ArgsClienteFisico, BaseEntityPerson, } from "../mod.ts";
+import { SuperDateTS } from "@replicasRemote";
+import { ArgsClienteFisico } from "@clienteFisico";
+import { BaseEntityPerson } from "@replicasLocal";
 
 class FactoryClienteFisico extends BaseEntityPerson<ArgsClienteFisico> {
   private constructor(args: ArgsClienteFisico, ID: string) {
