@@ -4,7 +4,7 @@ import {
   type ArgsClienteFisico,
   type ClienteFisicoModel,
 } from "../../../_base/mod.ts";
-import { FirstName, Sobrenome, Email } from '../../../../../../_roots/deps/replicasLocal.deps.ts'
+import { FirstName, Sobrenome, Email } from '../../../../../../_roots/deps/replicas.local.deps.ts'
 
 // -- Feats --
 // -- fabricar + validar_argumentos +
