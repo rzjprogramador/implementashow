@@ -1,8 +1,11 @@
-// FONTE UNICA MODULAR DESTA ENTIDADE
+// -- FONTE UNICA DA ENTIDADE ->
+// -- REGISTRO DE TODOS ARTEFATOS DESTA ENTIDADE --
 
-/* re-exportar artefatos da entidade -- Ond eprecisarem de artefatos desta entidade -> buscaram aqui a importacao. */
-export * from './_factory/factory.ts'
+// -- Types --
 export * from './types.ts'
+
+// -- Factory --
+export * from './_factory/factory.ts'
 
 // -- Uniques --
 export * from './../uniques/fakes/fakes.ts'
@@ -10,7 +13,7 @@ export * from './../uniques/fakes/fakes.ts'
 // -- UseCases --
 export * from '../usecases/create/create.pipe.ts'
 
-// -- UseCases - list pipe create --
+// -- UseCases - list pipe --
 export * from '../usecases/create/listFeaturesForPipe/listArgsFeatures.ts'
 
 // -- Controller --
