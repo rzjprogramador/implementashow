@@ -1,6 +1,6 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { caseCreateClienteFisicoArgsValid } from "./create.ts";
+import { caseCreateClienteFisicoArgsValid } from "./create.pipe.ts";
 import { Log, fakesArgsClienteFisico } from "../../_base/mod.ts";
 
 
