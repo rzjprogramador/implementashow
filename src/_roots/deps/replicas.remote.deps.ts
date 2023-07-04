@@ -4,13 +4,13 @@
 * ferramentas: se for renomear a replica renomeie o symbol após a clausula <as>
 */
 
+// logConsole
 export { log as Log } from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
 
+// superDate
 export { superDateTS as SuperDateTS } from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
 
-export { pipeGeneric as PipeFNGeneric } from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
-
+// superValidates
 export {
   minString as minString,
-  maxString as maxString,
-} from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
+} from "/home/rzj/..gitAll/SuperValidades/main.ts";
