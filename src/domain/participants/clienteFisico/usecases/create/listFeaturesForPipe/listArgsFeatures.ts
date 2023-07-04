@@ -7,42 +7,53 @@ import {
 import { FirstName, Sobrenome, Email } from "@replicasLocal"
 
 // -- Feats --
-// -- fabricar + validar_argumentos +
+// -- 1- validar_argumentos +, 2- fabricarEntity +
 // daqui sai a lista de acoes feitas sobre os argumentos, para serem usadas no usecase.
+
+
+
+const validateFieldsArgsClienteFisico = async (args: ArgsClienteFisico): Promise<ArgsClienteFisico> => {
+
+  const { primeiroNome, sobrenome, email, dataNascimento: {
+    dia, mes, ano
+  } } = args
+
+  const fieldsValidateds: ArgsClienteFisico = {
+    primeiroNome: await FirstName(primeiroNome),
+    sobrenome: sobrenome,
+    email: email,
+    dataNascimento: {
+      dia: dia,
+      mes: mes,
+      ano: ano,
+    },
+    idade: args.idade,
+    tipoUser: args.tipoUser,
+    endereco: {
+      cep: args.endereco.cep,
+      longadouro: args.endereco.longadouro,
+      numero: args.endereco.numero,
+      complemento: args.endereco.complemento,
+      cidade: {
+        nome: args.endereco.cidade.nome,
+        uf: args.endereco.cidade.uf,
+      },
+    },
+  }
+  try {
+    return await fieldsValidateds
+  } catch (err: any) {
+    return err
+  }
+}
 
 const createFactoryClienteFisico = async (args: ArgsClienteFisico) => {
   return await makerFactoryClienteFisico(args)
 }
 
-const validateFieldsArgsClienteFisico = async (args: ClienteFisicoModel): Promise<ArgsClienteFisico> => {
-  const fieldsValidateds: ArgsClienteFisico = {
-    primeiroNome: await FirstName(args.args.primeiroNome),
-    sobrenome: await Sobrenome(args.args.sobrenome),
-    email: await Email(args.args.email),
-    dataNascimento: {
-      dia: args.args.dataNascimento.dia,
-      mes: args.args.dataNascimento.mes,
-      ano: args.args.dataNascimento.ano,
-    },
-    idade: args.args.idade,
-    tipoUser: args.args.tipoUser,
-    endereco: {
-      cep: args.args.endereco.cep,
-      longadouro: args.args.endereco.longadouro,
-      numero: args.args.endereco.numero,
-      complemento: args.args.endereco.complemento,
-      cidade: {
-        nome: args.args.endereco.cidade.nome,
-        uf: args.args.endereco.cidade.uf,
-      },
-    },
-  }
-  return await fieldsValidateds
-}
-
 // ---------------------------------------------------------------------------
-// -- List EXPORT for Pipe --
-const listforPipeCreateClienteFisico: Function[] = [createFactoryClienteFisico, validateFieldsArgsClienteFisico,]
+// -- List EXPORT for Pipe -- é importante a ordem para lógica das features no array
+const listforPipeCreateClienteFisico: Function[] = [validateFieldsArgsClienteFisico, createFactoryClienteFisico,]
 
 export {
   listforPipeCreateClienteFisico

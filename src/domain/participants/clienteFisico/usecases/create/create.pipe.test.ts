@@ -7,15 +7,16 @@ import { pipeCaseCreateClienteFisico, fakesArgsClienteFisico } from "@clienteFis
 const sut = pipeCaseCreateClienteFisico
 const inputSut = fakesArgsClienteFisico
 
+const inFAIL = inputSut.FAIL;
+
 Deno.test({
-  name: "deve retornar ->  && .",
+  name: "deve retornar falha nos objectValues usados na listValidades em { validateFieldsArgsClienteFisico() }",
   only: false,
   async fn() {
-    // const input = inputSut;
-    // const where = await sut(input);
-    // const assertion = undefined;
-    // Log('  >>>>>>> ', where)
-    // expect(where).toEqual(assertion);
+
+    // const where = await sut(inFAIL.one);
+    // Log('>>>>>>>', where)
+    // expect(await where).toThrow(`Ops o total de letras não pode ser menor que 2`);
   },
 
 });
@@ -23,17 +24,16 @@ Deno.test({
 
 /* TESTER_CONSOLE ************************************* */
 
-async function tester_() {
-  // const instance1 = await sut(inputSut.OK.one)
-  // console.log(instance1)
-  // console.log(instance1.ID)
-  // console.log('ACESSANDO MEBRO >>>>>>>', instance1?.showIdade)
-  // sut(inputSut.OK.one).then((d: any) => Log(d.showIdade))
-}
-tester_();
+async function tester_FAIL_PrimeiroNome() {
+  try {
+    await sut(inFAIL.one)
+  }
+  catch (err: any) {
+    console.log(err.message)
+    // return err.message
+  }
 
-/*
-* PARA RODAR ONLY SÓ ESTE TEST ```deno test <caminhoDesteArquivo>```
-*/
+}
+tester_FAIL_PrimeiroNome();
 
 export default 1;

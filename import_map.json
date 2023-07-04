@@ -3,6 +3,6 @@
     "@/": "./src/",
     "@replicasLocal": "./src/_roots/deps/replicas.local.deps.ts",
     "@replicasRemote": "./src/_roots/deps/replicas.remote.deps.ts",
-    "@clienteFisico": "./src/domain/participants/clienteFisico/_base/mod.ts"
+    "@clienteFisico": "./src/_roots/deps/replicasEntitys/replicasEntitys.deps.ts"
   }
 }

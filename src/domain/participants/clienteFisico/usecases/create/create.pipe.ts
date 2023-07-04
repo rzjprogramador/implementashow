@@ -1,13 +1,14 @@
-import { PipeFNGeneric } from "@replicasRemote";
+// deno-lint-ignore-file ban-types
 import { listforPipeCreateClienteFisico, type ArgsClienteFisico, } from "@clienteFisico";
 
 
-// -- Pipe Ok Args -- daqui sai os argumentos validos para o objetivo de criacao no controle.
-
-const pipeCaseCreateClienteFisico = async (arg: ArgsClienteFisico, list = listforPipeCreateClienteFisico) => await PipeFNGeneric<ArgsClienteFisico, ArgsClienteFisico>(arg, list)
+const pipeCaseCreateClienteFisico = async (args: ArgsClienteFisico, listFunctions: Function[] = listforPipeCreateClienteFisico) =>
+  await listFunctions.reduce((acc, fns) =>
+    fns(acc), args)
 
 
 export {
   pipeCaseCreateClienteFisico
 }
 
+// -- Pipe Ok Args -- daqui sai os argumentos validos para o objetivo de criacao no controle.
