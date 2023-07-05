@@ -1,36 +1,49 @@
+// deno-lint-ignore-file no-explicit-any
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { Log } from "@replicasRemote";
-import { pipeCaseCreateClienteFisico, fakesArgsClienteFisico, ArgsClienteFisico } from "@clienteFisico";
-import { feedbackFailLength, setMinStringAdm } from "../../../../../_roots/deps/replicas.local.deps.ts";
+import { caseCreateClienteFisico, ArgsClienteFisico } from "@clienteFisico";
 
-const sut = pipeCaseCreateClienteFisico
-const inputSut = fakesArgsClienteFisico
+const sut = caseCreateClienteFisico
 
-const inFAIL = inputSut.FAIL;
-
-const testerPrimeiroNome = async (target: ArgsClienteFisico) => {
-  try {
-    return await sut(target)
-  }
-  catch (err: any) {
-    return err.message
-  }
+const inputFAIL: ArgsClienteFisico = {
+  primeiroNome: "f",
+  sobrenome: "one sobrenome",
+  email: "one.email@gmail.com",
+  dataNascimento: {
+    dia: 1,
+    mes: 1,
+    ano: 1970,
+  },
+  tipoUser: "Fisico",
+  endereco: {
+    cep: "08070140",
+    longadouro: "one rua 1",
+    numero: "1",
+    complemento: "any complemento",
+    cidade: {
+      nome: "Sao Paulo",
+      uf: "SP",
+    },
+  },
 }
 
 Deno.test({
-  name: "deve retornar estourar excessao de novo erro ao receber o campoPrimeiroNome com o minimo da capacidade de string",
+  name: "deve resolver em novo Erro ao receber fora do setado o campo primeiroNome",
   only: false,
   async fn() {
-
-    expect(await testerPrimeiroNome(inFAIL.one)).toEqual(`${feedbackFailLength} ${setMinStringAdm}`);
+    async function tester() {
+      try {
+        return await sut(inputFAIL)
+      }
+      catch (err: any) {
+        return await err.message
+      }
+    }
+    expect(await tester()).toEqual('Ops... as letras não podem ser menor que 2')
   },
 
 });
 
-
-/* TESTER_CONSOLE ************************************* */
-
-sut(inFAIL.one).catch((err) => Log(err.message)); // fail : primeiroNome
 
 export default 1;

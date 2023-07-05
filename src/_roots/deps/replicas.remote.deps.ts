@@ -13,4 +13,5 @@ export { superDateTS as SuperDateTS } from "/home/rzj/..gitAll/SuperLibsTS/main.
 // superValidates
 export {
   minString as minString,
+  firstname as Firstname
 } from "/home/rzj/..gitAll/SuperValidades/main.ts";

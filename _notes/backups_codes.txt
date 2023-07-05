@@ -1,0 +1,14 @@
+// tentando pipe para validar e criar entity - resultado: nao deu certo ao estourar erro no pipe usado em createClienteFisico
+```
+// -- List EXPORT for Pipe -- é importante a ordem para lógica das features no array --
+const listforPipeCreateClienteFisico: Function[] = [
+  validateFieldsArgsClienteFisico,
+  createFactoryClienteFisico,
+]
+
+const pipeCaseCreateClienteFisico = async (args: ArgsClienteFisico, listFunctions = listforPipeCreateClienteFisico) =>
+  await listFunctions.reduce((acc, fns) => fns(acc), args)
+```
+
+---
+
