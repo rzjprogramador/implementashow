@@ -55,13 +55,21 @@ Deno.test({
   name: "deve retornar ->  && .",
   only: false,
   async fn() {
-    // TODO : FAZER O TEST CONTROLLER - E ANTES PERSISTIR A FACTORY CRIADA DEPOIS DE VALIDAR TODOS CAMPOS
+    // TODO
+
     // const action = await sut.execute()
 
     expect(true);
   },
 
 });
+
+/*
+TODO :
+-- FAZER O TEST CONTROLLER - E ANTES PERSISTIR A FACTORY CRIADA
+-- DEPOIS DE VALIDAR TODOS CAMPOS
+-- USAR SETS NO OBJECTVALUES E ONDE ELES ESTAO SENOD USADOS.
+*/
 
 
 /* TESTER_CONSOLE ************************************* */
