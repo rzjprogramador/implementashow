@@ -1,5 +1,5 @@
 import {
-  caseCreateClienteFisico,
+  pipecaseCreateClienteFisico,
   type ArgsClienteFisico,
 } from "@clienteFisico"
 
@@ -9,7 +9,7 @@ class CreateClienteFisico {
   static async execute(args: ArgsClienteFisico) {
     try {
       return {
-        data: await caseCreateClienteFisico(args),
+        data: await pipecaseCreateClienteFisico(args),
         statusCode: 200,
       }
     }

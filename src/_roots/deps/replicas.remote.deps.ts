@@ -5,7 +5,10 @@
 */
 
 // logConsole
-export { log as Log } from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
+export {
+  log as Log,
+  pipeGeneric as PipeGeneric
+} from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
 
 // superDate
 export { superDateTS as SuperDateTS } from "/home/rzj/..gitAll/SuperLibsTS/main.ts";

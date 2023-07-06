@@ -11,4 +11,11 @@ const pipeCaseCreateClienteFisico = async (args: ArgsClienteFisico, listFunction
 ```
 
 ---
+// Pipe sem reduce - feitos dentro da funcao -- useCreateClienteFisico -- #desuso --
+const caseCreateClienteFisico = async (args: ArgsClienteFisico) => {
+  const valid = await validateFieldsArgsClienteFisico(args)
+  const factory = await createFactoryClienteFisico(valid)
+  return await factory
+}
 
+//
