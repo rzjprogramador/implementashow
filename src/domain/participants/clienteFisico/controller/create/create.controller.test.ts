@@ -2,54 +2,35 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import {
   CreateClienteFisico,
+  fakeBaseOkArgsClienteFisico,
   type ArgsClienteFisico,
 } from "@clienteFisico";
 
 
 const sut = CreateClienteFisico
-const inputOK: ArgsClienteFisico = {
-  primeiroNome: "any",
-  sobrenome: "one sobrenome",
-  email: "one.email@gmail.com",
-  dataNascimento: {
-    dia: 1,
-    mes: 1,
-    ano: 1970,
-  },
-  tipoUser: "Fisico",
-  endereco: {
-    cep: "08070140",
-    longadouro: "one rua 1",
-    numero: "1",
-    complemento: "any complemento",
-    cidade: {
-      nome: "Sao Paulo",
-      uf: "SP",
-    },
-  },
-}
+const inputBaseOK: ArgsClienteFisico = fakeBaseOkArgsClienteFisico
 
-const inputFAIL: ArgsClienteFisico = {
-  primeiroNome: "a",
-  sobrenome: "one sobrenome",
-  email: "one.email@gmail.com",
-  dataNascimento: {
-    dia: 1,
-    mes: 1,
-    ano: 1970,
-  },
-  tipoUser: "Fisico",
-  endereco: {
-    cep: "08070140",
-    longadouro: "one rua 1",
-    numero: "1",
-    complemento: "any complemento",
-    cidade: {
-      nome: "Sao Paulo",
-      uf: "SP",
-    },
-  },
-}
+// const inputFAIL: ArgsClienteFisico = {
+//   primeiroNome: "a",
+//   sobrenome: "one sobrenome",
+//   email: "one.email@gmail.com",
+//   dataNascimento: {
+//     dia: 1,
+//     mes: 1,
+//     ano: 1970,
+//   },
+//   tipoUser: "Fisico",
+//   endereco: {
+//     cep: "08070140",
+//     longadouro: "one rua 1",
+//     numero: "1",
+//     complemento: "any complemento",
+//     cidade: {
+//       nome: "Sao Paulo",
+//       uf: "SP",
+//     },
+//   },
+// }
 
 Deno.test({
   name: "deve retornar ->  && .",
@@ -75,15 +56,15 @@ TODO :
 /* TESTER_CONSOLE ************************************* */
 
 async function tester_OK() {
-  const res = await sut.execute(inputOK);
-  console.log(res)
+  const input = { ...inputBaseOK }
+  return await sut.execute(input);
 }
-// tester_OK ();
+tester_OK().then((d) => console.log(d))
 
 async function tester_FAIL() {
-  const res = await sut.execute(inputFAIL);
-  console.log(res)
+  const input = { ...inputBaseOK, primeiroNome: 'f' }
+  return await sut.execute(input);
 }
-// tester_FAIL ();
+// tester_FAIL().then((d) => console.log(d))
 
 export default 1;

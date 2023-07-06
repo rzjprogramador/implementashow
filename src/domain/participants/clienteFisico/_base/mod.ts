@@ -7,6 +7,8 @@ export * from './types.ts'
 // -- Factory --
 export * from './_factory/factory.ts'
 
+// -- Literals -> Fake --
+export * from '../literals/fakes/fake.ts'
 
 // -- UseCases - Create -- features
 export * from '../usecases/create/features/valid.ts'

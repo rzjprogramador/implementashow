@@ -1,4 +1,8 @@
-type DataNascimento = { dia: number; mes: number; ano: number }
+type DataNascimento = {
+  dia: number
+  mes: number
+  ano: number
+}
 
 interface Endereco {
   cep: string;
