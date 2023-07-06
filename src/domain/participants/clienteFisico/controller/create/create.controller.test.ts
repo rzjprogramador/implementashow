@@ -67,4 +67,9 @@ async function tester_FAIL() {
 }
 // tester_FAIL().then((d) => console.log(d))
 
+/*
+erro_todo: Cannot read properties of undefined
+traducao: Não é possível ler as propriedades de indefinid
+*/
+
 export default 1;
