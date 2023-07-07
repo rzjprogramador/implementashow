@@ -5,30 +5,38 @@ import { Firstname } from "@replicasRemote"
 
 const validateFieldsArgsClienteFisico = async (args: ArgsClienteFisico): Promise<ArgsClienteFisico> => {
 
-  // const { primeiroNome, sobrenome, email, dataNascimento: {
-  //   dia, mes, ano
-  // } } = argsTODO : NAO ESTA CONSEGUINDO LER A prop: ano no console.
-  //
+  const { primeiroNome, sobrenome, email, dataNascimento: {
+    dia, mes, ano
+  },
+    idade,
+    tipoUser,
+    endereco: {
+      cep, longadouro, numero, complemento,
+      cidade: {
+        nome_cidade, uf
+      }
+    }
+  } = args
 
   const validatedsFields: ArgsClienteFisico = {
-    primeiroNome: await Firstname(args.primeiroNome),
-    sobrenome: args.sobrenome,
-    email: args.email,
+    primeiroNome: await Firstname(primeiroNome),
+    sobrenome: sobrenome,
+    email: email,
     dataNascimento: {
-      dia: args.dataNascimento.dia,
-      mes: args.dataNascimento.mes,
-      ano: args.dataNascimento.ano,
+      dia: dia,
+      mes: mes,
+      ano: ano,
     },
-    idade: args.idade,
-    tipoUser: args.tipoUser,
+    idade: idade,
+    tipoUser: tipoUser,
     endereco: {
-      cep: args.endereco.cep,
-      longadouro: args.endereco.longadouro,
-      numero: args.endereco.numero,
-      complemento: args.endereco.complemento,
+      cep: cep,
+      longadouro: longadouro,
+      numero: numero,
+      complemento: complemento,
       cidade: {
-        nome: args.endereco.cidade.nome,
-        uf: args.endereco.cidade.uf,
+        nome_cidade: nome_cidade,
+        uf: uf,
       },
     },
   }

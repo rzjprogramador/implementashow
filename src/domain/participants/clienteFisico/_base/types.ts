@@ -5,17 +5,18 @@ interface ClienteFisicoModel {
   ID?: string
 }
 
-type ArgsClienteFisico = {
+interface ArgsClienteFisico extends MembersClienteFisico {
   primeiroNome: string;
   sobrenome: string;
   email: string;
   dataNascimento: DataNascimento;
-  idade?: MembersClienteFisico["showIdade"];
+  idade?: number | string;
+  // idade?: MembersClienteFisico["showIdade"];
   tipoUser: TipoUser;
   endereco: Endereco;
 }
 interface MembersClienteFisico {
-  showIdade?: number;
+  showIdade?: string | number;
 }
 
 // -- Repository --

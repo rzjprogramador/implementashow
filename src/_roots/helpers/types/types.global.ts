@@ -13,7 +13,7 @@ interface Endereco {
 }
 
 interface Cidade {
-  nome: string;
+  nome_cidade: string;
   uf: string;
 }
 
