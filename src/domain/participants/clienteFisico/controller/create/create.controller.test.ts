@@ -36,13 +36,13 @@ async function tester_OK() {
   const input = { ...inputBaseOK }
   return await sut.execute(input);
 }
-// tester_OK().then((d) => console.log(d))
+tester_OK().then((d) => console.log(d))
 
 async function tester_FAIL() {
   const input = { ...inputBaseOK, primeiroNome: 'f' }
   return await sut.execute(input);
 }
-tester_FAIL().then((d) => console.log(d))
+// tester_FAIL().then((d) => console.log(d))
 
 
 
