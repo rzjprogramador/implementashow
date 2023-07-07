@@ -3,7 +3,7 @@ import {
   type ArgsClienteFisico,
 } from "@clienteFisico"
 
-class CreateClienteFisico {
+class CreateClienteFisicoController {
   private constructor() { }
 
   static async execute(args: ArgsClienteFisico) {
@@ -24,7 +24,7 @@ class CreateClienteFisico {
 
 }
 
-export { CreateClienteFisico }
+export { CreateClienteFisicoController }
 
 /*
   * validar + gravar o validado

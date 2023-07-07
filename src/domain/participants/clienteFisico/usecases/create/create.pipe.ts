@@ -3,6 +3,12 @@ import {
   listFeatArgsClienteFisico,
   type ArgsClienteFisico,
 } from "@clienteFisico";
+
+import {
+  validateFieldsArgsClienteFisico,
+  createFactoryClienteFisico,
+} from "@clienteFisico";
+
 import { PipeGeneric } from "@replicasRemote"
 
 /**
@@ -11,7 +17,22 @@ import { PipeGeneric } from "@replicasRemote"
  * @returns daqui sai os argumentos validos para o objetivo de criacao no controle.
  */
 
-const pipecaseCreateClienteFisico = async (argTarget: ArgsClienteFisico) => await PipeGeneric<ArgsClienteFisico, ArgsClienteFisico>(argTarget, listFeatArgsClienteFisico)
+// const pipecaseCreateClienteFisico = async (argTarget: ArgsClienteFisico) => await PipeGeneric<ArgsClienteFisico, ArgsClienteFisico>(argTarget, listFeatArgsClienteFisico)
+
+// const pipecaseCreateClienteFisico = async (target: ArgsClienteFisico) => {
+//   try {
+//     return await listFeatArgsClienteFisico.reduce((acc: any, fn) => fn(acc), target)
+//   }
+//   catch (err: any) {
+//     return err
+//   }
+// }
+
+const pipecaseCreateClienteFisico = async (args: ArgsClienteFisico) => {
+  const valid = await validateFieldsArgsClienteFisico(args)
+  const factory = await createFactoryClienteFisico(valid)
+  return await factory
+}
 
 
 export {

@@ -7,11 +7,19 @@ const pipecaseCreateClienteFisico = async (target: ArgsClienteFisico) => {
 ```
 
 ---
-// Pipe sem reduce - feitos dentro da funcao -- useCreateClienteFisico -- #desuso --
-const caseCreateClienteFisico = async (args: ArgsClienteFisico) => {
+// Pipe sem reduce - feitos dentro da funcao -- useCreateClienteFisico --
+// è o que deu certo porque o reduce nao to conseguindo capturar o erro e passa-lo pra frente pra continuar a captura pela proxima camada que vai usar que é a de controlle.
+
+import {
+  validateFieldsArgsClienteFisico,
+  createFactoryClienteFisico,
+} from "@clienteFisico";
+
+const pipecaseCreateClienteFisico = async (args: ArgsClienteFisico) => {
   const valid = await validateFieldsArgsClienteFisico(args)
   const factory = await createFactoryClienteFisico(valid)
   return await factory
 }
 
-//
+// pipe usando pipeGeneric replicasRemote
+const pipecaseCreateClienteFisico = async (argTarget: ArgsClienteFisico) => await PipeGeneric<ArgsClienteFisico, ArgsClienteFisico>(argTarget, listFeatArgsClienteFisico)

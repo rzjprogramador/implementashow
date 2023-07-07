@@ -1,36 +1,14 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import {
-  CreateClienteFisico,
+  CreateClienteFisicoController,
   fakeBaseOkArgsClienteFisico,
   type ArgsClienteFisico,
 } from "@clienteFisico";
 
 
-const sut = CreateClienteFisico
+const sut = CreateClienteFisicoController
 const inputBaseOK: ArgsClienteFisico = fakeBaseOkArgsClienteFisico
-
-// const inputFAIL: ArgsClienteFisico = {
-//   primeiroNome: "a",
-//   sobrenome: "one sobrenome",
-//   email: "one.email@gmail.com",
-//   dataNascimento: {
-//     dia: 1,
-//     mes: 1,
-//     ano: 1970,
-//   },
-//   tipoUser: "Fisico",
-//   endereco: {
-//     cep: "08070140",
-//     longadouro: "one rua 1",
-//     numero: "1",
-//     complemento: "any complemento",
-//     cidade: {
-//       nome: "Sao Paulo",
-//       uf: "SP",
-//     },
-//   },
-// }
 
 Deno.test({
   name: "deve retornar ->  && .",
@@ -59,13 +37,15 @@ async function tester_OK() {
   const input = { ...inputBaseOK }
   return await sut.execute(input);
 }
-tester_OK().then((d) => console.log(d))
+// tester_OK().then((d) => console.log(d))
 
 async function tester_FAIL() {
   const input = { ...inputBaseOK, primeiroNome: 'f' }
   return await sut.execute(input);
 }
 // tester_FAIL().then((d) => console.log(d))
+
+
 
 /*
 erro_todo: Cannot read properties of undefined
