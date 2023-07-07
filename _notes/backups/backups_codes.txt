@@ -1,3 +1,18 @@
+// pipe ok - async que conseguiu capturar mensagem de erro - todo: só nao passou o tipo erro apra poder pegar o statuscode 400 do obj erro.
+
+const pipecaseCreateClienteFisico = async (target: ArgsClienteFisico) => {
+  return await listFeatArgsClienteFisico.reduce(async (acc: any, fn) => {
+    try {
+      return await fn(acc)
+    }
+    catch (err: any) {
+      return err.message
+    }
+  }, target)
+}
+
+---
+
 // tentando pipe para validar e criar entity - resultado: nao deu certo ao estourar erro no pipe usado em createClienteFisico
 ```
 // -- pipe caseCreateClientefisico - troquei este que funcionou pela lib pipeGeneric :

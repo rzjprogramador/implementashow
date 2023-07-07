@@ -6,7 +6,8 @@ import {
 class CreateClienteFisicoController {
   private constructor() { }
 
-  static async execute(args: ArgsClienteFisico) {
+  static async execute(args: ArgsClienteFisico | any) {
+
     try {
       return {
         data: await pipecaseCreateClienteFisico(args),
@@ -28,4 +29,5 @@ export { CreateClienteFisicoController }
 
 /*
   * validar + gravar o validado
+* todo: por estar dando throw nao to capturando o status 400
 */

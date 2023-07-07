@@ -30,7 +30,6 @@ TODO :
 -- USAR SETS NO OBJECTVALUES E ONDE ELES ESTAO SENOD USADOS.
 */
 
-
 /* TESTER_CONSOLE ************************************* */
 
 async function tester_OK() {
@@ -43,13 +42,12 @@ async function tester_FAIL() {
   const input = { ...inputBaseOK, primeiroNome: 'f' }
   return await sut.execute(input);
 }
-// tester_FAIL().then((d) => console.log(d))
+tester_FAIL().then((d) => console.log(d))
 
 
 
 /*
-erro_todo: Cannot read properties of undefined
-traducao: Não é possível ler as propriedades de indefinid
+
 */
 
 export default 1;

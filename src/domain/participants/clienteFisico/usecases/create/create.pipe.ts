@@ -17,23 +17,16 @@ import { PipeGeneric } from "@replicasRemote"
  * @returns daqui sai os argumentos validos para o objetivo de criacao no controle.
  */
 
-// const pipecaseCreateClienteFisico = async (argTarget: ArgsClienteFisico) => await PipeGeneric<ArgsClienteFisico, ArgsClienteFisico>(argTarget, listFeatArgsClienteFisico)
-
-// const pipecaseCreateClienteFisico = async (target: ArgsClienteFisico) => {
-//   try {
-//     return await listFeatArgsClienteFisico.reduce((acc: any, fn) => fn(acc), target)
-//   }
-//   catch (err: any) {
-//     return err
-//   }
-// }
-
-const pipecaseCreateClienteFisico = async (args: ArgsClienteFisico) => {
-  const valid = await validateFieldsArgsClienteFisico(args)
-  const factory = await createFactoryClienteFisico(valid)
-  return await factory
+const pipecaseCreateClienteFisico = async (target: ArgsClienteFisico): Promise<ArgsClienteFisico | any> => {
+  return await listFeatArgsClienteFisico.reduce(async (acc: any, fn) => {
+    try {
+      return await fn(acc)
+    }
+    catch (err: any) {
+      return await err.message
+    }
+  }, target)
 }
-
 
 export {
   pipecaseCreateClienteFisico
