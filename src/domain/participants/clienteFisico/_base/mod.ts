@@ -18,6 +18,11 @@ export * from '../literals/seeds/seeds.ts'
 // -- important: evitando ReferenceError -> importe-as listFeatures antes do create-pipe para se enxergarem em ordemLogica. --
 // export * from '../usecases/create/features/_listFeatures.ts'
 
+// -- Repositorios --
+export * from '../remotes/repository/firebase.repositoryClienteFisico.ts'
+export * from '../remotes/repository/memory.repositoryClienteFisico.ts'
+export * from '../literals/mediator/mediator.repository.ts'
+
 // -- UseCases CreatePipe--
 export * from '../usecases/create/create.pipe.ts'
 
@@ -25,4 +30,4 @@ export * from '../usecases/create/create.pipe.ts'
 export * from '../usecases/create/create.pipe.ts'
 
 // -- Controller --
-// export * from '../controller/create/create.controller.ts'
+export * from '../controller/create/create.controller.ts'

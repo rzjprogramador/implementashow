@@ -5,6 +5,7 @@ interface ClienteFisicoModel extends ArgsClienteFisico {
 }
 
 interface ArgsClienteFisico extends MembersClienteFisico {
+  ID?: string;
   primeiroNome: string;
   sobrenome: string;
   email: string;
@@ -20,11 +21,9 @@ interface MembersClienteFisico {
 
 // -- Repository --
 interface ClienteFisicoRepository {
-  items?: ClienteFisicoModel[];
-  create: (m: ClienteFisicoModel) => Promise<ClienteFisicoModel>;
-  exist: (
-    m: Partial<ClienteFisicoModel>
-  ) => Promise<| undefined | ClienteFisicoModel | ClienteFisicoModel>;
+  _items?: ClienteFisicoModel[];
+  exist: (ID: string) => boolean;
+  // create: (m: ClienteFisicoModel) => Promise<ClienteFisicoModel>;
 }
 
 type TipoUser = "Fisico" | "Juridico" | "Empresa_Informal";
@@ -35,4 +34,5 @@ export type {
   ClienteFisicoModel,
   ArgsClienteFisico,
   MembersClienteFisico,
+  ClienteFisicoRepository,
 }
