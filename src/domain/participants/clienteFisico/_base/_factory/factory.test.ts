@@ -1,68 +1,57 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { Log } from '@replicasRemote'
-import { ArgsClienteFisico, makerFactoryClienteFisico,
-  // fakesArgsClienteFisico
+import {
+  ArgsClienteFisico, fakeBaseOkArgsClienteFisicoONE, generatorFactoryClienteFisico,
 } from '@clienteFisico'
 
-const sut = makerFactoryClienteFisico
-const inputSutFakeOK: ArgsClienteFisico = {
-  primeiroNome: "onename",
-  sobrenome: "one sobrenome",
-  email: "one.email@gmail.com",
-  dataNascimento: {
-    dia: 1,
-    mes: 1,
-    ano: 1970,
-  },
-  tipoUser: "Fisico",
-  endereco: {
-    cep: "08070140",
-    longadouro: "one rua 1",
-    numero: "1",
-    complemento: "any complemento",
-    cidade: {
-      nome: "Sao Paulo",
-      uf: "SP",
-    },
-  },
-}
+const sut = generatorFactoryClienteFisico
+const inputSutFakeBaseOK: ArgsClienteFisico = fakeBaseOkArgsClienteFisicoONE
 
 Deno.test({
   name: "[ Ok.Args ] deve conter as props com os valores.",
   only: false,
   async fn() {
-    const where = await sut(inputSutFakeOK);
-    Log('  >>>>>>> ', where)
-    expect(where.args.primeiroNome).toBe('onename');
+    const action = await sut(inputSutFakeBaseOK);
+    // Log('  >>>>>>> ', action)
+    expect(action.primeiroNome).toBe('any');
   },
 
 });
 
 Deno.test({
-  name: "[ OK.members ] deve conter o membro { showIdade () } herdado na entidade final.",
+  name: "[ Ok ] deve conter no prototype o membro showIdade().",
   only: false,
   async fn() {
-    const where = await sut(inputSutFakeOK);
-    Log('RESULT MEMBRO SHOW IDADE() >>>>> ', where.showIdade())
-    expect(where.showIdade).toBeDefined()
-    expect(where.showIdade).toBeInstanceOf(Function)
-    expect(typeof where.showIdade == 'function').toBeTruthy()
+    const action = await sut(inputSutFakeBaseOK);
+    // action.showIdade()
+    // Log('  >>>>>>> ', action)
+    expect(action.showIdade()).toBeTruthy();
   },
 
 });
+
+// Deno.test({
+//   name: "[ OK.members ] deve conter o membro { showIdade () } herdado na entidade final.",
+//   only: false,
+//   async fn() {
+//     const where = await sut(inputSutFakeBaseOK);
+//     Log('RESULT MEMBRO SHOW IDADE() >>>>> ', where.showIdade())
+//     expect(where.showIdade).toBeDefined()
+//     expect(where.showIdade).toBeInstanceOf(Function)
+//     expect(typeof where.showIdade == 'function').toBeTruthy()
+//   },
+
+// });
 
 // /* TESTER_CONSOLE ************************************* */
 
 // viewConsole : tester_Show_CreateEntityArgs
 // sut(inputSutOk_one).then((d: any) => Log(d))
 
-async function show() {
-  // const instance1 = await sut(inputSutOk_one)
-  // instance1.primeiroNome = 'foooooooo'
-  // TODO NAO DEVERIA SER POSSIVEL - MAS ESTA SENDO PORQUE AS PROPS ESTAO PUBLICAS
-  // Log(instance1)
-}
-// show()
+sut(inputSutFakeBaseOK).then((d: any) => Log(d))
+
+const instance1 = sut(inputSutFakeBaseOK).then((d: any) => d)
+instance1.then((d: any) => Log(d.showIdade()))
 
 export default 1;

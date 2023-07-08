@@ -1,0 +1,15 @@
+
+// DESCONSTRUCAO ARG clienteFisico
+
+const { primeiroNome, sobrenome, email, dataNascimento: {
+    dia, mes, ano
+  },
+    idade,
+    tipoUser,
+    endereco: {
+      cep, longadouro, numero, complemento,
+      cidade: {
+        nome_cidade, uf
+      }
+    }
+  } = args

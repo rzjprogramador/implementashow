@@ -1,8 +1,7 @@
 import type { DataNascimento, Endereco } from "@replicasLocal";
 
-interface ClienteFisicoModel {
-  args: ArgsClienteFisico
-  ID?: string
+interface ClienteFisicoModel extends ArgsClienteFisico {
+  ID: string
 }
 
 interface ArgsClienteFisico extends MembersClienteFisico {
@@ -10,8 +9,8 @@ interface ArgsClienteFisico extends MembersClienteFisico {
   sobrenome: string;
   email: string;
   dataNascimento: DataNascimento;
-  idade?: number | string;
-  // idade?: MembersClienteFisico["showIdade"];
+  // idade?: number | string;
+  idade?: MembersClienteFisico["showIdade"];
   tipoUser: TipoUser;
   endereco: Endereco;
 }
