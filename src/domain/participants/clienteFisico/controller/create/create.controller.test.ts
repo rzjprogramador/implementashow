@@ -20,18 +20,20 @@ Deno.test("[ deve retornar feedback faça outra ação se nos args conter a prop
   expect(action).toEqual(assertion);
 });
 
-Deno.test("[ deve retornar feedback de erro em validacao tamanho do texto. { #validacaoCampos }", async () => {
-  const input = { ...argFakeONE, ID: setSystem.Strings.one }
+Deno.test("{ #validacaoCampo: Firstname } deve retornar feedback correto com o campo testado, conforme a configuracao definida.", async () => {
+  const input = { ...argFakeONE, primeiroNome: 'f' }
   const action = await sut.execute(input);
-  const assertion: any = await badRequest(ExceptionsMessages.feedbackExistID())
+  // console.log('RESPOSTA >>>>> ', action)
+  const assertion = {
+    cause: `Ops... as letras não podem ser menor que 2`,
+  }
 
-  expect(action).toEqual(assertion);
+  expect(action?.data).toEqual(assertion);
 });
 
-// Ops... as letras não podem ser menor que
 
 /* TESTER_CONSOLE ************************************* */
 
-// sut.execute(argSeedONE).catch((d) => console.log(d))
+// sut.execute({ ...argFakeONE, primeiroNome: 'f' }).then((d) => console.log(d))
 
 export default 1;

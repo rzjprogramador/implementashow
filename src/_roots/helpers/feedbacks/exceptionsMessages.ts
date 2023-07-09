@@ -1,7 +1,7 @@
 
 interface FeedbackException {
   cause: string
-  toCorrect: string
+  toCorrect?: string
 }
 
 class ExceptionsMessages {
@@ -18,5 +18,5 @@ class ExceptionsMessages {
 export {
   ExceptionsMessages,
   type FeedbackException
- }
+}
 

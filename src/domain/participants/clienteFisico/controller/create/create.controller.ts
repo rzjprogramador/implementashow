@@ -1,17 +1,16 @@
-// deno-lint-ignore-file no-prototype-builtins
+// deno-lint-ignore-file no-prototype-builtins no-explicit-any
 import {
   facadeCheckArgsClienteFisico,
   type ArgsClienteFisico,
 } from '@clienteFisico'
 import {
   ok, badRequest,
-  type HttpResponse,
 } from '@replicasLocalGlobal'
 
 class CreateClienteFisicoController {
   private constructor() { }
 
-  static async execute(args: ArgsClienteFisico): Promise<HttpResponse | void> {
+  static async execute(args: ArgsClienteFisico) {
     try {
       await ok(await facadeCheckArgsClienteFisico(args))
     }
