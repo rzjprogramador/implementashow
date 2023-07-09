@@ -2,7 +2,7 @@
 import {
   type ArgsClienteFisico,
 } from '@clienteFisico'
-import { ExceptionsMessages } from "@replicasLocal"
+import { ExceptionsMessages } from "@replicasLocalGlobal"
 
 const facadeCheckArgsClienteFisico = (args: ArgsClienteFisico) => {
   if (args.hasOwnProperty('ID')) {

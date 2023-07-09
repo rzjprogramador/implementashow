@@ -1,7 +1,7 @@
 {
   "imports": {
     "@/": "./src/",
-    "@replicasLocal": "./src/_roots/deps/replicas.local.deps.ts",
+    "@replicasLocalGlobal": "./src/_roots/deps/replicas.localGlobal.deps.ts",
     "@replicasRemote": "./src/_roots/deps/replicas.remote.deps.ts",
     "@clienteFisico": "./src/_roots/deps/replicasEntitys/replicasEntitys.deps.ts"
   }

@@ -1,4 +1,4 @@
-import type { DataNascimento, Endereco } from "@replicasLocal";
+import type { DataNascimento, Endereco } from "@replicasLocalGlobal";
 
 interface ClienteFisicoModel extends ArgsClienteFisico {
   ID: string
