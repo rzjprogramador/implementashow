@@ -1,4 +1,4 @@
-// import { SuperDateTS } from "@replicasRemote";
+// import { SuperDateTS } from "@remotes";
 import { ArgsClienteFisico } from "@clienteFisico";
 
 const membersClienteFisico = {

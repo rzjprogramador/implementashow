@@ -1,4 +1,4 @@
-import { setSystem } from '@replicasLocalGlobal'
+import { setSystem } from '@globalEntitys'
 import { ClienteFisicoModel, fakeBaseOkArgsClienteFisicoONE, fakeBaseOkArgsClienteFisicoTWO } from "@clienteFisico"
 
 const seedClienteFisicoONE: ClienteFisicoModel = {

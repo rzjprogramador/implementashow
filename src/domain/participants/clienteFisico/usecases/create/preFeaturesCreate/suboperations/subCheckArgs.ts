@@ -2,7 +2,7 @@
 import {
   type ArgsClienteFisico,
 } from '@clienteFisico'
-import { ExceptionsMessages, OutputThrowObject } from "@replicasLocalGlobal"
+import { ExceptionsMessages, OutputThrowObject } from "@globalEntitys"
 
 
 const hasPropertyID = async (args: ArgsClienteFisico) => {

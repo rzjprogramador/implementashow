@@ -9,7 +9,7 @@
 //   createFactoryClienteFisico,
 // } from "@clienteFisico";
 
-// import { PipeGeneric } from "@replicasRemote"
+// import { PipeGeneric } from "@remotes"
 
 // /**
 //  * @description configuracao passe o inputArgtarget e receber este inputArgtarget tratado.

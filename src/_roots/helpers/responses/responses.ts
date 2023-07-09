@@ -1,5 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
-import { FeedbackException } from "@replicasLocalGlobal"
+import { FeedbackException } from "@globalEntitys"
 
 interface HttpResponse {
   data: any,

@@ -5,18 +5,12 @@
 export * from './types.ts'
 
 // -- Factory --
-export * from './_factory/factory.ts'
+export * from '../factory/factory.ts'
 
 // -- Literals --
 export * from '../literals/fakes/fake.ts'
 export * from '../literals/seeds/seeds.ts'
 
-// -- UseCases - Create -- features
-// export * from '../usecases/create/features/valid.ts'
-// export * from '../usecases/create/features/createFactory.ts'
-
-// -- important: evitando ReferenceError -> importe-as listFeatures antes do create-pipe para se enxergarem em ordemLogica. --
-// export * from '../usecases/create/features/_listFeatures.ts'
 
 // -- Sets --
 export * from '../literals/sets/sets.ts'

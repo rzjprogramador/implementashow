@@ -1,6 +1,6 @@
 // import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-// import { Log } from '@replicasRemote'
+// import { Log } from '@remotes'
 // import {
 //   ArgsClienteFisico, fakeBaseOkArgsClienteFisicoONE, generatorFactoryClienteFisico,
 // } from '@clienteFisico'

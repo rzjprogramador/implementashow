@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-prototype-builtins no-explicit-any ban-unused-ignore
 import { setsClienteFisico, type ArgsClienteFisico } from '@clienteFisico'
-import { type FeedbackException } from "@replicasLocalGlobal"
-import { Firstname } from '@replicasRemote'
+import { type FeedbackException } from "@globalEntitys"
+import { Firstname } from '@remotes'
 
 const setMinLettersLocal = setsClienteFisico.minLetters
 

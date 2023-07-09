@@ -5,7 +5,7 @@ import {
 } from '@clienteFisico'
 import {
   ok, badRequest,
-} from '@replicasLocalGlobal'
+} from '@globalEntitys'
 
 class CreateClienteFisicoController {
   private constructor() { }

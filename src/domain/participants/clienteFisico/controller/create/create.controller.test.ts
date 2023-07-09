@@ -1,8 +1,8 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { CreateClienteFisicoController, fakeBaseOkArgsClienteFisicoONE, seedClienteFisicoONE } from "@clienteFisico";
-import { ExceptionsMessages } from "@replicasLocalGlobal"
-import { ok, badRequest, setSystem, type HttpResponse } from '@replicasLocalGlobal'
+import { ExceptionsMessages } from "@globalEntitys"
+import { ok, badRequest, setSystem, type HttpResponse } from '@globalEntitys'
 
 const sut = CreateClienteFisicoController
 const argFakeONE = fakeBaseOkArgsClienteFisicoONE

@@ -3,7 +3,7 @@
 // deno-lint-ignore-file no-explicit-any
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
-import { Log } from "@replicasRemote";
+import { Log } from "@remotes";
 import { caseCreateClienteFisico, ArgsClienteFisico } from "@clienteFisico";
 
 const sut = caseCreateClienteFisico

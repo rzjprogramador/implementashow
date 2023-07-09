@@ -1,5 +1,5 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { setSystem } from '@replicasLocalGlobal'
+import { setSystem } from '@globalEntitys'
 import { setsClienteFisico } from "./sets.ts";
 
 
