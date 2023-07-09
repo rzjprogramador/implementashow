@@ -12,7 +12,7 @@ const sut = CreateClienteFisicoController
 const argFakeONE = fakeBaseOkArgsClienteFisicoONE
 const argSeedONE = seedClienteFisicoONE
 
-Deno.test("[ deve retornar feedback faça outra ação de conter a prop. ID { #investigacaoJaExiste }", async () => {
+Deno.test("[ deve retornar feedback faça outra ação se nos args conter a prop. ID { #investigacaoJaExiste }", async () => {
   const input = { ...argFakeONE, ID: setSystem.Strings.one }
   const action = await sut.execute(input);
   const assertion: any = await badRequest(ExceptionsMessages.feedbackExistID())
