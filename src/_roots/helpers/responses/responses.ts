@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 
-interface HttpResponse<T = any> {
-  data: T,
+interface HttpResponse {
+  data: any,
   statusCode: number
 }
 

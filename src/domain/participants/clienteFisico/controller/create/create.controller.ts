@@ -3,17 +3,21 @@ import {
   facadeCheckArgsClienteFisico,
   type ArgsClienteFisico,
 } from '@clienteFisico'
+import {
+  ok, badRequest,
+  type HttpResponse,
+} from '@replicasLocalGlobal'
 
 class CreateClienteFisicoController {
   private constructor() { }
 
-  static async execute(args: ArgsClienteFisico) {
+  static async execute(args: ArgsClienteFisico): Promise<HttpResponse | undefined> {
     try {
-      await facadeCheckArgsClienteFisico(args)
+      await ok(await facadeCheckArgsClienteFisico(args))
     }
 
     catch (err: any) {
-      return err.message
+      return await badRequest(err.message)
     }
   }
 }
