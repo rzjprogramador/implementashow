@@ -4,8 +4,8 @@ import {
 } from '@clienteFisico'
 import { ExceptionsMessages } from "@replicasLocalGlobal"
 
-const facadeCheckArgsClienteFisico = (args: ArgsClienteFisico) => {
-  if (args.hasOwnProperty('ID')) {
+const facadeCheckArgsClienteFisico = async (args: ArgsClienteFisico) => {
+  if (await args.hasOwnProperty('ID')) {
     throw new Error(ExceptionsMessages.existID)
   }
 }

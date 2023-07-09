@@ -9,7 +9,7 @@ class CreateClienteFisicoController {
 
   static async execute(args: ArgsClienteFisico) {
     try {
-      facadeCheckArgsClienteFisico(args)
+      await facadeCheckArgsClienteFisico(args)
     }
 
     catch (err: any) {
