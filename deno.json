@@ -21,9 +21,10 @@
       "exclude": ["src/testdata/", "data/fixtures/**/*.ts"],
       "rules": {
         "tags": ["recommended"],
-        "include": ["ban-untagged-todo"],
-        "exclude": ["no-unused-vars"]
+        "include": [],
+        "exclude": ["no-unused-vars", "no-explicit-any"]
       }
     }
   }
 }
+// "no-unused-vars", "no-explicit-any"
