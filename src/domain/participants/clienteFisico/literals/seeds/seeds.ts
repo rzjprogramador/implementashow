@@ -1,13 +1,14 @@
+import { setSystem } from '@replicasLocalGlobal'
 import { ClienteFisicoModel, fakeBaseOkArgsClienteFisicoONE, fakeBaseOkArgsClienteFisicoTWO } from "@clienteFisico"
 
 const seedClienteFisicoONE: ClienteFisicoModel = {
   ...fakeBaseOkArgsClienteFisicoONE,
-  ID: '1',
+  ID: setSystem.Strings.one,
 }
 
 const seedClienteFisicoTWO: ClienteFisicoModel = {
   ...fakeBaseOkArgsClienteFisicoTWO,
-  ID: '2',
+  ID: setSystem.Strings.two,
 }
 
 export { seedClienteFisicoONE, seedClienteFisicoTWO }

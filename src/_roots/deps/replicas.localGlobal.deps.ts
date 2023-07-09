@@ -3,6 +3,9 @@
  * Replicar aqui todas dependencias fora da entidade :exemplo tudo que esta em: [ helpers/ ]
 */
 
+// -- Sets --
+export * from '../sets/setSystem/setSystem.ts'
+
 // Base Entitys
 export * from '../helpers/bases/base.factory.entity.ts'
 
