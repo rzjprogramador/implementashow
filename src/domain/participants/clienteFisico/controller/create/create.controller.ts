@@ -1,5 +1,6 @@
+// deno-lint-ignore-file no-prototype-builtins
 import {
-  repositoryInUseClientefisico,
+  facadeCheckArgsClienteFisico,
   type ArgsClienteFisico,
 } from '@clienteFisico'
 
@@ -8,10 +9,7 @@ class CreateClienteFisicoController {
 
   static async execute(args: ArgsClienteFisico) {
     try {
-      const exist = repositoryInUseClientefisico.exist(args?.ID!)
-      if (exist) {
-        throw new Error('Ja Existe')
-      }
+      facadeCheckArgsClienteFisico(args)
     }
 
     catch (err: any) {

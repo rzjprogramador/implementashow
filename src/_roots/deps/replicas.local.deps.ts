@@ -9,3 +9,6 @@ export * from '../helpers/bases/base.factory.entity.ts'
 // -- Types Global --
 export * from '../helpers/types/types.global.ts'
 
+// -- Messages Feedback Global
+export * from '../helpers/feedbacks/exceptionsMessages.ts'
+

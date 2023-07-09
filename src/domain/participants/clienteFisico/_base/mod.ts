@@ -23,6 +23,9 @@ export * from '../remotes/repository/firebase.repositoryClienteFisico.ts'
 export * from '../remotes/repository/memory.repositoryClienteFisico.ts'
 export * from '../literals/mediator/mediator.repository.ts'
 
+// -- PreArgs --
+export * from '../usecases/create/preFeaturesCreate/checkArgs.ts'
+
 // -- UseCases CreatePipe--
 export * from '../usecases/create/create.pipe.ts'
 
