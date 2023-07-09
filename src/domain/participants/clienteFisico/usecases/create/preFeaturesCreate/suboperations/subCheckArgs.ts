@@ -2,11 +2,12 @@
 import {
   type ArgsClienteFisico,
 } from '@clienteFisico'
-import { ExceptionsMessages } from "@replicasLocalGlobal"
+import { ExceptionsMessages, OutputThrowObject } from "@replicasLocalGlobal"
+
 
 const hasPropertyID = async (args: ArgsClienteFisico) => {
   if (await args.hasOwnProperty('ID')) {
-    throw ExceptionsMessages.feedbackExistID()
+    OutputThrowObject(ExceptionsMessages.feedbackExistID())
   }
 }
 

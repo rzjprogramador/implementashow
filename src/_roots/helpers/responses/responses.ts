@@ -16,8 +16,13 @@ const badRequest = (data: Error | FeedbackException): HttpResponse => ({
   statusCode: 400
 })
 
+function OutputThrowObject(input: any) {
+  throw input
+}
+
 export {
   ok,
   badRequest,
+  OutputThrowObject,
   type HttpResponse
 }
