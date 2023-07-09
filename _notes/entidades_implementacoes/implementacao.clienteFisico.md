@@ -1,7 +1,7 @@
 ---
 marp: true
 ---
-# ClineteFisico
+# Entidade : Participante :: ClienteFisico
 
 > ## Meta: Criacao Entidade
 > conceito:  "antes de criar regrar e tratar regra para liberar acao -> ",
