@@ -1,13 +1,7 @@
-// deno-lint-ignore-file no-prototype-builtins
-import {
-  type ArgsClienteFisico,
-} from '@clienteFisico'
-import {
-  setsADM,
-  type FeedbackException
-} from "@replicasLocalGlobal"
+// deno-lint-ignore-file no-prototype-builtins no-explicit-any ban-unused-ignore
+import { type ArgsClienteFisico } from '@clienteFisico'
+import { setsADM, type FeedbackException } from "@replicasLocalGlobal"
 import { Firstname } from '@replicasRemote'
-
 
 const setMinLettersLocal = setsADM.minLetters
 

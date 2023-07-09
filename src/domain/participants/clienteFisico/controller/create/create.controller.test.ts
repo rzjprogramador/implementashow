@@ -2,11 +2,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { CreateClienteFisicoController, fakeBaseOkArgsClienteFisicoONE, seedClienteFisicoONE } from "@clienteFisico";
 import { ExceptionsMessages } from "@replicasLocalGlobal"
-import {
-  ok, badRequest,
-  setSystem,
-  type HttpResponse,
-} from '@replicasLocalGlobal'
+import { ok, badRequest, setSystem, type HttpResponse } from '@replicasLocalGlobal'
 
 const sut = CreateClienteFisicoController
 const argFakeONE = fakeBaseOkArgsClienteFisicoONE
