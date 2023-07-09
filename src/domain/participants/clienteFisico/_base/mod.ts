@@ -6,6 +6,7 @@ export * from './types.ts'
 
 // -- Factory --
 export * from '../factory/factory.ts'
+export * from '../factory/members.ts'
 
 // -- Literals --
 export * from '../literals/fakes/fake.ts'

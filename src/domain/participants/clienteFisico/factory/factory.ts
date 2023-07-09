@@ -1,18 +1,12 @@
 // import { SuperDateTS } from "@remotes";
-import { ArgsClienteFisico } from "@clienteFisico";
+import { ArgsClienteFisico, membersClienteFisico } from "@clienteFisico";
 
-const membersClienteFisico = {
-  showIdade(this: ArgsClienteFisico) {
-    return this.dataNascimento.ano - 2023
-  }
-}
-
-const generatorFactoryClienteFisico = async (args: ArgsClienteFisico) => {
+const factoryClienteFisico = async (args: ArgsClienteFisico) => {
   const factory = await Object.create(membersClienteFisico)
-  return await Object.assign(args, factory)
+  return await Object.assign(factory, args)
 }
 
-export { generatorFactoryClienteFisico }
+export { factoryClienteFisico}
 
 /*
 TODO: COMPUTAR O CAMPO IDADE - SEM CRIAR UM NOVO FORA DO OBJ.
