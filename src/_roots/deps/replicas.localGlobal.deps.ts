@@ -12,3 +12,7 @@ export * from '../helpers/types/types.global.ts'
 // -- Messages Feedback Global
 export * from '../helpers/feedbacks/exceptionsMessages.ts'
 
+// -- HttpResponse --
+export * from '../helpers/responses/responses.ts'
+
+
