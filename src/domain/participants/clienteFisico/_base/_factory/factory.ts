@@ -1,6 +1,5 @@
-import { SuperDateTS } from "@replicasRemote";
+// import { SuperDateTS } from "@replicasRemote";
 import { ArgsClienteFisico } from "@clienteFisico";
-import { BaseEntityPerson } from "@replicasLocalGlobal";
 
 const membersClienteFisico = {
   showIdade(this: ArgsClienteFisico) {
