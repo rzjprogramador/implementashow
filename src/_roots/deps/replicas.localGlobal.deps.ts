@@ -4,7 +4,6 @@
 */
 
 // -- Sets --
-export * from '../sets/setsAdm/setsAdmEntitys.ts'
 export * from '../sets/setSystem/setSystem.ts'
 
 // Base Entitys

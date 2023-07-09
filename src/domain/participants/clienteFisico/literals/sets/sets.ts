@@ -1,5 +1,5 @@
 
-const setsADM = {
+const setsClienteFisico = {
   minLetters: 2,
 
   feedSetsWithNumber(setNumber: number) {
@@ -8,4 +8,4 @@ const setsADM = {
 
 }
 
-export { setsADM }
+export { setsClienteFisico }

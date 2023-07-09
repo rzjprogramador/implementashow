@@ -18,6 +18,9 @@ export * from '../literals/seeds/seeds.ts'
 // -- important: evitando ReferenceError -> importe-as listFeatures antes do create-pipe para se enxergarem em ordemLogica. --
 // export * from '../usecases/create/features/_listFeatures.ts'
 
+// -- Sets --
+export * from '../literals/sets/sets.ts'
+
 // -- Repositorios --
 export * from '../remotes/repository/firebase.repositoryClienteFisico.ts'
 export * from '../remotes/repository/memory.repositoryClienteFisico.ts'
