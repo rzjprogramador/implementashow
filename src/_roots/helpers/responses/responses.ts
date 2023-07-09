@@ -1,4 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
+import { FeedbackException } from "@replicasLocalGlobal"
 
 interface HttpResponse {
   data: any,
@@ -9,7 +10,8 @@ const ok = (data: any): HttpResponse => ({
   data,
   statusCode: 200
 })
-const badRequest = (data: any): HttpResponse => ({
+
+const badRequest = (data: Error | FeedbackException): HttpResponse => ({
   data,
   statusCode: 400
 })

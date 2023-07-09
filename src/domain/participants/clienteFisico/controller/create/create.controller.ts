@@ -11,13 +11,13 @@ import {
 class CreateClienteFisicoController {
   private constructor() { }
 
-  static async execute(args: ArgsClienteFisico): Promise<HttpResponse | undefined> {
+  static async execute(args: ArgsClienteFisico): Promise<HttpResponse | void> {
     try {
       await ok(await facadeCheckArgsClienteFisico(args))
     }
 
     catch (err: any) {
-      return await badRequest(err.message)
+      return await badRequest(err)
     }
   }
 }

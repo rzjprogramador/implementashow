@@ -1,8 +1,22 @@
 
+interface FeedbackException {
+  cause: string
+  toCorrect: string
+}
+
 class ExceptionsMessages {
-  static existID: string = 'Já contém um registro ID, não pode recriar a entidade, faça outra operação'
+
+  static feedbackExistID(): FeedbackException {
+    return {
+      cause: `Já contém um registro ID, não pode recriar a entidade.`,
+      toCorrect: `Faça outra operação`,
+    }
+  }
 
 }
 
-export { ExceptionsMessages }
+export {
+  ExceptionsMessages,
+  type FeedbackException
+ }
 

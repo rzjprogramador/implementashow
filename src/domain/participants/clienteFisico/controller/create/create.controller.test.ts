@@ -12,8 +12,8 @@ const argSeedONE = seedClienteFisicoONE
 
 Deno.test("[ deve retornar feedback faça outra ação de conter a prop. ID { #investigacaoJaExiste }", async () => {
   const action = await sut.execute(argSeedONE);
-  const assertion: any = await badRequest(ExceptionsMessages.existID)
-  // Log('  >>>>>>> ', where)
+  const assertion: any = await badRequest(ExceptionsMessages.feedbackExistID())
+
   expect(action).toEqual(assertion);
 });
 
