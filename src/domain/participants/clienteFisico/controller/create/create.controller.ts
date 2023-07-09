@@ -1,4 +1,4 @@
-// deno-lint-ignore-file no-prototype-builtins no-explicit-any
+// deno-lint-ignore-file no-explicit-any
 import {
   facadeCheckArgsClienteFisico,
   type ArgsClienteFisico,
