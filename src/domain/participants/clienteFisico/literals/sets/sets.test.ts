@@ -8,8 +8,8 @@ const sut = setsClienteFisico
 Deno.test("deve retornar os valores definidos no sets.", () => {
   const two = setSystem.Numbers.two
 
-  expect(sut.minLetters).toEqual(two);
-  expect(sut.feedSetsWithNumber(two)).toEqual(`Ops... as letras não podem ser menor que ${two}`);
+  expect(sut.objectValues.firstname.setMin).toEqual(two);
+  expect(sut?.objectValues?.firstname?.feedback?.(two)).toEqual(`Ops... as letras não podem ser menor que ${two}`);
 });
 
 export default 1;

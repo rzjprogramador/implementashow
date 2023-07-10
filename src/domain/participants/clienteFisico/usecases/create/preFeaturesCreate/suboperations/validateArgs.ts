@@ -1,14 +1,17 @@
 // deno-lint-ignore-file no-prototype-builtins no-explicit-any ban-unused-ignore
-import { setsClienteFisico, type ArgsClienteFisico } from '@clienteFisico'
+import {
+  setsClienteFisico,
+  type ArgsClienteFisico,
+} from '@clienteFisico'
 import { type FeedbackException } from "@globalEntitys"
-import { Firstname } from '@remotes'
+import { Firstname, type ObjSetRM } from '@remotes'
 
-const setMinLettersLocal = setsClienteFisico.minLetters
+const setFirstnameLocal: ObjSetRM = setsClienteFisico.objectValues.firstname
 
 const validateArgsClienteFisico = async (args: ArgsClienteFisico): Promise<ArgsClienteFisico | FeedbackException> => {
   try {
     const validateds = {
-      primeiroNome: await Firstname(args.primeiroNome, setMinLettersLocal, setsClienteFisico.feedSetsWithNumber(setMinLettersLocal)),
+      primeiroNome: await Firstname(args.primeiroNome, setFirstnameLocal),
     }
 
     const provisorio = { ...args, validateds }

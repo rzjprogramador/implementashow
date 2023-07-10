@@ -1,10 +1,21 @@
+import { ObjSetRM } from "@remotes"
 
-const setsClienteFisico = {
-  minLetters: 2,
+interface SetClienteFisico {
+  objectValues: {
+    firstname: ObjSetRM
+  }
+}
 
-  feedSetsWithNumber(setNumber: number) {
-    return `Ops... as letras não podem ser menor que ${setNumber}`
-  },
+const setsClienteFisico: SetClienteFisico = {
+  objectValues: {
+    firstname: {
+      setMin: 2,
+
+      feedback: (minSet: number = 2) => {
+        return `Ops... as letras não podem ser menor que ${minSet}`
+      },
+    } // firstname
+  }, // objValues
 
 }
 
