@@ -13,7 +13,7 @@ const fakeArgSut: ClienteFisicoRequest = {
 }
 
 Deno.test({
-  name: "deve retornar os campos existentes.",
+  name: "[ OK ] deve retornar a existencia de todos os campos da entidade.",
   only: false,
   async fn() {
     const input = fakeArgSut;
