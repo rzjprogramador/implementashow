@@ -20,12 +20,13 @@ class CreateclienteFisicoController {
     }
   }
 
+  static _preMaker = async () => {
+    return await new CreateclienteFisicoController()
+    // factoryMethod somente para se autoInstanciar
+  }
+
 }
 
-const preClienteFisicoControllerMaker = async () => {
-  return await new CreateclienteFisicoController()
-}
-
-const createClienteFisicoControllerMaker = await preClienteFisicoControllerMaker()
+const createClienteFisicoControllerMaker = await CreateclienteFisicoController._preMaker()
 
 export { createClienteFisicoControllerMaker }
