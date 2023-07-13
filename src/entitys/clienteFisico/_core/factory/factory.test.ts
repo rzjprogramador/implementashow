@@ -1,10 +1,10 @@
 // deno-lint-ignore-file no-explicit-any no-unused-vars
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { makerFactoryClienteFisico } from "./factory.ts";
+import { createFactoryClienteFisicoMaker } from "./factory.ts";
 import { ClienteFisicoRequest } from "@clienteFisico";
 
 
-const sut = makerFactoryClienteFisico
+const sut = createFactoryClienteFisicoMaker
 
 const fakeArgSut: ClienteFisicoRequest = {
   primeiroNome: 'any',

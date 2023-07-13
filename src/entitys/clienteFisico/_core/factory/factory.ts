@@ -27,8 +27,8 @@ class FactoryClienteFisico extends BaseEntityPerson<ClienteFisicoModel> {
 }
 
 // maker
-const makerFactoryClienteFisico = async (args: ClienteFisicoRequest, ID?: string) => {
+const createFactoryClienteFisicoMaker = async (args: ClienteFisicoRequest, ID?: string) => {
   return await FactoryClienteFisico.create(args, ID)
 }
 
-export { makerFactoryClienteFisico }
+export { createFactoryClienteFisicoMaker }
