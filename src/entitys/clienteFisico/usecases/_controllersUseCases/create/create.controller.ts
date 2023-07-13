@@ -4,12 +4,12 @@ import { createFactoryClienteFisicoMaker } from "../../../_core/factory/factory.
 
 
 class CreateclienteFisicoController {
-  static pipeArgs = CreateClienteFisicoCasePipeArgs
-  static createFactory = createFactoryClienteFisicoMaker
+  private pipeArgs = CreateClienteFisicoCasePipeArgs
+  private createFactory = createFactoryClienteFisicoMaker
 
-  static async execute(args: ClienteFisicoModel) {
-    const argsFilters = await CreateclienteFisicoController.pipeArgs(args)
-    const factory = await CreateclienteFisicoController.createFactory(argsFilters)
+  async execute(args: ClienteFisicoModel) {
+    const argsFilters = await this.pipeArgs(args)
+    const factory = await this.createFactory(argsFilters)
     const model = { ...factory }
 
     try {
@@ -22,8 +22,10 @@ class CreateclienteFisicoController {
 
 }
 
-const createClienteFisicoControllerMaker = async (args: ClienteFisicoModel) => {
-  return await CreateclienteFisicoController.execute(args)
+const preClienteFisicoControllerMaker = async () => {
+  return await new CreateclienteFisicoController()
 }
+
+const createClienteFisicoControllerMaker = await preClienteFisicoControllerMaker()
 
 export { createClienteFisicoControllerMaker }
