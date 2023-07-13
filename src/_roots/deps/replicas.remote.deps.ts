@@ -13,9 +13,7 @@ export {
 // superDate
 export { superDateTS as SuperDateTS } from "/home/rzj/..gitAll/SuperLibsTS/main.ts";
 
-// superValidates
-export {
-  minString as minString,
-  firstname as Firstname,
-  type ObjSet as ObjSetRM,
-} from "/home/rzj/..gitAll/SuperValidades/main.ts";
+// -- ObjectValues - Remote --
+import { makerObjectValues } from "/home/rzj/..gitAll/SuperValidades/main.ts";
+// -- cada objectValue -->
+export const FirstnamePerson = await makerObjectValues.makerFirstnamePerson

@@ -1,12 +1,13 @@
 // deno-lint-ignore-file no-explicit-any
 import { ClienteFisicoModel } from "@clienteFisico";
-import { makerFirstnamePerson as Firstname } from "/home/rzj/..gitAll/SuperValidades/main.ts";
+import { FirstnamePerson } from "@remotes";
+
 
 const validatesClienteFisico = async (args: ClienteFisicoModel) => {
   const { primeiroNome, sobrenome, anoNascimento } = args
 
   const valids = {
-    primeiroNome: await Firstname(primeiroNome),
+    primeiroNome: await FirstnamePerson(primeiroNome),
     sobrenome,
     anoNascimento,
   }
@@ -25,9 +26,3 @@ const CreateClienteFisicoCasePipeArgs = async (args: ClienteFisicoModel) => {
 }
 
 export { CreateClienteFisicoCasePipeArgs }
-
-/*
-primeiroNome
-sobrenome
-anoNascimento
-  */
