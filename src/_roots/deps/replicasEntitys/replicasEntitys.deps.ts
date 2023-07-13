@@ -1,2 +1,2 @@
 // clienteFisico
-export * from '../../../entitys/clienteFisico/_base/mod.ts'
+export * from '../../../entitys/clienteFisico/_core/mod.ts'

@@ -3,8 +3,8 @@ interface ClienteFisicoModel extends MembersClienteFisico {
   ID?: string
   primeiroNome: string
   sobrenome: string
-  idade?: MembersClienteFisico["showIdade"]
   anoNascimento: number
+  idade?: MembersClienteFisico["showIdade"]
   nomeCompleto?: MembersClienteFisico["nomeCompleto"]
 }
 
